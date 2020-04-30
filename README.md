@@ -1,6 +1,11 @@
 # onenice
-> OneNice是一款超级简洁的WordPress主题，无任何加密，无任何冗余代码，无任何授权限制，可随便使用。  
-[主题演示](http://www.xenice.com/)
+> OneNice是一款超级简洁的WordPress主题，支持中英文，免费开源，无任何加密，无任何冗余代码，无任何授权限制，可随便使用。  
+
+### 主题演示
+
+[http://www.xenice.com/](http://www.xenice.com/)
+
+![onenice](https://raw.githubusercontent.com/xenice/onenice/master/screenshot.png)
 
 ### 主题特色
 
@@ -30,4 +35,4 @@ MVC分层架构，层次分明，扩展更灵活、维护更方便；
 
 
 ### 系统要求
-php版本7.0或更高
+- php版本7.0或更高
