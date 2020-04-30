@@ -1,0 +1,25 @@
+{
+    "name": "xenice/wp-framework",
+    "description": "A core package for wordpress theme framework xenice",
+    "type": "library",
+    "authors": [
+        {
+            "name": "xenice",
+            "email": "xenice@qq.com"
+        }
+    ],
+	"require": {
+		"php": ">=7.0"
+	},
+	"autoload": {
+		"psr-4": {
+		  "xenice\\theme\\":"theme/",
+		  "xenice\\model\\":"model/",
+		  "xenice\\view\\":"view/",
+		  "xenice\\option\\":"option/",
+		  "xenice\\optimize\\":"optimize/",
+		  "xenice\\mail\\":"mail/"
+		},
+		"files": ["option/functions.php"]
+	}
+}

@@ -1,0 +1,1663 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: onenice\n"
+"POT-Creation-Date: 2020-04-16 10:56+0800\n"
+"PO-Revision-Date: 2020-04-16 10:58+0800\n"
+"Last-Translator: \n"
+"Language-Team: xenice<xenice@qq.com>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.2.3\n"
+"X-Poedit-KeywordsList: _t\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: app/web/about/About.php:22
+msgid "About"
+msgstr "关于"
+
+#: app/web/about/About.php:23
+msgid "About the theme"
+msgstr "关于主题"
+
+#: app/web/about/About.php:24
+#, php-format
+msgid ""
+"Thank you for using <a href=\"http://www.xenice.com/\" target=\"_blank\">%s</"
+"a> theme."
+msgstr ""
+"感谢使用<a href=\"http://www.xenice.com/\" target=\"_blank\">%s</a>主题。"
+
+#: app/web/about/About.php:28
+msgid "Version"
+msgstr "版本"
+
+#: app/web/about/About.php:33
+msgid "Official website"
+msgstr "官网"
+
+#: app/web/action/AdminAction.php:12 app/web/action/GlobalAction.php:45
+msgid "Top menu"
+msgstr "顶部菜单"
+
+#: app/web/action/AdminAction.php:28 app/web/action/AdminAction.php:29
+#: app/web/action/AdminAction.php:40
+msgid "Phrase"
+msgstr "说说"
+
+#: app/web/action/AdminAction.php:30
+msgid "All Phrases"
+msgstr "所有说说"
+
+#: app/web/action/AdminAction.php:31
+msgid "Add New"
+msgstr "新增"
+
+#: app/web/action/AdminAction.php:32
+msgid "Add New Phrase"
+msgstr "新增说说"
+
+#: app/web/action/AdminAction.php:33
+msgid "Edit Phrase"
+msgstr "编辑说说"
+
+#: app/web/action/AdminAction.php:34
+msgid "New Phrase"
+msgstr "新说说"
+
+#: app/web/action/AdminAction.php:35
+msgid "View Phrase"
+msgstr "浏览说说"
+
+#: app/web/action/AdminAction.php:36
+msgid "Search Phrases"
+msgstr "搜索说说"
+
+#: app/web/action/AdminAction.php:37
+msgid "No phrases found"
+msgstr "没有说说"
+
+#: app/web/action/AdminAction.php:38
+msgid "No phrases found in trash"
+msgstr "垃圾站没有说说"
+
+#: app/web/action/GlobalAction.php:53
+msgid "Global Top"
+msgstr "全局上"
+
+#: app/web/action/GlobalAction.php:60
+msgid "Global Bottom"
+msgstr "全局下"
+
+#: app/web/action/GlobalAction.php:67
+msgid "Home Page"
+msgstr "首页"
+
+#: app/web/action/GlobalAction.php:74
+msgid "Category Page"
+msgstr "分类页"
+
+#: app/web/action/GlobalAction.php:81
+msgid "Tag Page"
+msgstr "标签页"
+
+#: app/web/action/GlobalAction.php:88
+msgid "Search Page"
+msgstr "搜索页"
+
+#: app/web/action/GlobalAction.php:95
+msgid "Single Page"
+msgstr "单篇页"
+
+#: app/web/action/SeoAction.php:18
+msgid "SEO"
+msgstr "SEO"
+
+#: app/web/action/SeoAction.php:28
+msgid "Describtion"
+msgstr "描述"
+
+#: app/web/action/SeoAction.php:30 config/options.php:99
+msgid "Keywords"
+msgstr "关键字"
+
+#: app/web/ajax/LoginAjax.php:48 app/web/ajax/LoginAjax.php:127
+msgid "Please enter username"
+msgstr "请输入用户名"
+
+#: app/web/ajax/LoginAjax.php:51 app/web/ajax/LoginAjax.php:129
+msgid "This username contains an invalid character"
+msgstr "此用户名包含无效字符"
+
+#: app/web/ajax/LoginAjax.php:54 app/web/ajax/LoginAjax.php:131
+msgid "The username has been registered"
+msgstr "用户名已注册"
+
+#: app/web/ajax/LoginAjax.php:58 app/web/ajax/LoginAjax.php:140
+msgid "Please fill in your email address"
+msgstr "请填写您的电子邮件地址"
+
+#: app/web/ajax/LoginAjax.php:61
+msgid "The email address is incorrect"
+msgstr "电子邮件地址不正确"
+
+#: app/web/ajax/LoginAjax.php:64
+msgid "The email address has been registered"
+msgstr "邮箱已注册"
+
+#: app/web/ajax/LoginAjax.php:68
+msgid "Please enter password"
+msgstr "请输入密码"
+
+#: app/web/ajax/LoginAjax.php:72 app/web/ajax/LoginAjax.php:277
+#: app/web/view/page/user.php:178 static/js/login.js:111 static/js/login.js:113
+#: static/js/login.js:217
+msgid "Entered passwords differ"
+msgstr "两次输入的密码不一致"
+
+#: app/web/ajax/LoginAjax.php:76
+msgid "Password length should not be less than 6"
+msgstr "密码长度不得小于6位"
+
+#: app/web/ajax/LoginAjax.php:80
+msgid "Captcha error"
+msgstr "验证码错误"
+
+#: app/web/ajax/LoginAjax.php:84
+msgid "Captcha and email do not correspond"
+msgstr "验证码和电子邮件并不匹配"
+
+#: app/web/ajax/LoginAjax.php:106
+msgid "Server timeout, please try again later"
+msgstr "服务器超时，请稍后再试"
+
+#: app/web/ajax/LoginAjax.php:125
+msgid "Username at least 6 characters"
+msgstr "用户名至少6个字符"
+
+#: app/web/ajax/LoginAjax.php:143
+msgid "The email format is incorrect"
+msgstr "电子邮件格式不正确"
+
+#: app/web/ajax/LoginAjax.php:146
+msgid "This email address has been registered, please change it"
+msgstr "这个邮箱已经注册，请更改"
+
+#: app/web/ajax/LoginAjax.php:182 app/web/ajax/LoginAjax.php:183
+#: app/web/view/login.php:79 app/web/view/page/login.php:97
+#: app/web/view/page/login.php:120 app/web/view/page/login.php:155
+msgid "Captcha"
+msgstr "验证码"
+
+#: app/web/ajax/LoginAjax.php:197 app/web/ajax/LoginAjax.php:272
+msgid "The captcha is incorrect"
+msgstr "验证码不正确"
+
+#: app/web/ajax/LoginAjax.php:208
+msgid "Username does not exist"
+msgstr "用户名不存在"
+
+#: app/web/ajax/LoginAjax.php:213
+msgid "User does not set email"
+msgstr "用户未设置电子邮件"
+
+#: app/web/ajax/LoginAjax.php:219
+msgid "Email does not exist"
+msgstr "电子邮件不存在"
+
+#: app/web/ajax/LoginAjax.php:243
+msgid "Reset password"
+msgstr "重置密码"
+
+#: app/web/ajax/LoginAjax.php:244 app/web/ajax/LoginAjax.php:294
+msgid "Dear "
+msgstr "尊敬的"
+
+#: app/web/ajax/LoginAjax.php:244 app/web/ajax/LoginAjax.php:294
+msgid ":"
+msgstr "："
+
+#: app/web/ajax/LoginAjax.php:244
+msgid ""
+"You have just initiated a password reset request, please click the following "
+"link to reset your password:"
+msgstr "您刚刚发起了密码重置请求，请点击以下链接重置您的密码："
+
+#: app/web/ajax/LoginAjax.php:244
+msgid "If not you, please ignore this mail."
+msgstr "如果不是本人操作，请忽略此邮件。"
+
+#: app/web/ajax/LoginAjax.php:244 app/web/ajax/LoginAjax.php:294
+msgid "With the best wishes"
+msgstr "此致"
+
+#: app/web/ajax/LoginAjax.php:251
+msgid "Send mail failed, please try again later"
+msgstr "发送邮件失败，请稍后重试"
+
+#: app/web/ajax/LoginAjax.php:293 app/web/view/page/user.php:182
+msgid "Password changed successfully"
+msgstr "密码更改成功"
+
+#: app/web/ajax/LoginAjax.php:294
+msgid "Your password has been changed successfully, user name: "
+msgstr "您的密码修改成功，用户名："
+
+#: app/web/ajax/LoginAjax.php:294
+msgid "New password: "
+msgstr "新密码："
+
+#: app/web/ajax/LoginAjax.php:294
+msgid ""
+"Please remember the password, you can click the following link to log in: "
+msgstr "请记住密码，您可以点击以下链接登录："
+
+#: app/web/ajax/LoginAjax.php:299
+msgid "Illegal request"
+msgstr "非法请求"
+
+#: app/web/ajax/ValidationAjax.php:37
+msgid "Sorry, Please enter verification code "
+msgstr "对不起，请输入验证码"
+
+#: app/web/ajax/ValidationAjax.php:37 app/web/ajax/ValidationAjax.php:40
+msgid "Go back"
+msgstr "返回"
+
+#: app/web/ajax/ValidationAjax.php:37 app/web/ajax/ValidationAjax.php:40
+msgid "Comment failure"
+msgstr "评论失败"
+
+#: app/web/ajax/ValidationAjax.php:40
+msgid "Sorry, Verification code error "
+msgstr "抱歉，验证码错误"
+
+#: app/web/model/Article.php:47
+msgid "comments"
+msgstr "评论"
+
+#: app/web/model/Article.php:50
+msgid "comment"
+msgstr "评论"
+
+#: app/web/model/Article.php:58
+msgid "views"
+msgstr "阅读"
+
+#: app/web/model/Article.php:61
+msgid "view"
+msgstr "阅读"
+
+#: app/web/model/Category.php:17 app/web/model/Tag.php:12
+#: app/web/model/part/Article.php:15 app/web/view/search/index.php:4
+#: config/options.php:85
+msgid "Home"
+msgstr "首页"
+
+#: app/web/model/part/Comment.php:124
+msgid "Sofa"
+msgstr "沙发"
+
+#: app/web/model/part/Comment.php:127
+msgid "Bench"
+msgstr "板凳"
+
+#: app/web/model/part/Comment.php:130
+msgid "Floor"
+msgstr "地板"
+
+#: app/web/model/part/Comment.php:133
+#, php-format
+msgid "#%s"
+msgstr "#%s"
+
+#: app/web/model/part/Comment.php:145 app/web/model/part/Comment.php:176
+msgid "Reply"
+msgstr "回复"
+
+#: app/web/model/part/Model.php:13
+msgid " days ago"
+msgstr " 天前"
+
+#: app/web/model/part/Model.php:14
+msgid " hours ago"
+msgstr " 小时前"
+
+#: app/web/model/part/Model.php:15
+msgid " minutes ago"
+msgstr " 分钟前"
+
+#: app/web/model/part/Model.php:16
+msgid " seconds ago"
+msgstr " 秒前"
+
+#: app/web/view/comments.php:4
+msgid "Comments"
+msgstr "评论"
+
+#: app/web/view/comments.php:13
+msgid "Leave a reply"
+msgstr "发表评论"
+
+#: app/web/view/comments.php:20
+#, php-format
+msgid "You need <a href=\"%s\">login</a> to reply."
+msgstr "你需要<a href=\"%s\">登录</a>来评论."
+
+#: app/web/view/comments.php:26
+#, php-format
+msgid "Welcome <a href=\"%1$s\">%2$s</a> back，"
+msgstr "欢迎<a href=\"%1$s\">%2$s</a>归来，"
+
+#: app/web/view/comments.php:27
+msgid "Log out of this account"
+msgstr "退出帐号"
+
+#: app/web/view/comments.php:28
+msgid "Log out »"
+msgstr "退出 »"
+
+#: app/web/view/comments.php:38
+#, php-format
+msgid "Not logged in. I want to <a href=\"%s\">login</a>"
+msgstr "你需要<a href=\"%s\">登录</a>来评论。"
+
+#: app/web/view/comments.php:45
+msgid "Username (required)"
+msgstr "用户名(必填)"
+
+#: app/web/view/comments.php:46
+msgid "Email (required)"
+msgstr "邮箱(必填)"
+
+#: app/web/view/comments.php:47 app/web/view/page/user.php:157
+msgid "URL"
+msgstr "网址"
+
+#: app/web/view/comments.php:53
+msgid "Comment"
+msgstr "评论"
+
+#: app/web/view/comments.php:57
+msgid "Validation"
+msgstr "验证"
+
+#: app/web/view/comments.php:58 app/web/view/page/user.php:201
+msgid "Submit"
+msgstr "提交"
+
+#: app/web/view/header.php:34 app/web/view/search/index.php:5
+msgid "Search keyword"
+msgstr "搜索关键词"
+
+#: app/web/view/home/index.php:6 app/web/widget/RecentArticles.php:11
+#: app/web/widget/RecentArticles.php:54 app/web/widget/UniversalArticles.php:39
+msgid "Recent Articles"
+msgstr "最新文章"
+
+#: app/web/view/login.php:10
+msgid "Admin"
+msgstr "管理"
+
+#: app/web/view/login.php:12
+msgid "Logout"
+msgstr "退出"
+
+#: app/web/view/login.php:14 app/web/view/login.php:22
+#: app/web/view/login.php:37 app/web/view/login.php:58
+#: app/web/view/page/login.php:74 app/web/view/page/login.php:107
+#: app/web/view/page/login.php:131 app/web/view/page/login.php:166
+#: static/js/login.js:44 vendor/xenice/wp-login/src/Login.php:36
+msgid "Login"
+msgstr "登录"
+
+#: app/web/view/login.php:25 app/web/view/login.php:61
+#: app/web/view/login.php:85 app/web/view/page/login.php:79
+#: app/web/view/page/login.php:103 app/web/view/page/login.php:132
+#: app/web/view/page/login.php:167 static/js/login.js:166
+msgid "Register"
+msgstr "注册"
+
+#: app/web/view/login.php:31 app/web/view/page/login.php:68
+#: app/web/view/page/login.php:117
+msgid "Username or Email"
+msgstr "用户名或邮箱"
+
+#: app/web/view/login.php:34 app/web/view/login.php:73
+#: app/web/view/page/login.php:71 app/web/view/page/login.php:91
+msgid "Password"
+msgstr "密码"
+
+#: app/web/view/login.php:41
+msgid "Forget password?"
+msgstr "忘记密码？"
+
+#: app/web/view/login.php:67 app/web/view/page/login.php:85
+#: app/web/view/page/user.php:139
+msgid "Username"
+msgstr "用户名"
+
+#: app/web/view/login.php:70 app/web/view/page/login.php:88
+#: app/web/view/page/user.php:145
+msgid "Email"
+msgstr "邮箱"
+
+#: app/web/view/login.php:76 app/web/view/page/login.php:94
+#: app/web/view/page/login.php:152 app/web/view/page/user.php:198
+msgid "Confirm password"
+msgstr "确认密码"
+
+#: app/web/view/login.php:81
+msgid "Get captcha"
+msgstr "获取验证码"
+
+#: app/web/view/notFound/index.php:10
+msgid "Not Found"
+msgstr "未找到"
+
+#: app/web/view/notFound/index.php:11
+msgid "Sorry, the page you visited has migrated or does not exist"
+msgstr "对不起，您访问的页面已迁移或不存在"
+
+#: app/web/view/page/login.php:78
+msgid "Forget password ?"
+msgstr "忘记密码?"
+
+#: app/web/view/page/login.php:99 static/js/login.js:291 static/js/login.js:297
+msgid "Send captcha"
+msgstr "发送验证码"
+
+#: app/web/view/page/login.php:111
+msgid ""
+"Please enter your username or email address. You will receive a link to "
+"create a new password via email."
+msgstr "请输入您的用户名或邮箱地址。您将通过邮箱收到创建新密码的链接。"
+
+#: app/web/view/page/login.php:127 static/js/login.js:199
+msgid "Get New Password"
+msgstr "获取新密码"
+
+#: app/web/view/page/login.php:149 app/web/view/page/user.php:195
+msgid "New password"
+msgstr "新密码"
+
+#: app/web/view/page/login.php:162 app/web/view/page/user.php:187
+#: static/js/login.js:240
+msgid "Change password"
+msgstr "修改密码"
+
+#: app/web/view/page/login.php:171
+msgid "Error request, please check email for reset password link"
+msgstr "错误请求，请检查邮箱中的重置密码链接"
+
+#: app/web/view/page/login.php:174
+msgid "Back to home"
+msgstr "返回首页"
+
+#: app/web/view/page/user.php:87 app/web/view/page/user.php:132
+msgid "Profile"
+msgstr "简介"
+
+#: app/web/view/page/user.php:90
+msgid "Security"
+msgstr "安全"
+
+#: app/web/view/page/user.php:110
+msgid "The url is invalid"
+msgstr "网址无效"
+
+#: app/web/view/page/user.php:119
+msgid "Save success"
+msgstr "保存成功"
+
+#: app/web/view/page/user.php:122
+msgid "Save failed"
+msgstr "保存失败"
+
+#: app/web/view/page/user.php:151
+#: vendor/xenice/wp-framework/optimize/UserTableOptimize.php:66
+msgid "Nicename"
+msgstr "昵称"
+
+#: app/web/view/page/user.php:162
+msgid "Save changes"
+msgstr "保存更改"
+
+#: app/web/view/page/user.php:170
+msgid "Original password error"
+msgstr "原密码错误"
+
+#: app/web/view/page/user.php:174 static/js/login.js:27
+msgid "Password cannot be empty"
+msgstr "密码不能为空"
+
+#: app/web/view/page/user.php:192
+msgid "Original password"
+msgstr "原密码"
+
+#: app/web/view/single/index.php:48
+msgid "Edit"
+msgstr "编辑"
+
+#: app/web/view/single/index.php:53
+msgid "Tags:"
+msgstr "标签："
+
+#: app/web/view/single/index.php:56
+msgid "Previous Page<br/>"
+msgstr "上一篇<br/>"
+
+#: app/web/view/single/index.php:57
+msgid "Next Page<br/>"
+msgstr "下一篇<br/>"
+
+#: app/web/view/single/related.php:2
+msgid "Related Articles"
+msgstr "相关文章"
+
+#: app/web/widget/Advertise.php:10
+msgid "Xenice Advertise"
+msgstr "Xenice 广告"
+
+#: app/web/widget/Advertise.php:11 config/options.php:147
+msgid "Advertise"
+msgstr "广告"
+
+#: app/web/widget/Advertise.php:29
+msgid "AD code:"
+msgstr "广告位代码："
+
+#: app/web/widget/HotArticles.php:10
+msgid "Xenice Hot Articles"
+msgstr "Xenice 热门文章"
+
+#: app/web/widget/HotArticles.php:11 app/web/widget/HotArticles.php:54
+msgid "Hot Articles"
+msgstr "热门文章"
+
+#: app/web/widget/HotArticles.php:57 app/web/widget/RecentArticles.php:58
+#: app/web/widget/SickyArticles.php:59 app/web/widget/TagsCloud.php:58
+#: app/web/widget/UniversalArticles.php:77
+msgid "Name:"
+msgstr "名称："
+
+#: app/web/widget/HotArticles.php:65 app/web/widget/RecentArticles.php:66
+#: app/web/widget/SickyArticles.php:67 app/web/widget/UniversalArticles.php:85
+msgid "Article Count:"
+msgstr "文章数量："
+
+#: app/web/widget/Links.php:8
+msgid "Xenice Links"
+msgstr "Xenice 友情链接"
+
+#: app/web/widget/Links.php:9 app/web/widget/Links.php:18
+msgid "Links"
+msgstr "友情链接"
+
+#: app/web/widget/Links.php:50
+msgid "Links Count"
+msgstr "友情链接数量"
+
+#: app/web/widget/RecentArticles.php:10
+msgid "Xenice Recent Articles"
+msgstr "Xenice 最新文章"
+
+#: app/web/widget/RecentComments.php:10
+msgid "Xenice Recent Comments"
+msgstr "Xenice 最新评论"
+
+#: app/web/widget/RecentComments.php:11 app/web/widget/RecentComments.php:21
+msgid "Recent Comments"
+msgstr "最新评论"
+
+#: app/web/widget/RecentComments.php:60
+msgid "Comment Count:"
+msgstr "评论数量："
+
+#: app/web/widget/SickyArticles.php:10
+msgid "Xenice Sicky Articles"
+msgstr "Xenice 置顶文章"
+
+#: app/web/widget/SickyArticles.php:11 app/web/widget/SickyArticles.php:55
+msgid "Sicky Articles"
+msgstr "置顶文章"
+
+#: app/web/widget/TagsCloud.php:10
+msgid "Xenice Tags Cloud"
+msgstr "Xenice 标签云"
+
+#: app/web/widget/TagsCloud.php:11 app/web/widget/TagsCloud.php:52
+msgid "Tags Cloud"
+msgstr "标签云"
+
+#: app/web/widget/TagsCloud.php:28
+msgid "No tags"
+msgstr "没有标签"
+
+#: app/web/widget/TagsCloud.php:66
+msgid "Count:"
+msgstr "数量："
+
+#: app/web/widget/UniversalArticles.php:10
+msgid "Xenice Universal Articles"
+msgstr "Xenice 通用文章"
+
+#: app/web/widget/UniversalArticles.php:11
+#: app/web/widget/UniversalArticles.php:70
+msgid "Universal Articles"
+msgstr "通用文章"
+
+#: app/web/widget/UniversalArticles.php:93
+msgid "Category:"
+msgstr "分类："
+
+#: app/web/widget/UniversalArticles.php:98
+#: app/web/widget/UniversalArticles.php:101
+msgid "Auto"
+msgstr "自动"
+
+#: config/options.php:5
+msgid "Global"
+msgstr "全局"
+
+#: config/options.php:6
+msgid "Global Settings"
+msgstr "全局设置"
+
+#: config/options.php:10
+msgid "Theme Color"
+msgstr "主题颜色"
+
+#: config/options.php:14
+msgid "Blue"
+msgstr "蓝色"
+
+#: config/options.php:15
+msgid "Grey"
+msgstr "灰色"
+
+#: config/options.php:16
+msgid "Red"
+msgstr "红色"
+
+#: config/options.php:22
+msgid "Display Style"
+msgstr "显示风格"
+
+#: config/options.php:26
+msgid "Pure Text"
+msgstr "纯文本"
+
+#: config/options.php:27
+msgid "Show Thumbnail"
+msgstr "显示缩略图"
+
+#: config/options.php:33
+msgid "Auxiliary"
+msgstr "辅助"
+
+#: config/options.php:39
+msgid "Enable static file CDN acceleration"
+msgstr "开启静态文件CDN加速"
+
+#: config/options.php:45
+msgid "Enbale category badge on the list page"
+msgstr "在列表页上启用类别标记"
+
+#: config/options.php:51
+msgid "Enable article seo"
+msgstr "开启文章SEO"
+
+#: config/options.php:57
+msgid "Enable the phrase"
+msgstr "开启说说"
+
+#: config/options.php:63
+msgid "Baidu Statistics"
+msgstr "百度统计"
+
+#: config/options.php:64
+msgid "Fill in baidu statistics script"
+msgstr "填写百度统计脚本"
+
+#: config/options.php:73
+msgid "Baidu Auto Push"
+msgstr "百度自动推送"
+
+#: config/options.php:74
+msgid "Fill in baidu auto push script"
+msgstr "填写百度自动推送脚本"
+
+#: config/options.php:86
+msgid "Home Settings"
+msgstr "首页设置"
+
+#: config/options.php:90
+msgid "Description"
+msgstr "描述"
+
+#: config/options.php:107
+msgid "Slide"
+msgstr "幻灯片"
+
+#: config/options.php:108
+msgid ""
+"Please set slide images below if Enable slide, Images recommended size is "
+"715px*350px."
+msgstr "如果开启幻灯片，请设置下面的幻灯片图片，图片推荐大小为715px*350px。"
+
+#: config/options.php:111
+msgid "Enable Slide"
+msgstr "开启放灯片"
+
+#: config/options.php:115
+msgid "Slide Image 1"
+msgstr "放灯片图片1"
+
+#: config/options.php:125
+msgid "Slide Image 2"
+msgstr "放灯片图片2"
+
+#: config/options.php:135
+msgid "Slide Image 3"
+msgstr "放灯片图片3"
+
+#: config/options.php:148
+msgid "Advertise Settings"
+msgstr "广告设置"
+
+#: config/options.php:151
+msgid "Single page top AD"
+msgstr "单篇页上部广告"
+
+#: config/options.php:156 config/options.php:184 config/options.php:212
+#: config/options.php:240 vendor/xenice/wp-login/src/Login.php:47
+#: vendor/xenice/wp-login/src/Login.php:71
+#: vendor/xenice/wp-login/src/Login.php:95
+msgid "Enable"
+msgstr "开启"
+
+#: config/options.php:162 config/options.php:190 config/options.php:218
+#: config/options.php:246
+msgid "PC AD code"
+msgstr "电脑端广告代码"
+
+#: config/options.php:170 config/options.php:198 config/options.php:226
+#: config/options.php:254
+msgid "Mobile AD code"
+msgstr "手机端广告代码"
+
+#: config/options.php:179
+msgid "Single page bottom AD"
+msgstr "单篇页底部广告"
+
+#: config/options.php:207
+msgid "List page top AD"
+msgstr "列表页上部广告"
+
+#: config/options.php:235
+msgid "List page bottom AD"
+msgstr "列表页底部广告"
+
+#: static/js/login.js:22 static/js/login.js:174
+msgid "Username or email cannot be empty"
+msgstr "用户名或邮箱不能为空"
+
+#: static/js/login.js:32
+msgid "Login..."
+msgstr "登录中..."
+
+#: static/js/login.js:43
+msgid "Username or password wrong"
+msgstr "用户名或密码错误"
+
+#: static/js/login.js:120
+msgid ""
+"Username can only be 6-16 characters composed of alphanumeric or underlined "
+"characters"
+msgstr "用户名只能是6-16个字符，由字母、数字或下划线字符组成"
+
+#: static/js/login.js:125
+msgid "Email format error"
+msgstr "邮箱格式错误"
+
+#: static/js/login.js:130 static/js/login.js:212
+msgid "Password length at least 6"
+msgstr "密码长度至少6位"
+
+#: static/js/login.js:136 static/js/login.js:178 static/js/login.js:207
+msgid "The captcha cannot be empty"
+msgstr "验证码不能为空"
+
+#: static/js/login.js:141
+msgid "Register..."
+msgstr "注册中..."
+
+#: static/js/login.js:154
+msgid "Registered successfully"
+msgstr "注册成功"
+
+#: static/js/login.js:182 static/js/login.js:221
+msgid "execute..."
+msgstr "执行中..."
+
+#: static/js/login.js:194
+msgid ""
+"The link has been successfully sent to your email, please check and confirm."
+msgstr "链接已经成功发送到您的邮箱，请查收并确认。"
+
+#: static/js/login.js:235
+msgid "Password changed successfully, please remember the password."
+msgstr "密码更改成功，请记住密码。"
+
+#: static/js/login.js:252
+msgid "Your operation too fast, please wait a moment."
+msgstr "您操作太快了，请稍等。"
+
+#: static/js/login.js:258
+msgid "Send in..."
+msgstr "发送中..."
+
+#: static/js/login.js:271
+msgid "Captcha has been sent to the email, may appear in the dustbin oh ~"
+msgstr "验证码已发送到邮箱，可能出现在垃圾箱哦~"
+
+#: static/js/login.js:277 static/js/login.js:282
+msgid "Resend captcha"
+msgstr "重新发送验证码"
+
+#: static/js/login.js:290
+msgid "Email already exists"
+msgstr "邮箱已存在"
+
+#: static/js/login.js:296
+msgid "The captcha failed to send. Please try again later."
+msgstr "验证码发送失败，请稍后再试。"
+
+#: vendor/xenice/wp-framework/mail/Mail.php:31
+msgid "Mail"
+msgstr "邮箱"
+
+#: vendor/xenice/wp-framework/mail/Mail.php:32
+msgid "Mail Settings"
+msgstr "邮箱设置"
+
+#: vendor/xenice/wp-framework/mail/Mail.php:36
+msgid "Mail Service"
+msgstr "邮箱服务器"
+
+#: vendor/xenice/wp-framework/mail/Mail.php:37
+msgid "Enable mail service"
+msgstr "启用邮箱服务器"
+
+#: vendor/xenice/wp-framework/mail/Mail.php:43
+msgid "From Name"
+msgstr "发件人名称"
+
+#: vendor/xenice/wp-framework/mail/Mail.php:49
+msgid "STMP Host"
+msgstr "STMP服务器"
+
+#: vendor/xenice/wp-framework/mail/Mail.php:55
+msgid "STMP Post"
+msgstr "STMP端口"
+
+#: vendor/xenice/wp-framework/mail/Mail.php:61
+msgid "Mail Account"
+msgstr "邮箱账号"
+
+#: vendor/xenice/wp-framework/mail/Mail.php:67
+msgid "Mail Password"
+msgstr "邮箱密码"
+
+#: vendor/xenice/wp-framework/mail/Mail.php:73
+msgid "SMTP Auth"
+msgstr "SMTP验证"
+
+#: vendor/xenice/wp-framework/mail/Mail.php:74
+msgid "Enable SMTP Auth service"
+msgstr "启用SMTP验证服务"
+
+#: vendor/xenice/wp-framework/mail/Mail.php:80
+msgid "SMTP Secure"
+msgstr "SMTP 安全"
+
+#: vendor/xenice/wp-framework/mail/Mail.php:81
+msgid "Fill in ssl if SMTP Auth service is enabled, leave blank if not"
+msgstr "如果启用SMTP验证服务，请填写ssl;如果没有启用SMTP验证服务，请留空"
+
+#: vendor/xenice/wp-framework/mail/Send.php:31
+#: vendor/xenice/wp-framework/mail/Send.php:33
+msgid "Send"
+msgstr "发送"
+
+#: vendor/xenice/wp-framework/mail/Send.php:32
+msgid "Send Mail"
+msgstr "发送邮件"
+
+#: vendor/xenice/wp-framework/mail/Send.php:37
+msgid "Mail Title"
+msgstr "邮件标题"
+
+#: vendor/xenice/wp-framework/mail/Send.php:43
+msgid "Mail Content"
+msgstr "邮件内容"
+
+#: vendor/xenice/wp-framework/mail/Send.php:60
+msgid "Send successfully"
+msgstr "发送成功"
+
+#: vendor/xenice/wp-framework/mail/Send.php:62
+msgid "Send failure"
+msgstr "发送失败"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:34
+msgid "Optimize"
+msgstr "优化"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:35
+msgid "Optimize Options"
+msgstr "优化选项"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:38
+msgid "Global optimization"
+msgstr "全局优化"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:44
+msgid "Disable all built-in widgets"
+msgstr "禁用所有内置小工具"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:50
+msgid "Disable the pingback"
+msgstr "禁用pingback"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:56
+msgid "Disable the emoji"
+msgstr "禁用emoji"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:62
+msgid "Disable the restapi"
+msgstr "禁用restapi"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:68
+msgid "Disable the embeds"
+msgstr "禁用embeds"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:74
+msgid "Disable the opensans"
+msgstr "禁用opensans"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:80
+msgid "Remove the category link prefix"
+msgstr "删除分类链接前缀"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:86
+msgid "Remove the article link subcategory, leaving only the parent category"
+msgstr "删除文章链接子分类，只留下父分类"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:92
+msgid "Enable official Gravatar SSL avatar links"
+msgstr "启用官方的Gravatar SSL头像链接"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:98
+msgid "The user list display registration and last login information"
+msgstr "用户列表显示注册和最后登录信息"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:103
+msgid "Back-end optimization"
+msgstr "后端优化"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:109
+msgid "Disable auto save"
+msgstr "禁用自动保存"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:115
+msgid "Disable revision"
+msgstr "禁用修订版本"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:121
+msgid "Profile can also be saved when user email is empty"
+msgstr "用户电子邮件为空时，也可以保存个人资料"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:127
+msgid ""
+"Only current user articles and comments are displayed, except for "
+"administrators"
+msgstr "除了管理员之外，只显示当前用户的文章和评论"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:133
+msgid "Remove backstage at the top of the W icon in the upper left corner"
+msgstr "移除后台左上角的W图标"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:139
+msgid "Disable update reminders"
+msgstr "禁用更新提醒"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:145
+msgid "Enable the link"
+msgstr "启用友情链接"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:151
+msgid "Convert the html within the code tag to entity before saving article"
+msgstr "在保存文章之前，将代码标记中的html转换为实体"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:156
+msgid "Front-end optimization"
+msgstr "前端优化"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:162
+msgid "Disable the front admin bar"
+msgstr "禁用前台管理栏"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:168
+msgid "Disable useless links to the front wp_head"
+msgstr "禁用前端wp_head的无用链接"
+
+#: vendor/xenice/wp-framework/optimize/UserOptimize.php:73
+#: vendor/xenice/wp-framework/optimize/UserOptimize.php:101
+msgid "All"
+msgstr "全部"
+
+#: vendor/xenice/wp-framework/optimize/UserOptimize.php:74
+msgid "Publish"
+msgstr "发布"
+
+#: vendor/xenice/wp-framework/optimize/UserOptimize.php:75
+msgid "Draft"
+msgstr "草稿"
+
+#: vendor/xenice/wp-framework/optimize/UserOptimize.php:76
+msgid "Pending"
+msgstr "待审"
+
+#: vendor/xenice/wp-framework/optimize/UserOptimize.php:77
+msgid "trash"
+msgstr "回收站"
+
+#: vendor/xenice/wp-framework/optimize/UserOptimize.php:81
+#: vendor/xenice/wp-framework/optimize/UserOptimize.php:84
+msgid "("
+msgstr "（"
+
+#: vendor/xenice/wp-framework/optimize/UserOptimize.php:81
+#: vendor/xenice/wp-framework/optimize/UserOptimize.php:84
+msgid ")"
+msgstr "）"
+
+#: vendor/xenice/wp-framework/optimize/UserTableOptimize.php:68
+msgid "Registered"
+msgstr "已注册"
+
+#: vendor/xenice/wp-framework/optimize/UserTableOptimize.php:69
+msgid "Last Login"
+msgstr "上次登录"
+
+#: vendor/xenice/wp-framework/option/Admin.php:72
+msgid "Save Changes"
+msgstr "保存更改"
+
+#: vendor/xenice/wp-framework/option/Admin.php:100
+msgid "save success"
+msgstr "保存成功"
+
+#: vendor/xenice/wp-framework/option/Admin.php:101
+#: vendor/xenice/wp-framework/option/Admin.php:109
+msgid "Ignore this notice"
+msgstr "忽略此通知"
+
+#: vendor/xenice/wp-framework/option/Admin.php:108
+msgid "save failed"
+msgstr "保存失败"
+
+#: vendor/xenice/wp-framework/option/Elements.php:105
+msgid "URL:"
+msgstr "链接："
+
+#: vendor/xenice/wp-framework/option/Elements.php:107
+msgid "Title:"
+msgstr "标题："
+
+#: vendor/xenice/wp-framework/option/Elements.php:109
+msgid "Image Path:"
+msgstr "图片路径："
+
+#: vendor/xenice/wp-framework/option/Option.php:27
+msgid "Theme"
+msgstr "主题"
+
+#: vendor/xenice/wp-framework/view/Template.php:56
+msgid "Please set up widgets at dashboard!"
+msgstr "请在后台设置小工具!"
+
+#: vendor/xenice/wp-login/src/Login.php:37
+msgid "Social Login Settings"
+msgstr "社会登录设置"
+
+#: vendor/xenice/wp-login/src/Login.php:40
+msgid "QQ Login"
+msgstr "QQ登录"
+
+#: vendor/xenice/wp-login/src/Login.php:41
+#, php-format
+msgid ""
+"<a href=\"%s\" target=\"_blank\">Register</a> a QQ social login account. <a "
+"onclick=\"copyLink(this);return false;\" href=\"%s?action=qqCallback\">Copy</"
+"a> the callback url."
+msgstr ""
+"<a href=\"%s\" target=\"_blank\">注册</a>QQ授权登录账号。 <a onclick="
+"\"copyLink(this);return false;\" href=\"%s?action=qqCallback\">复制</a>回调链"
+"接。"
+
+#: vendor/xenice/wp-login/src/Login.php:53
+#: vendor/xenice/wp-login/src/Login.php:77
+msgid "APP ID"
+msgstr ""
+
+#: vendor/xenice/wp-login/src/Login.php:59
+#: vendor/xenice/wp-login/src/Login.php:101
+msgid "APP Key"
+msgstr ""
+
+#: vendor/xenice/wp-login/src/Login.php:64
+msgid "WeChat Login"
+msgstr "微信登录"
+
+#: vendor/xenice/wp-login/src/Login.php:65
+#, php-format
+msgid ""
+"<a href=\"%s\" target=\"_blank\">Register</a> a WeChat social login account. "
+"<a onclick=\"copyLink(this);return false;\" href=\"%s?action=wechatCallback"
+"\">Copy</a> the callback url."
+msgstr ""
+"<a href=\"%s\" target=\"_blank\">注册</a>微信授权登录账号。<a onclick="
+"\"copyLink(this);return false;\" href=\"%s?action=wechatCallback\">复制</a>回"
+"调链接。"
+
+#: vendor/xenice/wp-login/src/Login.php:83
+#: vendor/xenice/wp-login/src/Login.php:107
+msgid "APP Secret"
+msgstr ""
+
+#: vendor/xenice/wp-login/src/Login.php:88
+msgid "WeiBo Login"
+msgstr "微博登录"
+
+#: vendor/xenice/wp-login/src/Login.php:89
+#, php-format
+msgid ""
+"<a href=\"%s\" target=\"_blank\">Register</a> a WeiBo social login account. "
+"<a onclick=\"copyLink(this);return false;\" href=\"%s?action=weiboCallback"
+"\">Copy</a> the callback url."
+msgstr ""
+"<a href=\"%s\" target=\"_blank\">注册</a>微博授权登录账号。<a onclick="
+"\"copyLink(this);return false;\" href=\"%s?action=weiboCallback\">复制</a>回"
+"调链接。"
+
+#: vendor/xenice/wp-login/src/Login.php:146
+msgid "Successfully copied to clipboard"
+msgstr "成功复制到剪切板"
+
+#: vendor/xenice/wp-login/src/Login.php:147
+msgid "The browser does not support link clicks to copy to the clipboard"
+msgstr "浏览器不支持将链接单击复制到剪贴板"
+
+#: vendor/xenice/wp-login/src/QQLogin.php:84
+#: vendor/xenice/wp-login/src/WechatLogin.php:65
+#: vendor/xenice/wp-login/src/WeiboLogin.php:65
+msgid "The state does not match. You may be a victim of CSRF."
+msgstr "状态不匹配。你可能是CSRF受害者。"
+
+#: vendor/xenice/wp-login/src/QQLogin.php:117
+#: vendor/xenice/wp-login/src/WechatLogin.php:73
+#: vendor/xenice/wp-login/src/WeiboLogin.php:85
+msgid "You are logged in, please bind in the user page."
+msgstr "已登录，请在用户页面中绑定。"
+
+#: vendor/xenice/wp-login/src/QQLogin.php:177
+#: vendor/xenice/wp-login/src/WechatLogin.php:135
+#: vendor/xenice/wp-login/src/WeiboLogin.php:150
+msgid ""
+"The binding failed. It may have been bound to other accounts. Please log in "
+"to other accounts to unbind."
+msgstr "绑定失败，它可能被绑定到其他账户，请登录到其他帐户解除绑定。"
+
+#: vendor/xenice/wp-login/src/QQLogin.php:191
+#: vendor/xenice/wp-login/src/WechatLogin.php:149
+#: vendor/xenice/wp-login/src/WeiboLogin.php:165
+msgid "Binding failed, please login first"
+msgstr "绑定失败，请先登录"
+
+#~ msgid "Log in other ways: "
+#~ msgstr "其它登录方式："
+
+#~ msgid "Create a unique slug the first time you save the article"
+#~ msgstr "第一次保存文章时创建唯一的slug"
+
+#~ msgid "Current Version"
+#~ msgstr "版本"
+
+#~ msgid "Source Single Page"
+#~ msgstr "资源单篇页"
+
+#~ msgid "Custom"
+#~ msgstr "自定义"
+
+#~ msgid "Custom Settings"
+#~ msgstr "自定义设置"
+
+#~ msgid "Test Module"
+#~ msgstr "测试模块"
+
+#~ msgid "Enable Music"
+#~ msgstr "开启音乐"
+
+#~ msgid "Free"
+#~ msgstr "免费"
+
+#~ msgid "Weibo Login"
+#~ msgstr "微薄登录"
+
+#~ msgid "private"
+#~ msgstr "私有"
+
+#~ msgid ""
+#~ "You need <a href=\"javascript:;\" data-toggle=\"modal\" data-target="
+#~ "\"#login-modal\">login</a> to reply."
+#~ msgstr ""
+#~ "请<a href=\"javascript:;\" data-toggle=\"modal\" data-target=\"#login-"
+#~ "modal\">登录</a>后评论。"
+
+#~ msgid ""
+#~ "Not logged in. I want to <a href=\"javascript:;\" data-toggle=\"modal\" "
+#~ "data-target=\"#login-modal\">login</a>"
+#~ msgstr ""
+#~ "您还没有登录，请先<a href=\"javascript:;\" data-toggle=\"modal\" data-"
+#~ "target=\"#login-modal\">登录</a>"
+
+#~ msgid "Download"
+#~ msgstr "下载"
+
+#~ msgid "Order details"
+#~ msgstr "订单详情"
+
+#~ msgid "Purchased"
+#~ msgstr "已购买"
+
+#~ msgid "Authorization"
+#~ msgstr "授权"
+
+#~ msgid "Please select application"
+#~ msgstr "请选择应用"
+
+#~ msgid "Site name cannot be empty"
+#~ msgstr "网站名称不能为空"
+
+#~ msgid "Domain name cannot be empty"
+#~ msgstr "域名不能为空"
+
+#~ msgid "Bind domain failed"
+#~ msgstr "绑定域名失败"
+
+#~ msgid "Bind domain successfully"
+#~ msgstr "绑定域名成功"
+
+#~ msgid "Application"
+#~ msgstr "应用"
+
+#~ msgid "Site Name"
+#~ msgstr "网站名称"
+
+#~ msgid "Please enter the website name"
+#~ msgstr "请输入网站名称"
+
+#~ msgid "Domain Name"
+#~ msgstr "域名"
+
+#~ msgid "Auth Code"
+#~ msgstr "授权码"
+
+#~ msgid "Buy success"
+#~ msgstr "购买成功"
+
+#~ msgid "Buy failed"
+#~ msgstr "购买失败"
+
+#~ msgid "Has Buy"
+#~ msgstr "已购买"
+
+#~ msgid "Buy"
+#~ msgstr "购买"
+
+#~ msgid "Login to buy"
+#~ msgstr "登录购买"
+
+#~ msgid "Demo"
+#~ msgstr "演示"
+
+#~ msgid "Download Count"
+#~ msgstr "下载数量"
+
+#~ msgid "Size"
+#~ msgstr "大小"
+
+#~ msgid "Format"
+#~ msgstr "格式"
+
+#~ msgid "Price"
+#~ msgstr "价格"
+
+#~ msgid "Name"
+#~ msgstr "名称"
+
+#~ msgid "Xenice Related Articles, Use only on single pages"
+#~ msgstr "Xenice相关文章，只在单篇页中使用"
+
+#~ msgid "Article Sort:"
+#~ msgstr "文章排序："
+
+#~ msgid "Date"
+#~ msgstr "日期"
+
+#~ msgid "Views"
+#~ msgstr "阅读"
+
+#~ msgid "Auto gets category name as the widget name suffix."
+#~ msgstr "自动获取类别名称作为小部件名称后缀。"
+
+#~ msgid "Pink"
+#~ msgstr "粉色"
+
+#~ msgid "Site Icon"
+#~ msgstr "网站图标"
+
+#~ msgid "Site Logo"
+#~ msgstr "网站Logo"
+
+#~ msgid "Default Format"
+#~ msgstr "默认格式"
+
+#~ msgid "Article"
+#~ msgstr "文章"
+
+#~ msgid "Image"
+#~ msgstr "图片"
+
+#~ msgid "Source"
+#~ msgstr "资源"
+
+#~ msgid "Article Category"
+#~ msgstr "文章分类"
+
+#~ msgid "[none]"
+#~ msgstr "[无]"
+
+#~ msgid "Image Category"
+#~ msgstr "图片分类"
+
+#~ msgid "Source Category"
+#~ msgstr "资源分类"
+
+#~ msgid "Search Type"
+#~ msgstr "搜索类型"
+
+#~ msgid "Local Search"
+#~ msgstr "本地搜索"
+
+#~ msgid "Baidu Search"
+#~ msgstr "百度搜索"
+
+#~ msgid "Baidu Search Code"
+#~ msgstr "百度搜索代码"
+
+#~ msgid "The search box uses a custom template"
+#~ msgstr "搜索框采用自定义模板"
+
+#~ msgid "Site visit statistics"
+#~ msgstr "网站访问统计"
+
+#~ msgid "Site ICP"
+#~ msgstr "网站备案号"
+
+#~ msgid "Only search title"
+#~ msgstr "只搜索标题"
+
+#~ msgid "Enable code highlight"
+#~ msgstr "开启代码高亮显示"
+
+#~ msgid "Enable site source compression"
+#~ msgstr "启用网站代码压缩"
+
+#~ msgid "Enable css animation"
+#~ msgstr "开启CSS动画"
+
+#~ msgid "Focus Type"
+#~ msgstr "焦点类型"
+
+#~ msgid "Banner"
+#~ msgstr "横幅"
+
+#~ msgid "Close"
+#~ msgstr "关闭"
+
+#~ msgid "Banner Image"
+#~ msgstr "横幅图片"
+
+#~ msgid "iu200"
+#~ msgstr "爱优两百"
+
+#~ msgid "Banner Description"
+#~ msgstr "横幅描述"
+
+#~ msgid "List title"
+#~ msgstr "列表标题"
+
+#~ msgid "List"
+#~ msgstr "列表"
+
+#~ msgid "List Page Settings"
+#~ msgstr "列表页设置"
+
+#~ msgid "Show Source"
+#~ msgstr "显示资源"
+
+#~ msgid "Display field"
+#~ msgstr "显示字段"
+
+#~ msgid "display author name"
+#~ msgstr "显示作者名称"
+
+#~ msgid "display article description"
+#~ msgstr "显示文章描述"
+
+#~ msgid "display article views"
+#~ msgstr "显示文章阅读量"
+
+#~ msgid ""
+#~ "The first picture of the article is used as a thumbnail when no thumbnail "
+#~ "is set"
+#~ msgstr "当没有设置缩略图时，将文章的第一张图片用作缩略图"
+
+#~ msgid "Single"
+#~ msgstr "单篇"
+
+#~ msgid "Single Page Settings"
+#~ msgstr "单篇页设置"
+
+#~ msgid "display article comments"
+#~ msgstr "显示文章评论数"
+
+#~ msgid "Tags Alias"
+#~ msgstr "标签别名"
+
+#~ msgid "Related Articles Alias"
+#~ msgstr "相关文章别名"
+
+#~ msgid "user not exist"
+#~ msgstr "用户不存在"
+
+#~ msgid "No login"
+#~ msgstr "未登录"
+
+#~ msgid "Posts not exist"
+#~ msgstr "文章不存在"
+
+#~ msgid "Pay"
+#~ msgstr "支付"
+
+#~ msgid "Pay Settings"
+#~ msgstr "支付设置"
+
+#~ msgid "Xunhupay Wechat"
+#~ msgstr "虎皮椒微信"
+
+#~ msgid ""
+#~ "<a href=\"%s\" target=\"_blank\">Register</a> a xunhupay account. <a "
+#~ "onclick=\"copyLink(this);return false;\" href=\"%s?action=qqCallback"
+#~ "\">Copy</a> the callback url."
+#~ msgstr ""
+#~ "<a href=\"%s\" target=\"_blank\">注册</a>QQ授权登录账号。 <a onclick="
+#~ "\"copyLink(this);return false;\" href=\"%s?action=qqCallback\">复制</a>回"
+#~ "调链接。"
+
+#~ msgid "Pay Way"
+#~ msgstr "支付方式"
+
+#~ msgid "Charge"
+#~ msgstr "收费"
+
+#~ msgid "None"
+#~ msgstr "无"
+
+#~ msgid "Domain name authorization"
+#~ msgstr "域名授权"
+
+#~ msgid "Privilege"
+#~ msgstr "特权"
+
+#~ msgid "User Free"
+#~ msgstr "用户免费"
+
+#~ msgid "VIP Free"
+#~ msgstr "VIP免费"
+
+#~ msgid "Pay Count"
+#~ msgstr "购买数量"
+
+#~ msgid "Download URL"
+#~ msgstr "下载链接"
+
+#~ msgid "Demo URL"
+#~ msgstr "演示链接"
+
+#~ msgid "Orders"
+#~ msgstr "订单"
+
+#~ msgid "All Orders"
+#~ msgstr "全部订单"
+
+#~ msgid "Authorize"
+#~ msgstr "授权"
+
+#~ msgid "Domain Bind"
+#~ msgstr "域名绑定"
+
+#~ msgid "e.g. www.iu200.com"
+#~ msgstr "例如："
+
+#~ msgid "Site name must be less than 50 characters"
+#~ msgstr "网站名称必须少于50个字符"
+
+#~ msgid "Domain name must be less than 50 characters"
+#~ msgstr "域名必须少于50个字符"
+
+#~ msgid "Thank you for using iunice theme."
+#~ msgstr "感觉使用iuniceth"
+
+#~ msgid "Personal Center"
+#~ msgstr "个人中心"
+
+#~ msgid "WordPress built-in features"
+#~ msgstr "WordPress内置功能"
+
+#~ msgid ""
+#~ "Unused functions are recommended to disable, so as not to affect the site "
+#~ "speed"
+#~ msgstr "未使用的功能建议禁用，以免影响网站速度"
+
+#~ msgid "Xenice built-in features"
+#~ msgstr "Xenice内置功能"
+
+#~ msgid "Some commonly used functions can be enabled or disabled as needed"
+#~ msgstr "一些常用的功能可以根据需要启用或禁用"
+
+#~ msgid "sidebar"
+#~ msgstr "侧边栏"
+
+#~ msgid "Stick"
+#~ msgstr "置顶"
+
+#~ msgid "Comments Closed"
+#~ msgstr "评论关闭"
+
+#~ msgid "Please don't directly loading the page, thanks!"
+#~ msgstr "请不要直接加载该页面，谢谢!"
+
+#~ msgid "This article requires a password, enter the password to access."
+#~ msgstr "这篇文章需要密码，请输入密码访问。"
+
+#~ msgid "Welcome"
+#~ msgstr "欢迎"
+
+#~ msgid "Submit / Ctrl+Enter"
+#~ msgstr "提交评论 / Ctrl+Enter"
+
+#~ msgid "Dropdown menu"
+#~ msgstr "下拉菜单"
+
+#~ msgid "%s Floor"
+#~ msgstr "%s 楼"
+
+#~ msgid "Popular posts"
+#~ msgstr "热门文章"
+
+#~ msgid "Last modified posts"
+#~ msgstr "最近更新文章"
+
+#~ msgid "Update time："
+#~ msgstr "更新时间："
+
+#~ msgid "The page not found or not this page"
+#~ msgstr "页面出错或者不是当前页面"
+
+#~ msgid "You can also try to search the post!"
+#~ msgstr "你可以通过搜索来找到想要的文章!"
+
+#~ msgid "Tag"
+#~ msgstr "标签"
+
+#~ msgid "0 reply"
+#~ msgstr "0 回复"
+
+#~ msgid "1 reply"
+#~ msgstr "1 回复"
+
+#~ msgid "% replies"
+#~ msgstr "% 回复"
+
+#~ msgid "Website"
+#~ msgstr "网址"
+
+#~ msgid "Categories"
+#~ msgstr "分类"
+
+#~ msgid "The page fault or not this page"
+#~ msgstr "页面出错或者没有此页面"
+
+#~ msgid ""
+#~ "You can also try to through the top of the search to find what you want "
+#~ "to see"
+#~ msgstr "你也可以试着通过上方的搜索找到你想要看到的文章！"
