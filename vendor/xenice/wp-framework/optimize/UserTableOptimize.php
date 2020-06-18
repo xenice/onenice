@@ -54,7 +54,7 @@ class UserTableOptimize
     
     function wpLogin($login)
     {
-        $user = get_userdatabylogin( $login );
+        $user = get_user_by('login', $login );
         $this->login($user->ID);
     }
     
@@ -109,7 +109,7 @@ class UserTableOptimize
     { 
 
         if(!isset($_REQUEST['orderby']) || $_REQUEST['orderby']=='user_registered' ){  
-            if( !in_array($_REQUEST['order'],array('asc','desc')) ){  
+            if(empty($_REQUEST['order']) || !in_array($_REQUEST['order'],array('asc','desc')) ){  
                 $_REQUEST['order'] = 'desc';  
             }  
             $obj->query_orderby = "ORDER BY user_registered ".$_REQUEST['order']."";  

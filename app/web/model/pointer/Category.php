@@ -14,7 +14,7 @@ class Category extends CategoryPointer
     
     public function url()
     {
-        return get_category_link($this->id());
+        return get_term_link($this->id(), Theme::get('taxonomy'));
     }
     
     /**

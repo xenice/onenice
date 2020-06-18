@@ -23,9 +23,9 @@ class Controller extends Base
 		return $this->extends->__get($key);
 	}
 	
-	public function render($name = 'index')
+	public function render($name = 'index', $dir = '')
 	{
-		$this->extends->render($name);
+		$this->extends->render($name, $dir);
 	}
 	
 	public function global($name)

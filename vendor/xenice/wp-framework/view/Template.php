@@ -22,7 +22,9 @@ class Template extends Base
         do_action( 'wp_head');
         $head = ob_get_contents();
         ob_end_clean();
-        return Theme::call('head', $head);
+        $head = Theme::call('head', $head);
+        $head = Theme::call(Theme::get('type') . '_head', $head);
+        return $head;
     }
     
     public function footer()
@@ -32,6 +34,7 @@ class Template extends Base
         $footer = ob_get_contents();
         ob_end_clean();
         $footer = Theme::call('footer', $footer);
+        $footer = Theme::call(Theme::get('type') . '_footer', $footer);
         if($this->js){
             $footer .= '<script>' .$this->js . '</script>';
         }

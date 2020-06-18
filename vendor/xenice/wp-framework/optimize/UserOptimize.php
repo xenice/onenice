@@ -30,7 +30,7 @@ class UserOptimize
             add_filter( 'parse_query', [$this,'showArticlesTable']);
             add_filter('views_edit-comments', [$this,'showCommentsCount']);
             add_filter( 'comments_list_table_query_args', [$this,'showCommentsTable']);
-            add_action('admin_menu',[$this, filterMenu]);
+            add_action('admin_menu',[$this, 'filterMenu']);
         }
         
     }

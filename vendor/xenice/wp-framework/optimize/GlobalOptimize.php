@@ -28,6 +28,7 @@ class GlobalOptimize
         take('remove_category_pre') && new NoCategory;
         take('remove_child_categories') && add_filter( 'post_link_category', [$this,'removeChildCategories']);
         take('enable_user_register_login_info') && new UserTableOptimize;
+        take('enable_custom_avatar') && new AvatarOptimize;
     }
     
     /**

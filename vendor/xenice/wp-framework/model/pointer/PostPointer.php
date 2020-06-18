@@ -76,6 +76,16 @@ class PostPointer extends Pointer
         return $this->row->post_excerpt;
     }
     
+	public function parent()
+	{
+	    return $this->row->post_parent;
+	}
+
+    public function order()
+    {
+        return $this->row->menu_order;
+    }
+    
     public function comments()
 	{
 	    return Theme::call('post_comments', $this->row->comment_count, $this);

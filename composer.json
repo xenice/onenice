@@ -1,0 +1,21 @@
+{
+    "name": "xenice/wp-xenice",
+    "description": "A simple wordpress theme",
+    "authors": [
+        {
+            "name": "xenice",
+            "email": "xenice@qq.com"
+        }
+    ],
+	"minimum-stability": "dev",
+    "require": {
+		"php": ">=7.0",
+		"xenice/wp-framework":"@dev",
+		"xenice/wp-login":"@dev"
+	},
+    "autoload": {
+		"psr-4": {
+			"app\\":"app/"
+		}
+	}
+}

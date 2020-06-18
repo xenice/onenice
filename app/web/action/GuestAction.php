@@ -18,7 +18,9 @@ class GuestAction extends GlobalAction
     
     public function customColor($head)
     {
-        list($a1, $a2, $b1, $b2, $b3, $b4) = explode(' ', take('color'));
+        $color = explode(' ', take('color'));
+        Theme::use('template')->color = $color;
+        list($a1, $a2, $b1, $b2, $b3, $b4) = $color;
         $head .= '<style>';
         $head .= "a:hover{color:$a1;}.breadcrumb a:hover{color:$a2;}.btn-custom,.badge-custom{color:$b3!important;background-color:$b1;border-color:$b1;}.btn-custom:hover,.badge-custom:hover{color:$b3;background-color:$b2;border-color:$b2}.form-control:focus {border-color: $b4!important;}.navbar-nav .current-menu-item a{color:$a1}.search-form .fa-search:hover{color:$a2;}.user-login .nav-item .nav-link{color:$b4;}.user-login .nav-item .active{color:$a2;}";
         $head .= ".fa-weixin{color:#7BD172}.fa-qq{color:#f67585}.fa-weibo{color:#ff8d8d}";

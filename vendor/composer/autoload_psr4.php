@@ -12,6 +12,8 @@ return array(
     'xenice\\optimize\\' => array($vendorDir . '/xenice/wp-framework/optimize'),
     'xenice\\model\\' => array($vendorDir . '/xenice/wp-framework/model'),
     'xenice\\mail\\' => array($vendorDir . '/xenice/wp-framework/mail'),
+    'xenice\\cache\\' => array($vendorDir . '/xenice/wp-framework/cache'),
     'xenice\\login\\' => array($vendorDir . '/xenice/wp-login/src'),
+    'xenice\\profession\\' => array($vendorDir . '/xenice/wp-profession/src'),
     'app\\' => array($baseDir . '/app'),
 );

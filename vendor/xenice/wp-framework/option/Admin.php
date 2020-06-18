@@ -138,7 +138,7 @@ class Admin extends Base
         </style>
         <div class="wrap">
             <h2><?=$option['title']?></h2>
-            <?=$option['desc']?'<div style="margin-top:8px">'.$option['desc'].'</div>':''?>
+            <?=isset($option['desc'])?'<div style="margin-top:8px">'.$option['desc'].'</div>':''?>
             <form method="post" action="" id="xenice_option_form">
                 <?php wp_nonce_field('xenice-options-update'); ?>
                 <input type="hidden" name="xenice_option_key" value="<?=$option['id']?>">

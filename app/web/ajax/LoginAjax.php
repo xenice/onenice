@@ -207,7 +207,7 @@ class LoginAjax extends Ajax
 			if(!username_exists( $user_login )){
 				$error = _t("Username does not exist");
 			}else{
-				$user_data = get_userdatabylogin($username);
+				$user_data = get_user_by('login', $username);
 				$user_email = $user_data->user_email;
 				if(empty($user_email)){
 					$error = _t("User does not set email");

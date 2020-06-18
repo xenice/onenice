@@ -13,7 +13,15 @@ class Loader extends Base
 {
     public function __construct()
 	{
-	    Fault::instance();
+	    isset($_SESSION) || session_start();
+	    load_theme_textdomain(THEME_NAME, THEME_DIR . '/lang');
+	    if(DEBUG){
+	        error_reporting(-1);
+            ini_set('display_errors', 1);
+	    }
+	    else{
+	        Fault::instance();
+	    }
 	    date_default_timezone_set(get_option('timezone_string'));
 	    add_action('after_switch_theme',[$this, 'themeCheck']);
 	    Theme::alias([
@@ -36,6 +44,12 @@ class Loader extends Base
 	        
             // template
             'template' => 'xenice\view\Template',
+            
+            // route
+            'route' => 'xenice\theme\Route',
+            
+            // cache
+            'cache' => 'xenice\cache\Cache',
 
         ], true);
         
@@ -64,9 +78,6 @@ class Loader extends Base
 	
 	function themeCheck()
 	{
-	    $username = $_POST['key'];
-        $password = $_POST['seceret'];
-        
         $body = [
             'key'=>'iunice',
             'seceret'=>'f47a40c92ef0605f0bfdb03b7b02bfbd',

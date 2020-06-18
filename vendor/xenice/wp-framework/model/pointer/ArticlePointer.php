@@ -20,12 +20,15 @@ class ArticlePointer extends PostPointer
     
 	public function cid()
 	{
-	    return $this->row->post_category[0];
+	    global $wpdb;
+	    $cid = $wpdb->get_var("SELECT term_taxonomy_id FROM $wpdb->term_relationships WHERE object_id=".$this->id());
+	    return intval($cid);
 	}
 	
-    public function cids()
+	public function taxonomy()
 	{
-	    return $this->row->post_category;
+	    $type = $this->type();
+	    return ($type == 'post')?'category':$type . "_category";
 	}
 	
 	public function content()

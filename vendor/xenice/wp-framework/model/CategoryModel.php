@@ -16,9 +16,9 @@ class CategoryModel extends Model
     
     public function __construct()
     {
-        if(Theme::get('type') == 'category'){
-            global $cat;
-            $this->pointer = Theme::new('category_pointer', $cat);
+        $type = Theme::get('type');
+        if($type == 'category' || $type == 'tax'){
+            $this->pointer = Theme::new('category_pointer', Theme::get('cid'));
         }
     }
 }

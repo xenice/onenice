@@ -22,7 +22,6 @@ class SickyArticles extends \WP_Widget
                 $args  = array(
                     'orderby'             => 'modified',
                     'post__in' => get_option('sticky_posts'),
-                    'caller_get_posts' => 1,
                     'post_type'           => 'post',
                     'post_status'         => 'publish',
                     'showposts'           => $instance['limit']
@@ -37,7 +36,7 @@ class SickyArticles extends \WP_Widget
                         </li>
                     <?php else: ?>
                         <li class="d-flex thumbnail">
-                            <img class="lazyload" src="<?=STATIC_URL?>/images/loading.png" data-src="<?=$p->thumbnail()?>"/>
+                            <img class="lazyload" src="<?=STATIC_URL?>/images/thumbnail.png" data-src="<?=$p->thumbnail()?>"/>
                             <div class="data">
                                 <a href="<?=$p->url()?>" rel="bookmark" title="<?=$p->title()?>"><?=$p->title()?></a>
                                 <span><?=$p->date()?></span>

@@ -6,7 +6,7 @@
     <meta name="description" content="<?=$description??''?>"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
-    <meta name="baidu-site-verification" content="D5SBt5Hznm" />
+    <meta name="baidu-site-verification" content="Qbrs7uy60v" />
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
     <?=$template->head()?>
 </head>

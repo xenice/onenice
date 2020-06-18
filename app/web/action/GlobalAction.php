@@ -97,5 +97,4 @@ class GlobalAction extends Action
             'after_title'   => '</h3>'
         ]);
     }
-    
 }

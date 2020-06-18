@@ -8,8 +8,7 @@
 		    }
 		?>
 		<p>&copy; Copyright 2020 
-            <a href="<?=$option->info['url']?>"><?=$option->info['name']?></a> All Rights Reserved. Powered by 
-            <a href="https://wordpress.org/" target="_blank">WordPress</a>
+            <a href="<?=$option->info['url']?>"><?=$option->info['name']?></a> All Rights Reserved.
         </p>
 	</div>
 </footer>

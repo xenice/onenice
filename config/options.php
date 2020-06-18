@@ -41,7 +41,7 @@ return [
                     [
                         'id'   => 'enable_category_badge',
                         'type'  => 'checkbox',
-                        'value' => true,
+                        'value' => false,
                         'label'  => _t('Enbale category badge on the list page')
                     ],
                     [
@@ -61,7 +61,7 @@ return [
             [
                 'id'   => 'Baidu_statistics',
                 'name' => _t('Baidu Statistics'),
-                'desc' => _('Fill in baidu statistics script'),
+                'desc' => _t('Fill in baidu statistics script'),
                 'type'  => 'textarea',
                 'style' => 'regular',
                 'value' => '',
@@ -71,7 +71,7 @@ return [
             [
                 'id'   => 'baidu_auto_push',
                 'name' => _t('Baidu Auto Push'),
-                'desc' => _('Fill in baidu auto push script'),
+                'desc' => _t('Fill in baidu auto push script'),
                 'type'  => 'textarea',
                 'style' => 'regular',
                 'value' => '',
@@ -117,7 +117,7 @@ return [
                 'value' => [
                     'url'  =>'http://www.xenice.com/',
                     'title'=>'xenice',
-                    'path' =>'http://www.xenice.com/wp-content/uploads/2019/12/pure-1.jpg'
+                    'path' =>'https://www-xenice-com-1255371979.cos.ap-hongkong.myqcloud.com/project/images/2020/04/onenice_slide_1.jpg'
                 ]
             ],
             [
@@ -127,7 +127,7 @@ return [
                 'value' => [
                     'url'  =>'http://www.xenice.com/',
                     'title'=>'xenice',
-                    'path' =>'http://www.xenice.com/wp-content/uploads/2019/12/pure-2.jpg'
+                    'path' =>'https://www-xenice-com-1255371979.cos.ap-hongkong.myqcloud.com/project/images/2020/04/onenice_slide_2.jpg'
                 ]
             ],
             [
@@ -137,7 +137,7 @@ return [
                 'value' => [
                     'url'  =>'http://www.xenice.com/',
                     'title'=>'xenice',
-                    'path' =>'http://www.xenice.com/wp-content/uploads/2019/12/pure-3.jpg'
+                    'path' =>'https://www-xenice-com-1255371979.cos.ap-hongkong.myqcloud.com/project/images/2020/04/onenice_slide_3.jpg'
                 ]
             ]
         ]

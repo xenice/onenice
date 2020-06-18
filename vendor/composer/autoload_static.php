@@ -19,7 +19,9 @@ class ComposerStaticInit5fa26e59f63b759541052fd44cd6eb79
             'xenice\\optimize\\' => 16,
             'xenice\\model\\' => 13,
             'xenice\\mail\\' => 12,
+            'xenice\\cache\\' => 13,
             'xenice\\login\\' => 13,
+            'xenice\\profession\\' => 18,
         ),
         'a' => 
         array (
@@ -52,9 +54,17 @@ class ComposerStaticInit5fa26e59f63b759541052fd44cd6eb79
         array (
             0 => __DIR__ . '/..' . '/xenice/wp-framework/mail',
         ),
+        'xenice\\cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/xenice/wp-framework/cache',
+        ),
         'xenice\\login\\' => 
         array (
             0 => __DIR__ . '/..' . '/xenice/wp-login/src',
+        ),
+        'xenice\\profession\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/xenice/wp-profession/src',
         ),
         'app\\' => 
         array (

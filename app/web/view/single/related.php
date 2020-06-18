@@ -2,12 +2,12 @@
     <h3><?=_t('Related Articles')?></h3>
     <ul>
         <?php 
-        $args = array(
-            'category__in'        => $article->cid(), 
+        $args = [
+            'tax_query'           => [['taxonomy' => $article->taxonomy(), 'terms' => $article->cid()]],
+            //'category__in'        => $article->cid(), 
             'post__not_in'        => [$article->id()],
-            'ignore_sticky_posts' => 1,
             'posts_per_page'      => 8
-        );
+        ];
         while($p = $article->pointer($args)): 
         ?>
         <li>

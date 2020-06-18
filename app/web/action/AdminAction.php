@@ -11,19 +11,22 @@ class AdminAction extends GlobalAction
         add_action('after_wp_tiny_mce', [$this, 'mceButtons']);
         register_nav_menus(['top-menu'=> _t( 'Top menu')]);
         take('enable_phrase') && add_action('init', [$this, 'phrase']);
+        
 	}
 	
 	public function mceButtons($settings)
 	{
         ?>
         <script type="text/javascript">
+        QTags.addButton( 'h4', 'h4', "<h4>", "</h4>" );
         QTags.addButton( 'p', 'p', "<p>", "</p>" );
         QTags.addButton( 'pre-code', 'pre-code', "<pre><code>", "</code></pre>" );
         </script>
         <?php
     }
     
-    public function phrase(){
+    public function phrase()
+    {
     	$labels = [
         	'name' => _t('Phrase'),
         	'singular_name' => _t('Phrase'), 

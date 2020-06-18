@@ -16,37 +16,37 @@ class CategoryPointer extends Pointer
 
     public function __construct($mix)
     {
-        $this->row = get_category($mix);
+        $this->row = get_term($mix, Theme::get('taxonomy'));
     }
     
     public function id()
 	{
-		return $this->row->cat_ID;
+		return $this->row->term_id;
 	}
 	
 	public function pid()
 	{
-		return $this->row->category_parent;
+		return $this->row->parent;
 	}
 
 	
 	public function name()
 	{
-		return $this->row->cat_name;
+		return $this->row->name;
 	}
 	
 	public function slug()
 	{
-		return $this->row->category_nicename;
+		return $this->row->slug;
 	}
 	
 	public function count()
 	{
-		return $this->row->category_count;
+		return $this->row->count;
 	}
 	
 	public function description()
 	{
-		return $this->row->category_description;
+		return $this->row->description;
 	}
 }

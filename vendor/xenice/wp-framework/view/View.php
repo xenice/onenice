@@ -31,7 +31,7 @@ class View extends Base
 		{
 		    $this->comment = Theme::use('comment');
 		}
-		elseif($type == 'category')
+		elseif($type == 'category' || $type == 'tax')
 		{
 		    $this->category = Theme::use('category');
 		}
@@ -58,9 +58,11 @@ class View extends Base
         return $this->vars;
     }
 	
-    public function render($name = 'index')
+    public function render($name = 'index', $dir = '')
     {
-		$file = $this->dir . '/' . $name . '.php';
+        $dir || $dir = $this->dir;
+		$file = $dir. '/' . $name . '.php';
+		$file = Theme::call(Theme::get('type') . '_view', $file);
 		if(!is_file($file)){
 		    if(Theme::get('type') == 'notFound'){
 		        echo '404 not found';

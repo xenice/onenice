@@ -24,7 +24,7 @@ class Article extends ArticlePointer
 	
     public function category($field = 'name')
 	{
-	    return get_category($this->cid())->$field;
+	    return get_term($this->cid(), $this->taxonomy())->$field;
 	}
 	
 	public function user($field = 'display_name')

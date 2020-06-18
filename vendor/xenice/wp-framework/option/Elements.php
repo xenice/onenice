@@ -11,18 +11,26 @@ namespace xenice\option;
 
 trait Elements
 {
+    
     private function label($field)
     {
         return sprintf( '<label>%s</label>', $field['value']);
+    }
+    
+    private function button($field)
+    {
+        return sprintf( '<input type="button" class="button" name="%s" value="%s" />',$field['id'], $field['value']);
     }
     
     private function text($field)
     {
         $style = $field['style']??'regular';
         $label = $field['label']??'';
-        $show = empty($field['show'])?'':$field['show'] . '="' . $field['show'] . '" '; // readonly or disabled
-        
-        return sprintf( '<label><input type="text" class="%s-text" name="%s" value="%s" %s/>%s</label>', $style, $field['id'], $field['value']??'', $show, $label);
+        $str = empty($field['show'])?'':$field['show'] . '="' . $field['show'] . '" '; // readonly or disabled
+        if(isset($field['auto']) && $field['auto'] == false){
+            $str .= 'autocomplete="off"';
+        }
+        return sprintf( '<label><input type="text" class="%s-text" name="%s" value="%s" %s/>%s</label>', $style, $field['id'], $field['value']??'', $str, $label);
     }
 
     private function number($field)
@@ -52,7 +60,7 @@ trait Elements
         }
         return $str;
     }
-
+    
     private function selectCategories($field)
     {
         $cats= get_categories();

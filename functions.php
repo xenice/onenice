@@ -1,7 +1,4 @@
 <?php
-
-error_reporting(-1);
-ini_set('display_errors', 1);
 require __dir__ . '/config/app.php';
 require __dir__ . '/vendor/autoload.php';
 
@@ -34,6 +31,7 @@ Theme::bind('xenice_route_run',function($type, $method, $args){
     return call_user_func_array([$controller, $method], $args);
 });
 
+
 function _t($str, $domain = THEME_NAME)
 {
     $translations = get_translations_for_domain($domain);
@@ -53,10 +51,10 @@ function is_url($v){
 }
 
 
-function import($slug)
+function import($slug, $dir = VIEW_DIR)
 {
 	extract(View::getVars());
-	include(VIEW_DIR . '/' . $slug . '.php');
+	include($dir . '/' . $slug . '.php');
 }
 
 function ad($id, $class='', $style = ''){

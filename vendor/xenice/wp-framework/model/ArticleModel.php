@@ -30,7 +30,16 @@ class ArticleModel extends Model
                 $this->defaults['cat'] = $cat;
                 break;
             case 'tag':
-                $this->defaults['tag'] = single_tag_title('', false);;
+                $term = get_term_by('name',single_tag_title('', false),'post_tag');
+                $this->defaults['tag'] = $term->slug;
+                break;
+            case 'tax':
+                $this->defaults['tax_query'] =[
+                    [
+                        'taxonomy' => Theme::get('taxonomy'),
+                        'terms' => Theme::get('cid'),
+                    ]
+                ];
                 break;
             case 'search':
                 global $s;
@@ -43,7 +52,6 @@ class ArticleModel extends Model
     public function query($args = '')
     {
         $defaults = [
-            'post_type' => 'post',
             'ignore_sticky_posts' => 1,
         ];
         $args = wp_parse_args($args, $defaults);
@@ -63,7 +71,8 @@ class ArticleModel extends Model
         if(!$this->query){
             // The number of displays per page defaults to 10
             $defaults = [
-                'posts_per_page' => 10,
+                'paged' => 1,
+                'posts_per_page' => 8,
                 'no_found_rows' => true
             ];
             $args = wp_parse_args($args, $defaults);
@@ -77,7 +86,6 @@ class ArticleModel extends Model
         if(!$this->query){
             $this->defaults['paged'] = get_query_var('paged')?:1;
             $args = wp_parse_args($args, $this->defaults);
-            //_o($args);
             $this->query($args); 
             $this->pages = $this->query->max_num_pages;
         }

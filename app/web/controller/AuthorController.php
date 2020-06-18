@@ -2,7 +2,7 @@
 
 namespace app\web\controller;
 
-use censky\wp\Controller;
+use xenice\theme\Controller;
 
 class AuthorController extends Controller
 {

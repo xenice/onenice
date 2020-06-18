@@ -13,7 +13,9 @@ trait Article
 	{  
 	    $category = Theme::use('category');
 	    $str = '<a class="breadcrumb-item" href="'. home_url() .'">'._t('Home').'</a>'; 
-        $str .= $category->getBreadcrumb( $this->cid());
+	    if($cid = $this->cid()){
+            $str .= $category->getBreadcrumb($cid);
+	    }
         $str .= '<span class="breadcrumb-item active">' . $this->title() . '</span>';
 		return $str;
 	}

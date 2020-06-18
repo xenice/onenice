@@ -58,7 +58,7 @@ class Optimize extends Base
                         [
                             'id'   => 'disable_rest_api',
                             'type'  => 'checkbox',
-                            'value' => true,
+                            'value' => false,
                             'label'  => _t('Disable the restapi')
                         ],
                         [
@@ -96,6 +96,12 @@ class Optimize extends Base
                             'type'  => 'checkbox',
                             'value' => true,
                             'label'  => _t('The user list display registration and last login information')
+                        ],
+                        [
+                            'id'   => 'enable_custom_avatar',
+                            'type'  => 'checkbox',
+                            'value' => true,
+                            'label'  => _t('Enable custom avatar')
                         ],
                     ]
                 ],

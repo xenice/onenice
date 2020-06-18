@@ -24,11 +24,13 @@ class About extends Base
             'desc'=> sprintf(_t('Thank you for using <a href="http://www.xenice.com/" target="_blank">%s</a> theme.'),THEME_NAME),
             'fields'=>[
                 [
+                    'id' => 'about_version',
                     'type'  => 'label',
                     'name'  => _t('Version'),
                     'value' => THEME_VER,
                 ],
                 [
+                    'id' => 'about_official_website',
                     'type'  => 'label',
                     'name'  => _t('Official website'),
                     'value' => '<a href="http://www.xenice.com/" target="_blank">http://www.xenice.com/</a>',
