@@ -11,36 +11,70 @@ namespace xenice\cache;
 
 class File
 {
-    private $data = [];
+    private $data = []; // save keys
 
 	public function __construct()
 	{
-	    $this->file = THEME_DIR . '/cache/cachefile.txt';
-		if(is_file($this->file)){
-			$this->data = unserialize(file_get_contents($this->file));
+	    $this->dir = THEME_DIR . '/cache/cachefile/';
+	    is_dir($this->dir) || mkdir($this->dir);
+	    $file = $this->dir . 'keys';
+		if(is_file($file)){
+			$this->data = unserialize(file_get_contents($file));
 		}
 	}
 	
-    public function set($key, $value, $time = 3600)
+	public function __destruct()
+	{
+	    file_put_contents($this->dir . 'keys',  serialize($this->data));
+	}
+	
+    public function set($key, $value, $time = 0)
     {
-        $arr['value'] = $value;
-        $arr['time'] = time() + $time;
-        $this->data[$key] = $arr;
-		file_put_contents($this->file,  serialize($this->data));
+        $this->data[$key] = $time;
+		file_put_contents($this->dir . md5($key),  serialize($value));
     }
     
     public function get($key)
     {
         if(isset($this->data[$key])){
-            $arr= $this->data[$key];
-            
-            if($arr['time'] > time()){
-                return $arr['value'];
+            $time = $this->data[$key];
+            $file = $this->dir . md5($key);
+            if(($time == 0 || $time > time()) && is_file($file)){
+                return unserialize(file_get_contents($file));
             }
             else{
                 unset($this->data[$key]);
+                unlink($file);
             }
         }
         return '';
+    }
+    
+    public function keys()
+    {
+        return array_keys($this->data);
+    }
+    
+    public function clear()
+    {
+        $this->deleteDir($this->dir);
+    }
+    
+    private function deleteDir($dir) 
+    {
+        $dh=opendir($dir);
+        while ($file=readdir($dh)) {
+            if($file!="." && $file!="..") {
+                $fullpath=$dir."/".$file;
+                if(!is_dir($fullpath)) {
+                  unlink($fullpath);
+                } else {
+                  deldir($fullpath);
+                }
+            }
+        }
+        closedir($dh);
+        return rmdir($dir);
+
     }
 }

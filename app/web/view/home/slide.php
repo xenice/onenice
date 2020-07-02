@@ -14,13 +14,19 @@
   <!-- 轮播图片 -->
   <div class="carousel-inner rounded">
     <div class="carousel-item active">
-      <a href="<?=$img1['url']?>" title="<?=$img1['title']?>"><img src="<?=$img1['path']?>" /></a>
+      <a href="<?=$img1['url']?>" title="<?=$img1['title']?>">
+          <img src="<?=$img1['path']?>" alt="<?=$img1['title']?>" />
+      </a>
     </div>
     <div class="carousel-item">
-      <a href="<?=$img2['url']?>" title="<?=$img2['title']?>"><img src="<?=$img2['path']?>" /></a>
+      <a href="<?=$img2['url']?>" title="<?=$img2['title']?>">
+          <img src="<?=$img2['path']?>" alt="<?=$img2['title']?>" />
+      </a>
     </div>
     <div class="carousel-item">
-      <a href="<?=$img3['url']?>" title="<?=$img3['title']?>"><img src="<?=$img3['path']?>" /></a>
+      <a href="<?=$img3['url']?>" title="<?=$img3['title']?>">
+          <img src="<?=$img3['path']?>" alt="<?=$img3['title']?>" />
+      </a>
     </div>
   </div>
  

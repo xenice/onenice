@@ -21,3 +21,18 @@ function take($name)
     }
     return $option[$name]??'';
 }
+
+ /**
+ * set option
+ */
+function put($name, $value)
+{
+    $options = get_option('xenice_options')?:[];
+    foreach($options as $id=>&$o){
+        if(isset($o[$name])){
+            $o[$name] = $value;
+            update_option('xenice_options', $options);
+            return;
+        }
+    }
+}

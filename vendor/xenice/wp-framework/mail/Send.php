@@ -57,9 +57,9 @@ class Send extends Base
             global $current_user;
             $bool = wp_mail($current_user->user_email, $data['mail_title']??'', $data['mail_content']??'');
             if($bool)
-                $result = ['success' => 'true', 'message'=>_t('Send successfully')];
+                $result = ['return' => 'success', 'message'=>_t('Send successfully')];
             else
-                $result = ['success' => 'false', 'message'=>_t('Send failure')];
+                $result = ['return' => 'error', 'message'=>_t('Send failure')];
             Theme::call('xenice_options_result', $result);
         }
         else{

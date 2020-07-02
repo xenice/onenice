@@ -83,30 +83,50 @@ class Admin extends Base
                 if($this->set($_POST['xenice_option_key'],$data)){
                     $this->get();
                     $option = $this->options[$key];
-                    $result['success'] = 'true';
+                    $result['return'] = 'success';
                 }
                 else{
-                    $result['success'] = 'false';
+                    $result['return'] = 'error';
                 }
+                $result['key'] = $_POST['xenice_option_key'];
                 Theme::call('xenice_options_result', $result);
             }
 
         }
         
-        if(isset($_POST['success'])){
-            if($_POST['success'] == 'true'){
-                 ?>
-                <div id="message" class="updated notice is-dismissible">
-                <p><strong><?=$_POST['message']??$option['title'].' '._t('save success')?></strong></p>
-                <button type="button" class="notice-dismiss"><span class="screen-reader-text"><?=_t('Ignore this notice')?></span></button>
+        if(isset($_POST['return'])){
+            $result = [
+                'key' => $_POST['key'],
+                'return' => $_POST['return'],
+                'message' => $_POST['message']??null,
+            ];
+            
+            $result = Theme::call('xenice_options_result_after', $result, $key);
+            if($result['return'] == 'success'){
+                ?>
+                <div class="notice notice-success is-dismissible"> 
+            	    <p><strong><?=$result['message']??$option['title'].' '._t('save success')?></strong></p>
+                </div>
+                <?php
+            }
+            elseif($result['return'] == 'error'){
+                ?>
+                <div class="notice notice-error is-dismissible"> 
+            	    <p><strong><?=$result['message']??$option['title'].' '._t('save failed')?></strong></p>
+                </div>
+                <?php
+            }
+            elseif($result['return'] == 'warning'){
+                ?>
+                <div class="notice notice-warning is-dismissible"> 
+            	    <p><strong><?=$result['message']?></strong></p>
                 </div>
                 <?php
             }
             else{
-                 ?>
-                <div id="message" class="error settings-error notice is-dismissible">
-                <p><strong><?=$_POST['message']??$option['title'].' '._t('save failed')?></strong></p>
-                <button type="button" class="notice-dismiss"><span class="screen-reader-text"><?=_t('Ignore this notice')?></span></button>
+                ?>
+                <div class="notice notice-info is-dismissible"> 
+            	    <p><strong><?=$result['message']?></strong></p>
                 </div>
                 <?php
             }
@@ -147,8 +167,9 @@ class Admin extends Base
                     <?php
                     $str = '';
                     foreach ( $option['fields'] as $field ) {
+                        if(isset($field['type']) && $field['type'] == 'data')
+                            continue;
                         $top = '<tr valign="top"><th scope="row"><label>'.$field['name'].'</label></th><td><p>';
-                        
                         if(isset($field['fields'])){
                             $main = '';
                             foreach($field['fields'] as $f){
@@ -217,12 +238,13 @@ class Admin extends Base
      */
     public function post($result)
     {
-        $result = Theme::call('xenice_options_result_data', $result);
+        $result = Theme::call('xenice_options_result_before', $result);
         $str = "<form style='display:none;' id='form_result' name='form_result' method='post' action=''>";
         if(isset($result['message'])){
             $str .= "<input name='message' type='text' value='{$result['message']}' />";
         }
-        $str .= "<input name='success' type='text' value='{$result['success']}' /></form>";
+        $str .= "<input name='key' type='text' value='{$result['key']}' />";
+        $str .= "<input name='return' type='text' value='{$result['return']}' /></form>";
         $str .= "<script type='text/javascript'>document.form_result.submit();</script>";
         echo $str;
     }
@@ -274,6 +296,9 @@ class Admin extends Base
             $fields[$image] = json_decode(stripslashes($fields[$image]), true);
         }
         
+        $data = $this->data($id);
+        $data && $fields = array_merge($fields, $data);
+        
         return $this->update($id, $fields);
         //Theme::call('xenice_options_set', $id, $fields);
         
@@ -309,6 +334,22 @@ class Admin extends Base
                 if($field['type'] == $type){
                     $arr[] = $field['id'];
                 }
+            }
+        }
+        return $arr;
+    }
+    
+    /**
+     * Get data fields
+     */
+    private function data($id)
+    {
+        $key = array_search($id, array_column($this->defaults, 'id'));
+        $fields = $this->defaults[$key]['fields'];
+        $arr = [];
+        foreach($fields as $field){
+            if(isset($field['type']) && $field['type'] == 'data'){
+                $arr[$field['id']] = $field['value'];
             }
         }
         return $arr;

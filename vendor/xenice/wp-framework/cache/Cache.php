@@ -18,22 +18,38 @@ class Cache extends Base
 	
 	public function __construct()
 	{
+        if(!CACHE) return;
+        
 	    if(class_exists('\Memcached')){
-	        $this->extends = new \Memcached();
-            $this->extends->addServer('127.0.0.1', '11211');
+	        $this->extends = new Memcached;
+	        $this->extends->addServer('127.0.0.1', '11211');
 	    }
 	    else{
 	        $this->extends = new File;
 	    }
 	}
 	
-	public function set($key, $value, $time = 0)
+	protected function set($key, $value, $time = 0)
 	{
+	    if(!CACHE) return;
 	    $this->extends->set($key, $value, $time);
 	}
 	
-	public function get($key)
+	protected function get($key)
 	{
+	    if(!CACHE) return;
 		return $this->extends->get($key);
+	}
+	
+	protected function keys()
+	{
+	    if(!CACHE) return;
+		return $this->extends->keys();
+	}
+	
+	protected function clear()
+	{
+	    if(!CACHE) return;
+	    return $this->extends->clear();
 	}
 }
