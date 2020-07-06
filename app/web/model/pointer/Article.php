@@ -46,7 +46,7 @@ class Article extends ArticlePointer
 	    }
 	    $excerpt = $this->excerpt();
 	    if(!$excerpt){
-	       $excerpt = $this->content();
+	       $excerpt = $this->row('post_content');
 	    }
 	    $excerpt = preg_replace( "/\[.*?\].*?\[\/.*?\]/is", "", $excerpt);
         $excerpt = mb_strimwidth( strip_tags( $excerpt), 0, $limit, "..." );

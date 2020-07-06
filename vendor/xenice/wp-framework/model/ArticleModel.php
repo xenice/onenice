@@ -16,7 +16,7 @@ class ArticleModel extends Model
     public $query;
     public $pages;
     public $type;
-    
+    public $hasPosts;
     public function __construct()
     {
         $this->type = Theme::get('type');
@@ -56,13 +56,12 @@ class ArticleModel extends Model
         ];
         $args = wp_parse_args($args, $defaults);
         $this->query = new \WP_Query( $args );
+        $this->hasPosts = $this->query->have_posts();
     }
     
     public function has()
     {
-        if($this->query){
-            $this->query->have_posts();
-        }
+        return $this->hasPosts;
     }
     
     

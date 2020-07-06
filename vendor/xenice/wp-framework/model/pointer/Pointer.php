@@ -17,5 +17,9 @@ class Pointer
     {
         return empty($this->row)?true:false;
     }
-
+    
+    public function row($name)
+    {
+        return $this->row->$name;
+    }
 }

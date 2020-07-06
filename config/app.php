@@ -15,4 +15,4 @@ define('XENICE_URL', THEME_URL . '/vendor/xenice');
 define('OPTIONS_FILE', __dir__ . '/options.php');
 
 define('DEBUG', false);
-//define('CACHE', true);
+define('CACHE', false);

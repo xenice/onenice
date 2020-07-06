@@ -117,7 +117,7 @@ return [
                 'value' => [
                     'url'  =>'http://www.xenice.com/',
                     'title'=>'xenice',
-                    'path' =>'https://www-xenice-com-1255371979.cos.ap-hongkong.myqcloud.com/project/images/2020/04/onenice_slide_1.jpg'
+                    'path' =>'https://www-xenice-com-1255371979.cos.ap-hongkong.myqcloud.com/uploads/2020/07/onenice_slide_1.jpg'
                 ]
             ],
             [
@@ -127,7 +127,7 @@ return [
                 'value' => [
                     'url'  =>'http://www.xenice.com/',
                     'title'=>'xenice',
-                    'path' =>'https://www-xenice-com-1255371979.cos.ap-hongkong.myqcloud.com/project/images/2020/04/onenice_slide_2.jpg'
+                    'path' =>'https://www-xenice-com-1255371979.cos.ap-hongkong.myqcloud.com/uploads/2020/07/onenice_slide_2.jpg'
                 ]
             ],
             [
@@ -137,7 +137,7 @@ return [
                 'value' => [
                     'url'  =>'http://www.xenice.com/',
                     'title'=>'xenice',
-                    'path' =>'https://www-xenice-com-1255371979.cos.ap-hongkong.myqcloud.com/project/images/2020/04/onenice_slide_3.jpg'
+                    'path' =>'https://www-xenice-com-1255371979.cos.ap-hongkong.myqcloud.com/uploads/2020/07/onenice_slide_3.jpg'
                 ]
             ]
         ]

@@ -47,6 +47,8 @@ class PostPointer extends Pointer
 	
 	public function content()
 	{
+	    if ( post_password_required( $this->row ) )
+		    return get_the_password_form( $this->row );
 	    $content = apply_filters( 'the_content', $this->row->post_content );
 	    return Theme::call('post_content', $content, $this);
 	}

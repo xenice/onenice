@@ -27,7 +27,7 @@ class Article extends ArticleModel
     public function alterThumbnail($src, $p)
     {
         if(!$src){
-            preg_match_all( '/\<img.+?src="(.+?)".*?\/>/is', $p->content(), $matches, PREG_SET_ORDER );
+            preg_match_all( '/\<img.+?src="(.+?)".*?\/>/is', $p->row('post_content'), $matches, PREG_SET_ORDER );
             if(isset($matches[0][1])){
                 return $matches[0][1];
             }
