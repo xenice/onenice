@@ -10,9 +10,9 @@ class ArchiveController extends Controller
 {
     public function index()
     {
-        $this->title = single_cat_title('', false) . ' - ' . get_bloginfo( 'name' );
-        $this->keywords = single_cat_title( '', false );
-        $this->description = category_description();
+    	if(is_day()) $this->title = get_the_time('Y-m-j');
+		elseif(is_month()) $this->title = get_the_time('Y-m');
+		elseif(is_year()) $this->title = get_the_time('Y');
 		$this->render();
     }
 }

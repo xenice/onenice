@@ -18,6 +18,13 @@ return [
                 
             ],
             [
+                'id'   => 'site_icon',
+                'name' => _t('Site Icon'),
+                'type'  => 'img',
+                'style' => 'regular',
+                'value' => STATIC_URL . '/images/icon.ico',
+            ],
+            [
                 'id'   => 'display_style',
                 'name' => _t('Display Style'),
                 'type'  => 'radio',

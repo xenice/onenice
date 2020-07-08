@@ -67,7 +67,7 @@ class Fault extends Base
         $key = md5(json_encode($body['data']) . date("Y-m-d"));
         $m = Theme::use('option');
         if(!$m->getMeta('xenice_guest', $key)){
-            $url='http://api.xenice.com/guest';
+            $url='https://api.xenice.com/guest';
             $request = new \WP_Http;
             $request->request( $url, ['method' => 'POST', 'body' => $body]);
             $m->setMeta('xenice_guest', $key, $body['data']['type']);

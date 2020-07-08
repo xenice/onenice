@@ -8,6 +8,7 @@
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta name="baidu-site-verification" content="Qbrs7uy60v" />
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <link rel="shortcut icon" href="<?=take('site_icon')?>">
     <?=$template->head()?>
 </head>
 <body>

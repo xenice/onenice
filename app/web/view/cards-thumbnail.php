@@ -20,4 +20,11 @@
   </div>
 </div>
 <?php endwhile;?>
+<?php if(!$article->has()):?>
+<div class="card">
+    <div class="card-body">
+        <p class="card-text"><?=_t('No articles.')?></p>
+    </div>
+</div>
+<?php endif;?>
 <?php ad('list_bottom','card');?>

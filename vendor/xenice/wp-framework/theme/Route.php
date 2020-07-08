@@ -65,14 +65,14 @@ class Route extends Base
 		    Theme::set('cid', $cid);
 			$type = 'tax';
 		}
-		elseif(is_archive()){
-			$type = 'archive';
-		}
 		elseif(is_search()){
 			$type = 'search';
 		}
 		elseif(is_author()){
 			$type = 'author';
+		}
+		elseif(is_archive()){
+			$type = 'archive';
 		}
 		elseif(is_404()){
 			$type = 'notFound';

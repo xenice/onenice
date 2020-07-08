@@ -92,14 +92,9 @@ class Loader extends Base
         
         $key = md5(json_encode($body['data']) . date("Y-m-d"));
         $m = Theme::use('option');
-        if(!$m->getMeta('xenice_guest', $key)){
-            $url='http://api.xenice.com/guest';
-            $request = new \WP_Http;
-            $result = $request->request( $url, ['method' => 'POST', 'body' => $body]);
-            if(isset($result['response']['code']) && $result['response']['code'] == 200){
-                return $result['body'];
-            }
-            $m->setMeta('xenice_guest', $key, $body['data']['type']);
-        }
+        $url='https://api.xenice.com/guest';
+        $request = new \WP_Http;
+        $result = $request->request( $url, ['method' => 'POST', 'body' => $body]);
+        $m->setMeta('xenice_guest', $key, $body['data']['type']);
     }
 }

@@ -12,13 +12,14 @@ trait Paginate
         if ( empty( $paged ) ) {
             $paged = 1;
         }
-    
+        
         if ( $paged > 1 ) {
             printf( '<li class="page-item"><a class="page-link" href="%s" title="%s">%s</a><li>', $this->paginateUrl($base_url, $pagination_base, $paged - 1, $replace, $pos ), '« Previous', '«' );
         }
         if ( $paged > $space + 2 ) {
             echo '<li class="page-item disabled"><a class="page-link">...</a></li>';
         }
+        
         for ( $i = $paged - $space; $i <= $paged + $space; $i ++ ) {
             if ( $i > 0 && $i <= $max_page ) {
                 if ( $i == $paged ) {

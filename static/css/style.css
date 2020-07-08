@@ -501,7 +501,17 @@ input[type="text"],input[type="password"],textarea,select{
     border: 1px solid #FFF;
     opacity: 1 !important;
 }
-            
+
+.right-comments li{
+    margin-bottom: 0;
+}
+
+.right-comments li:nth-child(2n){
+    margin-left: 35px;
+    margin-top: 0;
+    
+}
+
 footer{
 	border-top: 1px solid #eeeeee;
 	padding:30px 0;

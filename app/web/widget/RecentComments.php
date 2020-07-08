@@ -17,21 +17,21 @@ class RecentComments extends \WP_Widget
         $limit = strip_tags( $instance['limit'] );
         $limit = $limit ? $limit : 5;
         ?>
-        <div class="right-group">
+        <div class="right-group right-comments">
             <h3><?=_t( 'Recent Comments'); ?></h3>
             <ul>
                 <?php
                 $args = "number={$limit}&status=approve&type=comment";
                 Theme::use('comment')->query($args);
                 while($p = Theme::use('comment')->pointer($args)):?>
+                    <li class="d-flex justify-content-between">
+                        <span><?=$p->avatar()?> <?=$p->author()?></span>
+                        <span><?=$p->date()?></span>
+                    </li>
                     <li>
                         <a href="<?=$p->articleLink()?>#comment-<?=$p->id()?>">
                             <?=$p->content()?>
                         </a>
-                    </li>
-                    <li class="d-flex justify-content-between">
-                        <span><?=$p->avatar()?> <?=$p->author()?></span>
-                        <span><?=$p->date()?></span>
                     </li>
                 <?php endwhile;?>
             </ul>

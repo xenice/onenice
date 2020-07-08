@@ -44,8 +44,18 @@ class CommentModel extends Model
         return $this->post->comment_status;
     }
     
-    public function count()
+    
+    public function count($parentCount = false)
     {
+        if($parentCount){
+            $count = 0;
+            foreach($this->query as $p){
+                if($p->comment_parent == 0){
+                    $count ++;
+                }
+            }
+            return $count;
+        }
         return $this->post->comment_count;
     }
     
@@ -62,6 +72,7 @@ class CommentModel extends Model
     public function query($args)
     {
         $this->query = (new \WP_Comment_Query)->query($args);
+        //var_dump($this->query);
         $this->index = 0;
         $this->count = count($this->query);
     }

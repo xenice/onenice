@@ -7,8 +7,9 @@
 		        echo $p->title();
 		    }
 		?>
-		<p>&copy; Copyright 2020 
-            <a href="<?=$option->info['url']?>"><?=$option->info['name']?></a> All Rights Reserved.
+		<p>&copy; 2020 
+            <a href="<?=$option->info['url']?>"><?=$option->info['name']?></a>&nbsp;&nbsp;
+            <a href="https://www.xenice.com/project/onenice" target="_blank">theme by onenice</a> 
         </p>
 	</div>
 </footer>

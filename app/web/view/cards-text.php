@@ -20,6 +20,13 @@ if(take('enable_list_top_ad')){
   </div>
 </div>
 <?php endwhile;?>
+<?php if(!$article->has()):?>
+<div class="card">
+    <div class="card-body">
+        <p class="card-text"><?=_t('No articles.')?></p>
+    </div>
+</div>
+<?php endif;?>
 <?php
 if(take('enable_list_bottom_ad')){
     echo '<div class="card">' . take('list_bottom_ad_code') . '</div>';

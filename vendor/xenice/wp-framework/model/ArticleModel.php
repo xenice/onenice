@@ -17,6 +17,8 @@ class ArticleModel extends Model
     public $pages;
     public $type;
     public $hasPosts;
+    public $defaults = [];
+    
     public function __construct()
     {
         $this->type = Theme::get('type');
@@ -45,6 +47,13 @@ class ArticleModel extends Model
                 global $s;
                 $this->s = $s;
                 $this->defaults['s'] = $s;
+                break;
+            case 'author':
+            case 'archive':
+                global $wp_query;
+                $this->query = $wp_query;
+                $this->hasPosts = $this->query->have_posts();
+                $this->pages = $this->query->max_num_pages;
                 break;
         }
     }

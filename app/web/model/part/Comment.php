@@ -110,7 +110,7 @@ trait Comment
         $page         = ( ! empty( $in_comment_loop ) ) ? get_query_var( 'cpage' ) - 1 : get_page_of_comment( $comment->comment_ID, $args ) - 1;
         $cpp          = get_option( 'comments_per_page' );
         //$this->commentcount = $this->commentcount??$cpp * $page;
-        $this->commentcount = $this->commentcount??$this->count-1;
+        $this->commentcount = $this->commentcount??$this->count(true)+1;
         $p = Theme::new('comment_pointer', $comment);
         if (!$p->pid()) {
             ?>
