@@ -77,6 +77,21 @@ input[type="text"],input[type="password"],textarea,select{
 	cursor: pointer;
 	z-index: 99;
 }
+
+.navbar .menu-item-has-children>a:after {
+    color: #aaa;
+    content: "\f107";
+    font-family: "FontAwesome";
+    font-size: 13px;
+    font-weight: 400;
+    margin-left: 5px;
+    transition: color 0.5s cubic-bezier(0.77,0,0.175,1);
+}
+
+.navbar .sub-menu {
+        display: none;
+}
+
 .search-form{
 	position: relative;
 }
@@ -297,6 +312,7 @@ input[type="text"],input[type="password"],textarea,select{
 
 }
 
+
 .post-content pre{
     line-height: 1.5;
 }
@@ -480,6 +496,16 @@ input[type="text"],input[type="password"],textarea,select{
     border-radius:5px;
 }
 
+.right-group .links{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.right-group .links li{
+    margin:5px;
+    padding:5px;
+}
+
 /* tags cloud */
 
 .tags-cloud .items a {
@@ -524,6 +550,25 @@ footer{
     body{
         font-size:14px;
     }
+    
+    .navbar .sub-menu {
+        position: absolute;
+        background-color: #fff;
+        font-size: 13px;
+        padding: 7px 0;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        min-width:120px;
+        margin:0;
+        border-radius: 4px;
+        z-index:2;
+    }
+
+    .navbar .sub-menu li{
+        list-style-type: none;
+        margin:6px 0;
+    }
+    
     /* reset bootstrap */
     .col-md-8{
         padding-right:30px;
@@ -556,7 +601,13 @@ footer{
 	}
 	.navbar-nav a{
 	    display: block;
-        margin:5px 0;
+        margin:6px 0;
+    }
+    .navbar .sub-menu{
+        padding-left:20px;
+    }
+    .navbar .sub-menu li{
+        list-style-type: none;
     }
     .user-login{
         position: absolute;

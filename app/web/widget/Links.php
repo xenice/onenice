@@ -16,7 +16,7 @@ class Links extends \WP_Widget
         ?>
         <div class="right-group">
             <h3><?=_t('Links'); ?></h3>
-            <ul class="list">
+            <ul class="list links">
                 <?php $bookmarks = get_bookmarks( 'limit=' . $limit );
                 if ( ! empty( $bookmarks ) ) {
                     foreach ( $bookmarks as $bookmark ) { ?>
@@ -43,7 +43,7 @@ class Links extends \WP_Widget
     }
 
     public function form( $instance ) {
-        $instance = wp_parse_args( (array) $instance, array( 'limit' => '' ) );
+        $instance = wp_parse_args( (array) $instance, array( 'limit' => 10 ) );
         $limit    = strip_tags( $instance['limit'] );
         ?>
 

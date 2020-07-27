@@ -17,7 +17,10 @@ class SingleController extends Controller
         //add_action( 'wp_print_scripts', [$this, 'footer']);
         $article = Article::instance();
         $article->setViews();
-        $this->title = $article->title() . ' - ' . $this->option->info['name'];
+        if(take('enable_article_seo') && $title = $article->get('title'))
+	       $this->title = $title;
+	    else
+            $this->title = $article->title() . ' - ' . $this->option->info['name'];
         $this->description = $article->description();
         $this->keywords = $article->keywords();
 	    $this->render();

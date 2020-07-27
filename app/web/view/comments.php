@@ -50,7 +50,7 @@
                 <?php endif; ?>
                     
                 <div class="form-group">
-                    <textarea name="comment" id="comment" class="form-control" rows="4" tabindex="4" placeholder=<?=_t("Comment")?> onkeydown="if(event.ctrlKey&&event.keyCode==13){document.getElementById('submit').click();return false};"></textarea>
+                    <textarea name="comment" id="comment" class="form-control" rows="4" tabindex="4" placeholder="<?=$comment->tip()?>" onkeydown="if(event.ctrlKey&&event.keyCode==13){document.getElementById('submit').click();return false};"></textarea>
                 </div>
                 <div class="form-group form-inline justify-content-end">
 					<img style="vertical-align:middle"  src=<?=admin_url('admin-ajax.php')?>?action=validation onclick="this.src=this.src+'&k='+Math.random();"></img>

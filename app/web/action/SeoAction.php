@@ -21,10 +21,14 @@ class SeoAction extends Action
 	public function metaForm()
 	{
 		global $post;
+		$title = ["name" => "title"];
 		$desc = ["name" => "description"];
 		$keywords = ["name" => "keywords"];
+		$title['value'] = get_post_meta($post->ID, $title['name'], true);
 		$desc['value'] = get_post_meta($post->ID, $desc['name'], true);
 		$keywords['value'] = get_post_meta($post->ID, $keywords['name'], true);
+		echo '<p>' . _t('Title') . '</p>';
+		echo '<input style="width:100%" type="text" value="'.$title['value'].'" name="'.$title['name'].'">';
 		echo '<p>' . _t('Describtion') . '</p>';
 		echo '<input style="width:100%" type="text" value="'.$desc['value'].'" name="'.$desc['name'].'">';
 		echo '<p>' . _t('Keywords') . '</p>';
@@ -43,7 +47,12 @@ class SeoAction extends Action
 	   
 		if ( !current_user_can( 'edit_posts', $post_id ))
 			return;
-		
+		if($_POST['title']){
+		    update_post_meta($post_id, 'title', $_POST['title']);
+		}
+		else{
+		    delete_post_meta($post_id, 'title');
+		}
 		if($_POST['description']){
 		    update_post_meta($post_id, 'description', $_POST['description']);
 		}

@@ -59,6 +59,11 @@ class CommentModel extends Model
         return $this->post->comment_count;
     }
     
+    public function tip()
+    {
+        return isset($_GET['replytocom'])?'@' . get_comment_author($_GET['replytocom']):_t("Comment");
+    }
+    
     public function fields()
     {
         return get_comment_id_fields();

@@ -6,6 +6,32 @@ var xenice = (function(){
 
 jQuery(function($){
     Gifffer();
+    // show sub-menu
+    if($(window).width()<768){
+        $(".menu-item-has-children").click(function(){
+            if($(window).width()<768){
+                $(this).children(".sub-menu").toggle();
+            }
+        })
+    }
+    else{
+        $(".menu-item-has-children").mouseenter(function(){
+            $(this).children(".sub-menu").show();
+        })
+        $(".menu-item-has-children").mouseleave(function() {
+            $(this).children(".sub-menu").hide();
+        })
+        $(".sub-menu").mouseleave(function() {
+            $(this).hide();
+        })
+    }
+    /*
+    $(window).resize(function(){
+        if($(window).width()<768){
+            $('.sub-menu').show();
+
+        }
+    });*/
 });
 
 function _t(key){
