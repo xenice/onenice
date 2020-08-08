@@ -114,6 +114,8 @@ trait Elements
         $str .= sprintf( '<input type="text" class="regular-text" id="%s" value="%s" />', $field['id'] . '_url', $value['url']??'');
         $str .=  '<div style="margin-bottom:5px;margin-top:10px">' . _t('Title:').'</div>';
         $str .= sprintf( '<input type="text" class="regular-text" id="%s" value="%s" />', $field['id'] . '_title', $value['title']??'');
+        $str .=  '<div style="margin-bottom:5px;margin-top:10px">' . _t('Description:').'</div>';
+        $str .= sprintf( '<input type="text" class="regular-text" id="%s" value="%s" />', $field['id'] . '_desc', $value['desc']??'');
         $str .=  '<div style="margin-bottom:5px;margin-top:10px">' . _t('Image Path:').'</div>';
         $str .= sprintf( '<input type="text" class="regular-text" id="%s" value="%s" /></div>', $field['id'] . '_path', $value['path']??'');
         $str .= sprintf( '<img class="slide-img" src="%s" />', $value['path']??'');

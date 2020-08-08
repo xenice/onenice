@@ -22,7 +22,7 @@ trait Article
 	
 	public function previousLink($tag = '', $same_term = false)
     {
-        $post = get_previous_post($same_term);
+        $post = get_adjacent_post( $same_term, '', true, $this->taxonomy());
         if($post){
             $row = Theme::new('article_pointer', $post);
             return $tag . '<a href="' . $row->url() . '" title="' . $row->title() . '">' . $row->title() . '</a>';
@@ -31,7 +31,7 @@ trait Article
     
     public function nextLink($tag = '', $same_term = false)
     {
-        $post = get_next_post($same_term);
+        $post = get_adjacent_post( $same_term, '', false, $this->taxonomy());
         if($post){
             $row = Theme::new('article_pointer', $post);
             return $tag . '<a href="' . $row->url() . '" title="' . $row->title() . '">' . $row->title() . '</a>';

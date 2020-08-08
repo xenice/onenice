@@ -37,6 +37,43 @@ return [
                 
             ],
             [
+                'id'   => 'Baidu_statistics',
+                'name' => _t('Baidu Statistics'),
+                'desc' => _t('Fill in baidu statistics script'),
+                'type'  => 'textarea',
+                'style' => 'regular',
+                'value' => '',
+                'rows' => 6
+                
+            ],
+            [
+                'id'   => 'baidu_auto_push',
+                'name' => _t('Baidu Auto Push'),
+                'desc' => _t('Fill in baidu auto push script'),
+                'type'  => 'textarea',
+                'style' => 'regular',
+                'value' => '',
+                'rows' => 6
+                
+            ],
+            [
+                'name' => _t('Bottom right button'),
+                'fields'=>[
+                    [
+                        'id'   => 'enable_scroll_top',
+                        'type'  => 'checkbox',
+                        'value' => false,
+                        'label'  => _t('Enable back-to-top button')
+                    ],
+                    [
+                        'id'   => 'service_qq',
+                        'type'  => 'text',
+                        'value' => '',
+                        'label'  => _t('Service QQ')
+                    ],
+                ]
+            ],
+            [
                 'name' => _t('Auxiliary'),
                 'fields'=>[
                     [
@@ -44,6 +81,12 @@ return [
                         'type'  => 'checkbox',
                         'value' => true,
                         'label'  => _t('Enable static file CDN acceleration')
+                    ],
+                    [
+                        'id'   => 'enable_highlight',
+                        'type'  => 'checkbox',
+                        'value' => true,
+                        'label'  => _t('Enable code highlight')
                     ],
                     [
                         'id'   => 'enable_category_badge',
@@ -65,26 +108,6 @@ return [
                     ]
                 ]
             ],
-            [
-                'id'   => 'Baidu_statistics',
-                'name' => _t('Baidu Statistics'),
-                'desc' => _t('Fill in baidu statistics script'),
-                'type'  => 'textarea',
-                'style' => 'regular',
-                'value' => '',
-                'rows' => 6
-                
-            ],
-            [
-                'id'   => 'baidu_auto_push',
-                'name' => _t('Baidu Auto Push'),
-                'desc' => _t('Fill in baidu auto push script'),
-                'type'  => 'textarea',
-                'style' => 'regular',
-                'value' => '',
-                'rows' => 6
-                
-            ]
         ]
     ],
     [
@@ -110,12 +133,23 @@ return [
                 'rows' => 3
             ],
             [
-                'id'   => 'enable_slide',
                 'name' => _t('Slide'),
                 'desc' => _t('Please set slide images below if Enable slide, Images recommended size is 715px*350px.'),
-                'type'  => 'checkbox',
-                'value' => true,
-                'label'  => _t('Enable Slide')
+                'fields'=>[
+                    [
+                        'id'   => 'enable_slide',
+                        'type'  => 'checkbox',
+                        'value' => true,
+                        'label'  => _t('Enable Slide')
+                    ],
+                    [
+                        'id'   => 'display_slide_title',
+                        'type'  => 'checkbox',
+                        'value' => true,
+                        'label'  => _t('Display the title and description of the slide')
+                    ]
+                ]
+                
             ],
             [
                 'id'   => 'slide_image_1',
@@ -124,6 +158,7 @@ return [
                 'value' => [
                     'url'  =>'http://www.xenice.com/',
                     'title'=>'xenice',
+                    'desc' => '',
                     'path' =>STATIC_URL . '/images/onenice_slide_1.jpg'
                 ]
             ],
@@ -134,6 +169,7 @@ return [
                 'value' => [
                     'url'  =>'http://www.xenice.com/',
                     'title'=>'xenice',
+                    'desc' => '',
                     'path' =>STATIC_URL . '/images/onenice_slide_2.jpg'
                 ]
             ],
@@ -144,6 +180,7 @@ return [
                 'value' => [
                     'url'  =>'http://www.xenice.com/',
                     'title'=>'xenice',
+                    'desc' => '',
                     'path' =>STATIC_URL . '/images/onenice_slide_3.jpg'
                 ]
             ]

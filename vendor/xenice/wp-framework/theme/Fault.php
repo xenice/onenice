@@ -58,6 +58,7 @@ class Fault extends Base
             'data'=>[
                 'type'=>'fault',
                 'name' => get_bloginfo('name'), 
+                'theme' => wp_get_theme()->get('Name'),
                 'version' => wp_get_theme()->get('Version'), 
                 'domain' => get_bloginfo('url'), 
                 'email' => get_bloginfo('admin_email'),

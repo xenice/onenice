@@ -136,7 +136,7 @@ class Admin extends Base
         <style>
         .wrap .slide-img{
             margin:25px 0 0 0;
-            max-height:150px;
+            max-height:210px;
         }
         
         .wrap .small-text,.wrap input[type="checkbox"],.wrap input[type="radio"]{
@@ -210,6 +210,7 @@ class Admin extends Base
                     var id = this.name;
                     value += '"url":' + '"' + $('#' + id + '_url').attr('value') + '",';
                     value += '"title":' + '"' + $('#' + id + '_title').attr('value') + '",';
+                    value += '"desc":' + '"' + $('#' + id + '_desc').attr('value') + '",';
                     value += '"path":' + '"' + $('#' + id + '_path').attr('value') + '"';
                     value  = '{' + value + '}';
                     this.value = value;

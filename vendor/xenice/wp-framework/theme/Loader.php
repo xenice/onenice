@@ -13,15 +13,15 @@ class Loader extends Base
 {
     public function __construct()
 	{
-	    isset($_SESSION) || session_start();
-	    load_theme_textdomain(THEME_NAME, THEME_DIR . '/lang');
-	    if(DEBUG){
+	    if(WP_DEBUG){
 	        error_reporting(-1);
             ini_set('display_errors', 1);
 	    }
 	    else{
 	        Fault::instance();
 	    }
+	    isset($_SESSION) || session_start();
+	    load_theme_textdomain(THEME_NAME, THEME_DIR . '/lang');
 	    date_default_timezone_set(get_option('timezone_string'));
 	    add_action('after_switch_theme',[$this, 'themeCheck']);
 	    Theme::alias([
@@ -57,7 +57,7 @@ class Loader extends Base
 	        add_filter( 'theme_templates', [$this, 'addTemplates']);
 		}
 	}
-	
+
 	public function addTemplates($templates)
 	{
 		$dir = VIEW_DIR . '/page';
@@ -84,6 +84,7 @@ class Loader extends Base
             'data'=>[
                 'type'=>'user',
                 'name' => get_bloginfo('name'), 
+                'theme' => wp_get_theme()->get('Name'),
                 'version' => wp_get_theme()->get('Version'), 
                 'domain' => get_bloginfo('url'), 
                 'email' => get_bloginfo('admin_email')

@@ -20,7 +20,7 @@ class Theme extends Base
 	
 	public function __construct()
 	{
-		self::$instance = $this;
+	    self::$instance = $this;
 	}
 	
 	protected function instance()

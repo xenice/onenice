@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: onenice\n"
-"POT-Creation-Date: 2020-07-27 14:41+0800\n"
-"PO-Revision-Date: 2020-07-27 14:42+0800\n"
+"POT-Creation-Date: 2020-08-08 21:41+0800\n"
+"PO-Revision-Date: 2020-08-08 22:03+0800\n"
 "Last-Translator: \n"
 "Language-Team: xenice<xenice@qq.com>\n"
 "Language: zh_CN\n"
@@ -115,6 +115,14 @@ msgstr "搜索页"
 msgid "Single Page"
 msgstr "单篇页"
 
+#: app/web/action/GuestAction.php:120 config/options.php:72
+msgid "Service QQ"
+msgstr "咨询QQ"
+
+#: app/web/action/GuestAction.php:123
+msgid "Back to top"
+msgstr "返回顶部"
+
 #: app/web/action/SeoAction.php:18
 msgid "SEO"
 msgstr "SEO"
@@ -127,7 +135,7 @@ msgstr "标题"
 msgid "Describtion"
 msgstr "描述"
 
-#: app/web/action/SeoAction.php:34 config/options.php:106
+#: app/web/action/SeoAction.php:34 config/options.php:129
 msgid "Keywords"
 msgstr "关键字"
 
@@ -284,10 +292,8 @@ msgid "Sorry, Verification code error "
 msgstr "抱歉，验证码错误"
 
 #: app/web/controller/AuthorController.php:14
-#, fuzzy
-#| msgid "Universal Articles"
 msgid "User articles"
-msgstr "通用文章"
+msgstr "用户文章"
 
 #: app/web/model/Article.php:47
 msgid "comments"
@@ -307,7 +313,7 @@ msgstr "阅读"
 
 #: app/web/model/Category.php:17 app/web/model/Tag.php:12
 #: app/web/model/part/Article.php:15 app/web/view/archive/index.php:4
-#: app/web/view/search/index.php:4 config/options.php:92
+#: app/web/view/search/index.php:4 config/options.php:115
 #: vendor/xenice/wp-profession/src/doc/view/index.php:12
 msgid "Home"
 msgstr "首页"
@@ -350,10 +356,8 @@ msgid " seconds ago"
 msgstr " 秒前"
 
 #: app/web/view/cards-text.php:26 app/web/view/cards-thumbnail.php:26
-#, fuzzy
-#| msgid "Hot Articles"
 msgid "No articles."
-msgstr "热门文章"
+msgstr "暂无文章 。。"
 
 #: app/web/view/comments.php:4
 msgid "Comments"
@@ -384,7 +388,7 @@ msgstr "退出 »"
 #: app/web/view/comments.php:38
 #, php-format
 msgid "Not logged in. I want to <a href=\"%s\">login</a>"
-msgstr "你需要<a href=\"%s\">登录</a>来评论。"
+msgstr "你需要<a href=\"%s\">登录</a>来评论"
 
 #: app/web/view/comments.php:45
 msgid "Username (required)"
@@ -585,7 +589,7 @@ msgstr "相关文章"
 msgid "Xenice Advertise"
 msgstr "Xenice 广告"
 
-#: app/web/widget/Advertise.php:11 config/options.php:154
+#: app/web/widget/Advertise.php:11 config/options.php:191
 msgid "Advertise"
 msgstr "广告"
 
@@ -723,110 +727,126 @@ msgstr "纯文本"
 msgid "Show Thumbnail"
 msgstr "显示缩略图"
 
-#: config/options.php:40
-msgid "Auxiliary"
-msgstr "辅助"
-
-#: config/options.php:46
-msgid "Enable static file CDN acceleration"
-msgstr "开启静态文件CDN加速"
-
-#: config/options.php:52
-msgid "Enbale category badge on the list page"
-msgstr "在列表页上启用类别标记"
-
-#: config/options.php:58
-msgid "Enable article seo"
-msgstr "开启文章SEO"
-
-#: config/options.php:64
-msgid "Enable the phrase"
-msgstr "开启说说"
-
-#: config/options.php:70
+#: config/options.php:41
 msgid "Baidu Statistics"
 msgstr "百度统计"
 
-#: config/options.php:71
+#: config/options.php:42
 msgid "Fill in baidu statistics script"
 msgstr "填写百度统计脚本"
 
-#: config/options.php:80
+#: config/options.php:51
 msgid "Baidu Auto Push"
 msgstr "百度自动推送"
 
-#: config/options.php:81
+#: config/options.php:52
 msgid "Fill in baidu auto push script"
 msgstr "填写百度自动推送脚本"
 
-#: config/options.php:93
+#: config/options.php:60
+msgid "Bottom right button"
+msgstr ""
+
+#: config/options.php:66
+msgid "Enable back-to-top button"
+msgstr ""
+
+#: config/options.php:77
+msgid "Auxiliary"
+msgstr "辅助"
+
+#: config/options.php:83
+msgid "Enable static file CDN acceleration"
+msgstr "开启静态文件CDN加速"
+
+#: config/options.php:89
+msgid "Enable code highlight"
+msgstr "开启代码高亮显示"
+
+#: config/options.php:95
+msgid "Enbale category badge on the list page"
+msgstr "在列表页上启用类别标记"
+
+#: config/options.php:101
+msgid "Enable article seo"
+msgstr "开启文章SEO"
+
+#: config/options.php:107
+msgid "Enable the phrase"
+msgstr "开启说说"
+
+#: config/options.php:116
 msgid "Home Settings"
 msgstr "首页设置"
 
-#: config/options.php:97
+#: config/options.php:120
 msgid "Description"
 msgstr "描述"
 
-#: config/options.php:114
+#: config/options.php:136
 msgid "Slide"
-msgstr "幻灯片"
+msgstr "放灯片"
 
-#: config/options.php:115
+#: config/options.php:137
 msgid ""
 "Please set slide images below if Enable slide, Images recommended size is "
 "715px*350px."
 msgstr "如果开启幻灯片，请设置下面的幻灯片图片，图片推荐大小为715px*350px。"
 
-#: config/options.php:118
+#: config/options.php:143
 msgid "Enable Slide"
 msgstr "开启放灯片"
 
-#: config/options.php:122
+#: config/options.php:149
+msgid "Display the title and description of the slide"
+msgstr "显示放灯片图片标题和描述"
+
+#: config/options.php:156
 msgid "Slide Image 1"
 msgstr "放灯片图片1"
 
-#: config/options.php:132
+#: config/options.php:167
 msgid "Slide Image 2"
 msgstr "放灯片图片2"
 
-#: config/options.php:142
+#: config/options.php:178
 msgid "Slide Image 3"
 msgstr "放灯片图片3"
 
-#: config/options.php:155
+#: config/options.php:192
 msgid "Advertise Settings"
 msgstr "广告设置"
 
-#: config/options.php:158
+#: config/options.php:195
 msgid "Single page top AD"
 msgstr "单篇页上部广告"
 
-#: config/options.php:163 config/options.php:191 config/options.php:219
-#: config/options.php:247 vendor/xenice/wp-login/src/Login.php:47
+#: config/options.php:200 config/options.php:228 config/options.php:256
+#: config/options.php:284 vendor/xenice/wp-login/src/Login.php:47
 #: vendor/xenice/wp-login/src/Login.php:71
 #: vendor/xenice/wp-login/src/Login.php:95
 msgid "Enable"
 msgstr "开启"
 
-#: config/options.php:169 config/options.php:197 config/options.php:225
-#: config/options.php:253
+#: config/options.php:206 config/options.php:234 config/options.php:262
+#: config/options.php:290
 msgid "PC AD code"
 msgstr "电脑端广告代码"
 
-#: config/options.php:177 config/options.php:205 config/options.php:233
-#: config/options.php:261
+#: config/options.php:214 config/options.php:242 config/options.php:270
+#: config/options.php:298
 msgid "Mobile AD code"
 msgstr "手机端广告代码"
 
-#: config/options.php:186
+#: config/options.php:223
 msgid "Single page bottom AD"
 msgstr "单篇页底部广告"
 
-#: config/options.php:214
+#: config/options.php:251
 msgid "List page top AD"
 msgstr "列表页上部广告"
 
-#: config/options.php:242
+#: config/options.php:279
 msgid "List page bottom AD"
 msgstr "列表页底部广告"
 
@@ -1039,10 +1059,8 @@ msgid "The user list display registration and last login information"
 msgstr "用户列表显示注册和最后登录信息"
 
 #: vendor/xenice/wp-framework/optimize/Optimize.php:104
-#, fuzzy
-#| msgid "Enable css animation"
 msgid "Enable custom avatar"
-msgstr "开启CSS动画"
+msgstr "开启自定义头像"
 
 #: vendor/xenice/wp-framework/optimize/Optimize.php:109
 msgid "Back-end optimization"
@@ -1135,17 +1153,19 @@ msgstr "上次登录"
 
 #: vendor/xenice/wp-framework/optimize/lib/Avatar.php:71
 msgid "Delete local avatar"
-msgstr ""
+msgstr "删除本地头像"
 
 #: vendor/xenice/wp-framework/optimize/lib/Avatar.php:72
 msgid ""
 "Replace the local avatar by uploading a new avatar, or erase the local "
 "avatar (falling back to a gravatar) by checking the delete option."
 msgstr ""
+"通过上传一个新的头像来替换本地头像，或者通过勾选删除选项来删除本地头像(回到"
+"gravatar)。"
 
 #: vendor/xenice/wp-framework/optimize/lib/Avatar.php:75
 msgid "No local avatar is set. Use the upload field to add a local avatar."
-msgstr ""
+msgstr "没有设置本地头像。使用上传字段添加本地头像。"
 
 #: vendor/xenice/wp-framework/option/Admin.php:72
 msgid "Save Changes"
@@ -1172,6 +1192,10 @@ msgid "Title:"
 msgstr "标题："
 
 #: vendor/xenice/wp-framework/option/Elements.php:117
+msgid "Description:"
+msgstr "描述："
+
+#: vendor/xenice/wp-framework/option/Elements.php:119
 msgid "Image Path:"
 msgstr "图片路径："
 
@@ -1283,47 +1307,35 @@ msgstr "绑定失败，请先登录"
 
 #: vendor/xenice/wp-profession/src/Profession.php:48
 msgid "Profession"
-msgstr ""
+msgstr "专业"
 
 #: vendor/xenice/wp-profession/src/Profession.php:49
-#, fuzzy
-#| msgid "Home Settings"
 msgid "Profession Settings"
-msgstr "首页设置"
+msgstr "专业设置"
 
 #: vendor/xenice/wp-profession/src/Profession.php:52
 msgid "General"
-msgstr ""
+msgstr "常规"
 
 #: vendor/xenice/wp-profession/src/Profession.php:58
-#, fuzzy
-#| msgid "Enable css animation"
 msgid "Enable Doc Manage"
-msgstr "开启CSS动画"
+msgstr "开启文档管理"
 
 #: vendor/xenice/wp-profession/src/Profession.php:64
-#, fuzzy
-#| msgid "Enable article seo"
 msgid "Enable Source Manage"
-msgstr "开启文章SEO"
+msgstr "开启资源管理"
 
 #: vendor/xenice/wp-profession/src/Profession.php:70
-#, fuzzy
-#| msgid "Enable article seo"
 msgid "Enable Markdown"
-msgstr "开启文章SEO"
+msgstr "开启Markdown"
 
 #: vendor/xenice/wp-profession/src/Profession.php:76
-#, fuzzy
-#| msgid "Enable Slide"
 msgid "Enable Sitemap"
-msgstr "开启放灯片"
+msgstr "开启网站地图"
 
 #: vendor/xenice/wp-profession/src/Profession.php:82
-#, fuzzy
-#| msgid "Enable"
 msgid "Enable Cos"
-msgstr "开启"
+msgstr "开启Cos"
 
 #: vendor/xenice/wp-profession/src/Profession.php:88
 msgid "Create a unique slug the first time you save the article"
@@ -1331,97 +1343,87 @@ msgstr "第一次保存文章时创建唯一的slug"
 
 #: vendor/xenice/wp-profession/src/Profession.php:94
 msgid "Set the article link such as \"article/post_name\""
+msgstr "将文章链接设置成\"article/post_name\"形式。"
+
+#: vendor/xenice/wp-profession/src/cos/Cos.php:203
+msgid "Cos"
 msgstr ""
 
-#: vendor/xenice/wp-profession/src/cos/Cos.php:201
-#, fuzzy
-#| msgid "Close"
-msgid "Cos"
-msgstr "关闭"
-
-#: vendor/xenice/wp-profession/src/cos/Cos.php:202
-#, fuzzy
-#| msgid "Custom Settings"
+#: vendor/xenice/wp-profession/src/cos/Cos.php:204
 msgid "Cos Settings"
-msgstr "自定义设置"
+msgstr "COS设置"
 
-#: vendor/xenice/wp-profession/src/cos/Cos.php:211
-#, fuzzy
-#| msgid "Site Name"
+#: vendor/xenice/wp-profession/src/cos/Cos.php:213
 msgid "Bucket Name"
-msgstr "网站名称"
+msgstr "Bucket名称"
 
-#: vendor/xenice/wp-profession/src/cos/Cos.php:217
+#: vendor/xenice/wp-profession/src/cos/Cos.php:219
 msgid "Bucket Region"
 msgstr ""
 
-#: vendor/xenice/wp-profession/src/cos/Cos.php:245
+#: vendor/xenice/wp-profession/src/cos/Cos.php:247
 msgid "Secret ID"
 msgstr ""
 
-#: vendor/xenice/wp-profession/src/cos/Cos.php:251
+#: vendor/xenice/wp-profession/src/cos/Cos.php:253
 msgid "Secret Key"
 msgstr ""
 
-#: vendor/xenice/wp-profession/src/cos/Cos.php:257
+#: vendor/xenice/wp-profession/src/cos/Cos.php:259
 msgid "Bucket URL"
 msgstr ""
 
-#: vendor/xenice/wp-profession/src/cos/Cos.php:264
+#: vendor/xenice/wp-profession/src/cos/Cos.php:266
 msgid "Upload Dir"
-msgstr ""
+msgstr "止传目录"
 
-#: vendor/xenice/wp-profession/src/cos/Cos.php:265
+#: vendor/xenice/wp-profession/src/cos/Cos.php:267
 msgid "Unfilled is the root directory"
-msgstr ""
+msgstr "不填为根目录"
 
-#: vendor/xenice/wp-profession/src/cos/Cos.php:271
+#: vendor/xenice/wp-profession/src/cos/Cos.php:273
 msgid "Attach file types"
-msgstr ""
+msgstr "附加类型"
 
-#: vendor/xenice/wp-profession/src/cos/Cos.php:272
+#: vendor/xenice/wp-profession/src/cos/Cos.php:274
 msgid "Multiple file types separated by a comma"
-msgstr ""
+msgstr "多种类形用逗号分割"
 
-#: vendor/xenice/wp-profession/src/cos/Cos.php:278
-#, fuzzy
-#| msgid "Nicename"
+#: vendor/xenice/wp-profession/src/cos/Cos.php:280
 msgid "File Rename"
-msgstr "昵称"
+msgstr "文件重命名"
 
-#: vendor/xenice/wp-profession/src/cos/Cos.php:282
+#: vendor/xenice/wp-profession/src/cos/Cos.php:284
 msgid "Close"
 msgstr "关闭"
 
-#: vendor/xenice/wp-profession/src/cos/Cos.php:283
+#: vendor/xenice/wp-profession/src/cos/Cos.php:285
 msgid "Md5 Way"
-msgstr ""
+msgstr "MD5方式"
 
-#: vendor/xenice/wp-profession/src/cos/Cos.php:284
+#: vendor/xenice/wp-profession/src/cos/Cos.php:286
 msgid "Time and random way"
-msgstr ""
+msgstr "时间和随机数方式"
 
-#: vendor/xenice/wp-profession/src/cos/Cos.php:290
-#, fuzzy
-#| msgid "Optimize Options"
+#: vendor/xenice/wp-profession/src/cos/Cos.php:292
 msgid "Options"
-msgstr "优化选项"
+msgstr "选项"
 
-#: vendor/xenice/wp-profession/src/cos/Cos.php:295
+#: vendor/xenice/wp-profession/src/cos/Cos.php:297
 msgid "Delete local files"
-msgstr ""
+msgstr "删除本地文件"
 
-#: vendor/xenice/wp-profession/src/cos/Cos.php:301
-#, fuzzy
-#| msgid "Show Thumbnail"
+#: vendor/xenice/wp-profession/src/cos/Cos.php:303
 msgid "Upload thumbnails"
-msgstr "显示缩略图"
+msgstr "上传缩略图"
+
+#: vendor/xenice/wp-profession/src/cos/Cos.php:309
+msgid "Upload the outer images when saving the article"
+msgstr ""
 
 #: vendor/xenice/wp-profession/src/doc/Doc.php:151
-#, fuzzy
-#| msgid "Home Page"
 msgid "Doc Page"
-msgstr "首页"
+msgstr "文档页"
 
 #: vendor/xenice/wp-profession/src/doc/Doc.php:160
 #: vendor/xenice/wp-profession/src/doc/Doc.php:172
@@ -1429,58 +1431,46 @@ msgstr "首页"
 #: vendor/xenice/wp-profession/src/doc/view/index.php:13
 #: vendor/xenice/wp-profession/src/source/DocsWidget.php:12
 msgid "Docs"
-msgstr ""
+msgstr "文档"
 
 #: vendor/xenice/wp-profession/src/doc/Doc.php:161
 #: vendor/xenice/wp-profession/src/source/PostMeta.php:27
 msgid "Doc"
-msgstr ""
+msgstr "文档"
 
 #: vendor/xenice/wp-profession/src/doc/Doc.php:162
 msgid "All Docs"
-msgstr ""
+msgstr "所有文档"
 
 #: vendor/xenice/wp-profession/src/doc/Doc.php:164
-#, fuzzy
-#| msgid "Add New"
 msgid "Add New Doc"
-msgstr "新增"
+msgstr "新增文档"
 
 #: vendor/xenice/wp-profession/src/doc/Doc.php:165
-#, fuzzy
-#| msgid "Edit"
 msgid "Edit Doc"
-msgstr "编辑"
+msgstr "编辑文档"
 
 #: vendor/xenice/wp-profession/src/doc/Doc.php:166
 msgid "New Doc"
-msgstr ""
+msgstr "新建文档"
 
 #: vendor/xenice/wp-profession/src/doc/Doc.php:167
-#, fuzzy
-#| msgid "Views"
 msgid "View Doc"
-msgstr "阅读"
+msgstr "查看文档"
 
 #: vendor/xenice/wp-profession/src/doc/Doc.php:168
 #: vendor/xenice/wp-profession/src/doc/view/sidebar.php:5
 #: vendor/xenice/wp-profession/src/doc/view/tax.php:67
-#, fuzzy
-#| msgid "Search Phrases"
 msgid "Search Docs"
-msgstr "搜索说说"
+msgstr "搜索文档"
 
 #: vendor/xenice/wp-profession/src/doc/Doc.php:169
-#, fuzzy
-#| msgid "No phrases found"
 msgid "No docs found"
-msgstr "没有说说"
+msgstr "没有文档"
 
 #: vendor/xenice/wp-profession/src/doc/Doc.php:170
-#, fuzzy
-#| msgid "No phrases found in trash"
 msgid "No docs found in trash"
-msgstr "垃圾站没有说说"
+msgstr "垃圾站没有文档"
 
 #: vendor/xenice/wp-profession/src/doc/Doc.php:186
 #: vendor/xenice/wp-profession/src/doc/Doc.php:197
@@ -1490,113 +1480,85 @@ msgid "Categories"
 msgstr "分类"
 
 #: vendor/xenice/wp-profession/src/doc/Doc.php:187
-#, fuzzy
-#| msgid "Source Category"
 msgid "Doc Category"
-msgstr "资源分类"
+msgstr "文档分类"
 
 #: vendor/xenice/wp-profession/src/doc/Doc.php:188
-#, fuzzy
-#| msgid "Categories"
 msgid "Search Doc Categories"
-msgstr "分类"
+msgstr "搜索文档分类"
 
 #: vendor/xenice/wp-profession/src/doc/Doc.php:189
-#, fuzzy
-#| msgid "Categories"
 msgid "All Doc Categories"
-msgstr "分类"
+msgstr "所有文档分类"
 
 #: vendor/xenice/wp-profession/src/doc/Doc.php:190
-#, fuzzy
-#| msgid "Article Category"
 msgid "Parent Doc Category"
-msgstr "文章分类"
+msgstr "父文档分类"
 
 #: vendor/xenice/wp-profession/src/doc/Doc.php:191
-#, fuzzy
-#| msgid "Article Category"
 msgid "Parent Doc Category:"
-msgstr "文章分类"
+msgstr "父文档分类："
 
 #: vendor/xenice/wp-profession/src/doc/Doc.php:192
-#, fuzzy
-#| msgid "Source Category"
 msgid "Edit Doc Category"
-msgstr "资源分类"
+msgstr "编辑文档分类"
 
 #: vendor/xenice/wp-profession/src/doc/Doc.php:193
-#, fuzzy
-#| msgid "Image Category"
 msgid "Update Doc Category"
-msgstr "图片分类"
+msgstr "更新文档分类"
 
 #: vendor/xenice/wp-profession/src/doc/Doc.php:194
 #: vendor/xenice/wp-profession/src/doc/Doc.php:195
-#, fuzzy
-#| msgid "Source Category"
 msgid "New Doc Category"
-msgstr "资源分类"
+msgstr "新增文档分类"
 
 #: vendor/xenice/wp-profession/src/doc/PostMeta.php:31
 msgid "Directory"
-msgstr ""
+msgstr "目录"
 
 #: vendor/xenice/wp-profession/src/doc/view/cards-text.php:30
 msgid "No search results."
-msgstr ""
+msgstr "没有搜索结果。"
 
 #: vendor/xenice/wp-profession/src/markdown/PostMeta.php:27
 msgid "Mode"
-msgstr ""
+msgstr "模式"
 
 #: vendor/xenice/wp-profession/src/markdown/PostMeta.php:32
 #: vendor/xenice/wp-profession/src/markdown/PostMeta.php:47
-#, fuzzy
-#| msgid "Pure Text"
 msgid "Text"
-msgstr "纯文本"
+msgstr "文本"
 
 #: vendor/xenice/wp-profession/src/markdown/PostMeta.php:55
 msgid "Filter"
-msgstr ""
+msgstr "过虑"
 
 #: vendor/xenice/wp-profession/src/markdown/PostMeta.php:63
-#, fuzzy
-#| msgid "Update time："
 msgid "Update"
-msgstr "更新时间："
+msgstr "更新"
 
 #: vendor/xenice/wp-profession/src/source/DocsWidget.php:11
-#, fuzzy
-#| msgid "Xenice Links"
 msgid "Xenice Docs"
-msgstr "Xenice 友情链接"
+msgstr "Xenice 文档"
 
 #: vendor/xenice/wp-profession/src/source/DocsWidget.php:44
 msgid "Doc Directory"
-msgstr ""
+msgstr "文档目录"
 
 #: vendor/xenice/wp-profession/src/source/DocsWidget.php:55
-#, fuzzy
-#| msgid "Count:"
 msgid "Doc Count:"
-msgstr "数量："
+msgstr "文档数量："
 
 #: vendor/xenice/wp-profession/src/source/PostMeta.php:82
 msgid "Rank"
-msgstr ""
+msgstr "排序"
 
 #: vendor/xenice/wp-profession/src/source/Source.php:23
-#, fuzzy
-#| msgid "Source Single Page"
 msgid "Source Page"
-msgstr "资源单篇页"
+msgstr "资源页"
 
 #: vendor/xenice/wp-profession/src/source/Source.php:37
 #: vendor/xenice/wp-profession/src/source/Source.php:49
-#, fuzzy
-#| msgid "Source"
 msgid "Sources"
 msgstr "资源"
 
@@ -1605,123 +1567,83 @@ msgid "Source"
 msgstr "资源"
 
 #: vendor/xenice/wp-profession/src/source/Source.php:39
-#, fuzzy
-#| msgid "Source"
 msgid "All Sources"
-msgstr "资源"
+msgstr "所有资源"
 
 #: vendor/xenice/wp-profession/src/source/Source.php:41
-#, fuzzy
-#| msgid "Add New Phrase"
 msgid "Add New Source"
-msgstr "新增说说"
+msgstr "新增资源"
 
 #: vendor/xenice/wp-profession/src/source/Source.php:42
-#, fuzzy
-#| msgid "Source"
 msgid "Edit Source"
-msgstr "资源"
+msgstr "编辑资源"
 
 #: vendor/xenice/wp-profession/src/source/Source.php:43
-#, fuzzy
-#| msgid "Show Source"
 msgid "New Source"
-msgstr "显示资源"
+msgstr "新资源"
 
 #: vendor/xenice/wp-profession/src/source/Source.php:44
-#, fuzzy
-#| msgid "Show Source"
 msgid "View Source"
-msgstr "显示资源"
+msgstr "查看资源"
 
 #: vendor/xenice/wp-profession/src/source/Source.php:45
-#, fuzzy
-#| msgid "Show Source"
 msgid "Search Sources"
-msgstr "显示资源"
+msgstr "搜索资源"
 
 #: vendor/xenice/wp-profession/src/source/Source.php:46
-#, fuzzy
-#| msgid "No phrases found"
 msgid "No sources found"
-msgstr "没有说说"
+msgstr "没有资源"
 
 #: vendor/xenice/wp-profession/src/source/Source.php:47
-#, fuzzy
-#| msgid "No phrases found in trash"
 msgid "No sources found in trash"
-msgstr "垃圾站没有说说"
+msgstr "垃圾站没有资源"
 
 #: vendor/xenice/wp-profession/src/source/Source.php:64
 msgid "Source Category"
 msgstr "资源分类"
 
 #: vendor/xenice/wp-profession/src/source/Source.php:65
-#, fuzzy
-#| msgid "Source Category"
 msgid "Search Source Categories"
-msgstr "资源分类"
+msgstr "搜索资源分类"
 
 #: vendor/xenice/wp-profession/src/source/Source.php:66
-#, fuzzy
-#| msgid "Source Category"
 msgid "All Source Categories"
-msgstr "资源分类"
+msgstr "所有资源分类"
 
 #: vendor/xenice/wp-profession/src/source/Source.php:67
-#, fuzzy
-#| msgid "Source Category"
 msgid "Parent Source Category"
-msgstr "资源分类"
+msgstr "父资源分类"
 
 #: vendor/xenice/wp-profession/src/source/Source.php:68
-#, fuzzy
-#| msgid "Source Category"
 msgid "Parent Source Category:"
-msgstr "资源分类"
+msgstr "父资源分类："
 
 #: vendor/xenice/wp-profession/src/source/Source.php:69
-#, fuzzy
-#| msgid "Source Category"
 msgid "Edit Source Category"
-msgstr "资源分类"
+msgstr "编辑资源分类"
 
 #: vendor/xenice/wp-profession/src/source/Source.php:70
-#, fuzzy
-#| msgid "Source Category"
 msgid "Update Source Category"
-msgstr "资源分类"
+msgstr "更新资源分类"
 
 #: vendor/xenice/wp-profession/src/source/Source.php:71
 #: vendor/xenice/wp-profession/src/source/Source.php:72
-#, fuzzy
-#| msgid "Source Category"
 msgid "New Source Category"
-msgstr "资源分类"
+msgstr "新增资源分类"
 
-#~ msgid "Ignore this notice"
-#~ msgstr "忽略此通知"
-
-#~ msgid "Log in other ways: "
-#~ msgstr "其它登录方式："
-
-#~ msgid "Current Version"
-#~ msgstr "版本"
-
-#~ msgid "Custom"
-#~ msgstr "自定义"
-
-#~ msgid "Test Module"
-#~ msgstr "测试模块"
-
-#~ msgid "Enable Music"
-#~ msgstr "开启音乐"
-
-#~ msgid "Free"
-#~ msgstr "免费"
+#~ msgid ""
+#~ "Thank you for creating with <a href=\"https://wordpress.org/\">WordPress</"
+#~ "a>, Use <a href=\"http://www.iu200.com/\" target=\"_blank\">Fairy</a> "
+#~ "theme."
+#~ msgstr ""
+#~ "感谢使用<a href=\"http://cn.wordpress.org/\">WordPress</a>进行创作，使用"
+#~ "<a href=\"http://www.iu200.com/\" target=\"_blank\">Fairy</a>主题。"
 
 #~ msgid "Weibo Login"
 #~ msgstr "微薄登录"
+
+#~ msgid "Log in other ways: "
+#~ msgstr "其它登录方式："
 
 #~ msgid "private"
 #~ msgstr "私有"
@@ -1740,6 +1662,262 @@ msgstr "资源分类"
 #~ "您还没有登录，请先<a href=\"javascript:;\" data-toggle=\"modal\" data-"
 #~ "target=\"#login-modal\">登录</a>"
 
+#~ msgid "Personal Center"
+#~ msgstr "个人中心"
+
+#~ msgid "Tags"
+#~ msgstr "标签"
+
+#~ msgid "Article Sort:"
+#~ msgstr "文章排序："
+
+#~ msgid "Date"
+#~ msgstr "日期"
+
+#~ msgid "Views"
+#~ msgstr "阅读"
+
+#~ msgid "Auto gets category name as the widget name suffix."
+#~ msgstr "自动获取类别名称作为小部件名称后缀。"
+
+#~ msgid "Green"
+#~ msgstr "绿色"
+
+#~ msgid "Site Logo"
+#~ msgstr "网站Logo"
+
+#~ msgid "Search Type"
+#~ msgstr "搜索类型"
+
+#~ msgid "Local Search"
+#~ msgstr "本地搜索"
+
+#~ msgid "Baidu Search"
+#~ msgstr "百度搜索"
+
+#~ msgid "Baidu Search Code"
+#~ msgstr "百度搜索代码"
+
+#~ msgid "The search box uses a custom template"
+#~ msgstr "搜索框采用自定义模板"
+
+#~ msgid "Site ICP"
+#~ msgstr "网站备案号"
+
+#~ msgid "Only search title"
+#~ msgstr "只搜索标题"
+
+#~ msgid "Enable site source compression"
+#~ msgstr "启用网站代码压缩"
+
+#~ msgid "Enable css animation"
+#~ msgstr "开启CSS动画"
+
+#~ msgid "List title"
+#~ msgstr "列表标题"
+
+#~ msgid "List"
+#~ msgstr "列表"
+
+#~ msgid "List Page Settings"
+#~ msgstr "列表页设置"
+
+#~ msgid "Display field"
+#~ msgstr "显示字段"
+
+#~ msgid "display author name"
+#~ msgstr "显示作者名称"
+
+#~ msgid "display article description"
+#~ msgstr "显示文章描述"
+
+#~ msgid "display article views"
+#~ msgstr "显示文章阅读量"
+
+#~ msgid ""
+#~ "The first picture of the article is used as a thumbnail when no thumbnail "
+#~ "is set"
+#~ msgstr "当没有设置缩略图时，将文章的第一张图片用作缩略图"
+
+#~ msgid "Single"
+#~ msgstr "单篇"
+
+#~ msgid "Single Page Settings"
+#~ msgstr "单篇页设置"
+
+#~ msgid "Default Format"
+#~ msgstr "默认格式"
+
+#~ msgid "Article"
+#~ msgstr "文章"
+
+#~ msgid "Image"
+#~ msgstr "图片"
+
+#~ msgid "Article Category"
+#~ msgstr "文章分类"
+
+#~ msgid "[none]"
+#~ msgstr "[无]"
+
+#~ msgid "Image Category"
+#~ msgstr "图片分类"
+
+#~ msgid "display article comments"
+#~ msgstr "显示文章评论数"
+
+#~ msgid "Tags Alias"
+#~ msgstr "标签别名"
+
+#~ msgid "Related Articles Alias"
+#~ msgstr "相关文章别名"
+
+#~ msgid "Enable Music"
+#~ msgstr "开启音乐"
+
+#~ msgid "Authorization"
+#~ msgstr "授权"
+
+#~ msgid "Theme Authorization"
+#~ msgstr "主题授权"
+
+#~ msgid "Authorize"
+#~ msgstr "授权"
+
+#~ msgid ""
+#~ "Thank you for using the FAIRY theme. Please fill in the authorization "
+#~ "code and click the authorization button to complete the verification."
+#~ msgstr "感谢您使用FAIRY主题。请填写授权码，点击授权按钮完成验证。"
+
+#~ msgid "Auth Code"
+#~ msgstr "授权码"
+
+#~ msgid ""
+#~ "Get theme authorization code, please go to <a href=\"http://www.iu200.com/"
+#~ "user?action=authorization\" target=\"_blank\">official website personal "
+#~ "center</a>."
+#~ msgstr ""
+#~ "获取授权码请前往<a href=\"http://www.iu200.com/user?action=authorization"
+#~ "\" target=\"_blank\">官网个人中心</a>。"
+
+#~ msgid ""
+#~ "Congratulations, the theme has been authorized!\n"
+#~ "\n"
+#~ msgstr "恭喜你,主题已被授权!\n"
+
+#~ msgid ""
+#~ "Sorry, the theme is not authorized!\n"
+#~ "\n"
+#~ msgstr "对不起，主题没有被授权！\n"
+
+#~ msgid "Authorization success"
+#~ msgstr "授权成功"
+
+#~ msgid "Authorization failure"
+#~ msgstr "授权失败"
+
+#~ msgid "Custom"
+#~ msgstr "自定义"
+
+#~ msgid "Test Module"
+#~ msgstr "测试模块"
+
+#~ msgid "Site visit statistics"
+#~ msgstr "网站访问统计"
+
+#~ msgid "iu200"
+#~ msgstr "爱优两百"
+
+#~ msgid "WordPress built-in features"
+#~ msgstr "WordPress内置功能"
+
+#~ msgid ""
+#~ "Unused functions are recommended to disable, so as not to affect the site "
+#~ "speed"
+#~ msgstr "未使用的功能建议禁用，以免影响网站速度"
+
+#~ msgid "Xenice built-in features"
+#~ msgstr "Xenice内置功能"
+
+#~ msgid "Some commonly used functions can be enabled or disabled as needed"
+#~ msgstr "一些常用的功能可以根据需要启用或禁用"
+
+#~ msgid "Ignore this notice"
+#~ msgstr "忽略此通知"
+
+#~ msgid "sidebar"
+#~ msgstr "侧边栏"
+
+#~ msgid "Stick"
+#~ msgstr "置顶"
+
+#~ msgid "Comments Closed"
+#~ msgstr "评论关闭"
+
+#, fuzzy
+#~| msgid "Login"
+#~ msgid "login"
+#~ msgstr "登录"
+
+#~ msgid "Please don't directly loading the page, thanks!"
+#~ msgstr "请不要直接加载该页面，谢谢!"
+
+#~ msgid "This article requires a password, enter the password to access."
+#~ msgstr "这篇文章需要密码，请输入密码访问。"
+
+#~ msgid "Welcome"
+#~ msgstr "欢迎"
+
+#~ msgid "Submit / Ctrl+Enter"
+#~ msgstr "提交评论 / Ctrl+Enter"
+
+#~ msgid "Dropdown menu"
+#~ msgstr "下拉菜单"
+
+#~ msgid "%s Floor"
+#~ msgstr "%s 楼"
+
+#~ msgid "Popular posts"
+#~ msgstr "热门文章"
+
+#~ msgid "Last modified posts"
+#~ msgstr "最近更新文章"
+
+#~ msgid "The page not found or not this page"
+#~ msgstr "页面出错或者不是当前页面"
+
+#~ msgid "You can also try to search the post!"
+#~ msgstr "你可以通过搜索来找到想要的文章!"
+
+#~ msgid "Tag"
+#~ msgstr "标签"
+
+#~ msgid "0 reply"
+#~ msgstr "0 回复"
+
+#~ msgid "1 reply"
+#~ msgstr "1 回复"
+
+#~ msgid "% replies"
+#~ msgstr "% 回复"
+
+#~ msgid "Website"
+#~ msgstr "网址"
+
+#~ msgid "The page fault or not this page"
+#~ msgstr "页面出错或者没有此页面"
+
+#~ msgid ""
+#~ "You can also try to through the top of the search to find what you want "
+#~ "to see"
+#~ msgstr "你也可以试着通过上方的搜索找到你想要看到的文章！"
+
+#~ msgid "Current Version"
+#~ msgstr "版本"
+
+#~ msgid "Free"
+#~ msgstr "免费"
+
 #~ msgid "Download"
 #~ msgstr "下载"
 
@@ -1748,9 +1926,6 @@ msgstr "资源分类"
 
 #~ msgid "Purchased"
 #~ msgstr "已购买"
-
-#~ msgid "Authorization"
-#~ msgstr "授权"
 
 #~ msgid "Please select application"
 #~ msgstr "请选择应用"
@@ -1775,9 +1950,6 @@ msgstr "资源分类"
 
 #~ msgid "Domain Name"
 #~ msgstr "域名"
-
-#~ msgid "Auth Code"
-#~ msgstr "授权码"
 
 #~ msgid "Buy success"
 #~ msgstr "购买成功"
@@ -1815,62 +1987,8 @@ msgstr "资源分类"
 #~ msgid "Xenice Related Articles, Use only on single pages"
 #~ msgstr "Xenice相关文章，只在单篇页中使用"
 
-#~ msgid "Article Sort:"
-#~ msgstr "文章排序："
-
-#~ msgid "Date"
-#~ msgstr "日期"
-
-#~ msgid "Auto gets category name as the widget name suffix."
-#~ msgstr "自动获取类别名称作为小部件名称后缀。"
-
 #~ msgid "Pink"
 #~ msgstr "粉色"
-
-#~ msgid "Site Logo"
-#~ msgstr "网站Logo"
-
-#~ msgid "Default Format"
-#~ msgstr "默认格式"
-
-#~ msgid "Article"
-#~ msgstr "文章"
-
-#~ msgid "Image"
-#~ msgstr "图片"
-
-#~ msgid "[none]"
-#~ msgstr "[无]"
-
-#~ msgid "Search Type"
-#~ msgstr "搜索类型"
-
-#~ msgid "Local Search"
-#~ msgstr "本地搜索"
-
-#~ msgid "Baidu Search"
-#~ msgstr "百度搜索"
-
-#~ msgid "Baidu Search Code"
-#~ msgstr "百度搜索代码"
-
-#~ msgid "The search box uses a custom template"
-#~ msgstr "搜索框采用自定义模板"
-
-#~ msgid "Site visit statistics"
-#~ msgstr "网站访问统计"
-
-#~ msgid "Site ICP"
-#~ msgstr "网站备案号"
-
-#~ msgid "Only search title"
-#~ msgstr "只搜索标题"
-
-#~ msgid "Enable code highlight"
-#~ msgstr "开启代码高亮显示"
-
-#~ msgid "Enable site source compression"
-#~ msgstr "启用网站代码压缩"
 
 #~ msgid "Focus Type"
 #~ msgstr "焦点类型"
@@ -1881,52 +1999,8 @@ msgstr "资源分类"
 #~ msgid "Banner Image"
 #~ msgstr "横幅图片"
 
-#~ msgid "iu200"
-#~ msgstr "爱优两百"
-
 #~ msgid "Banner Description"
 #~ msgstr "横幅描述"
-
-#~ msgid "List title"
-#~ msgstr "列表标题"
-
-#~ msgid "List"
-#~ msgstr "列表"
-
-#~ msgid "List Page Settings"
-#~ msgstr "列表页设置"
-
-#~ msgid "Display field"
-#~ msgstr "显示字段"
-
-#~ msgid "display author name"
-#~ msgstr "显示作者名称"
-
-#~ msgid "display article description"
-#~ msgstr "显示文章描述"
-
-#~ msgid "display article views"
-#~ msgstr "显示文章阅读量"
-
-#~ msgid ""
-#~ "The first picture of the article is used as a thumbnail when no thumbnail "
-#~ "is set"
-#~ msgstr "当没有设置缩略图时，将文章的第一张图片用作缩略图"
-
-#~ msgid "Single"
-#~ msgstr "单篇"
-
-#~ msgid "Single Page Settings"
-#~ msgstr "单篇页设置"
-
-#~ msgid "display article comments"
-#~ msgstr "显示文章评论数"
-
-#~ msgid "Tags Alias"
-#~ msgstr "标签别名"
-
-#~ msgid "Related Articles Alias"
-#~ msgstr "相关文章别名"
 
 #~ msgid "user not exist"
 #~ msgstr "用户不存在"
@@ -1991,9 +2065,6 @@ msgstr "资源分类"
 #~ msgid "All Orders"
 #~ msgstr "全部订单"
 
-#~ msgid "Authorize"
-#~ msgstr "授权"
-
 #~ msgid "Domain Bind"
 #~ msgstr "域名绑定"
 
@@ -2008,82 +2079,3 @@ msgstr "资源分类"
 
 #~ msgid "Thank you for using iunice theme."
 #~ msgstr "感觉使用iuniceth"
-
-#~ msgid "Personal Center"
-#~ msgstr "个人中心"
-
-#~ msgid "WordPress built-in features"
-#~ msgstr "WordPress内置功能"
-
-#~ msgid ""
-#~ "Unused functions are recommended to disable, so as not to affect the site "
-#~ "speed"
-#~ msgstr "未使用的功能建议禁用，以免影响网站速度"
-
-#~ msgid "Xenice built-in features"
-#~ msgstr "Xenice内置功能"
-
-#~ msgid "Some commonly used functions can be enabled or disabled as needed"
-#~ msgstr "一些常用的功能可以根据需要启用或禁用"
-
-#~ msgid "sidebar"
-#~ msgstr "侧边栏"
-
-#~ msgid "Stick"
-#~ msgstr "置顶"
-
-#~ msgid "Comments Closed"
-#~ msgstr "评论关闭"
-
-#~ msgid "Please don't directly loading the page, thanks!"
-#~ msgstr "请不要直接加载该页面，谢谢!"
-
-#~ msgid "This article requires a password, enter the password to access."
-#~ msgstr "这篇文章需要密码，请输入密码访问。"
-
-#~ msgid "Welcome"
-#~ msgstr "欢迎"
-
-#~ msgid "Submit / Ctrl+Enter"
-#~ msgstr "提交评论 / Ctrl+Enter"
-
-#~ msgid "Dropdown menu"
-#~ msgstr "下拉菜单"
-
-#~ msgid "%s Floor"
-#~ msgstr "%s 楼"
-
-#~ msgid "Popular posts"
-#~ msgstr "热门文章"
-
-#~ msgid "Last modified posts"
-#~ msgstr "最近更新文章"
-
-#~ msgid "The page not found or not this page"
-#~ msgstr "页面出错或者不是当前页面"
-
-#~ msgid "You can also try to search the post!"
-#~ msgstr "你可以通过搜索来找到想要的文章!"
-
-#~ msgid "Tag"
-#~ msgstr "标签"
-
-#~ msgid "0 reply"
-#~ msgstr "0 回复"
-
-#~ msgid "1 reply"
-#~ msgstr "1 回复"
-
-#~ msgid "% replies"
-#~ msgstr "% 回复"
-
-#~ msgid "Website"
-#~ msgstr "网址"
-
-#~ msgid "The page fault or not this page"
-#~ msgstr "页面出错或者没有此页面"
-
-#~ msgid ""
-#~ "You can also try to through the top of the search to find what you want "
-#~ "to see"
-#~ msgstr "你也可以试着通过上方的搜索找到你想要看到的文章！"

@@ -1,5 +1,5 @@
 <?php
-define('HOME_URL', home_url());
+define('HOME_URL', home_url('',$_SERVER['HTTPS']?'https':'http'));
 define('THEME_NAME', wp_get_theme()->get('Name'));
 define('THEME_DIR', get_template_directory());
 define('THEME_URL', get_template_directory_uri());
@@ -14,5 +14,4 @@ define('XENICE_URL', THEME_URL . '/vendor/xenice');
 // options
 define('OPTIONS_FILE', __dir__ . '/options.php');
 
-define('DEBUG', false);
 define('CACHE', false);

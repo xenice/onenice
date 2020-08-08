@@ -38,13 +38,6 @@ function _t($str, $domain = THEME_NAME)
     return $translations->translate($str);
 }
 
-function _o($var)
-{
-    echo '<pre>';
-    var_dump($var);
-    echo '<pre>';
-}
-
 function is_url($v){
 	$pattern="#(http|https)://(.*\.)?.*\..*#i";
     return preg_match($pattern,$v);
@@ -70,5 +63,6 @@ function ad($id, $class='', $style = ''){
         }
     }
 }
+
 
 Loader::instance();

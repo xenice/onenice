@@ -32,6 +32,11 @@ jQuery(function($){
 
         }
     });*/
+    // rollbar
+    $('.scroll-top').on('click',function(){
+        $('body,html').animate({'scrollTop':0},500);
+    });
+
 });
 
 function _t(key){

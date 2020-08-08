@@ -19,7 +19,7 @@ class Mail extends Base
         take('enable_mail_service') && add_action('phpmailer_init', [$this, 'smtp']);
         if(is_admin()){
             Theme::bind('xenice_options_init', [$this,'set']);
-            Send::instance();
+            take('enable_mail_service') && Send::instance();
         }
     }
     

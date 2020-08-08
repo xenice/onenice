@@ -15,8 +15,9 @@ class File
 
 	public function __construct()
 	{
-	    $this->dir = THEME_DIR . '/cache/cachefile/';
-	    is_dir($this->dir) || mkdir($this->dir);
+	    $this->dir = WP_CONTENT_DIR . '/uploads/xenice/cache/';
+	    
+	    is_dir($this->dir) || mkdir($this->dir, 0777, true);
 	    $file = $this->dir . 'keys';
 		if(is_file($file)){
 			$this->data = unserialize(file_get_contents($file));
