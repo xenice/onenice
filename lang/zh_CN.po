@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: onenice\n"
 "POT-Creation-Date: 2020-08-08 21:41+0800\n"
-"PO-Revision-Date: 2020-08-08 22:03+0800\n"
+"PO-Revision-Date: 2020-08-11 08:54+0800\n"
 "Last-Translator: \n"
 "Language-Team: xenice<xenice@qq.com>\n"
 "Language: zh_CN\n"
@@ -745,11 +745,11 @@ msgstr "填写百度自动推送脚本"
 
 #: config/options.php:60
 msgid "Bottom right button"
-msgstr ""
+msgstr "右下角按钮"
 
 #: config/options.php:66
 msgid "Enable back-to-top button"
-msgstr ""
+msgstr "开启回到顶部按钮"
 
 #: config/options.php:77
 msgid "Auxiliary"
@@ -1359,7 +1359,7 @@ msgstr "Bucket名称"
 
 #: vendor/xenice/wp-profession/src/cos/Cos.php:219
 msgid "Bucket Region"
-msgstr ""
+msgstr "Bucket区域"
 
 #: vendor/xenice/wp-profession/src/cos/Cos.php:247
 msgid "Secret ID"
@@ -1419,7 +1419,7 @@ msgstr "上传缩略图"
 
 #: vendor/xenice/wp-profession/src/cos/Cos.php:309
 msgid "Upload the outer images when saving the article"
-msgstr ""
+msgstr "保存文章时上传外链图片"
 
 #: vendor/xenice/wp-profession/src/doc/Doc.php:151
 msgid "Doc Page"
