@@ -29,12 +29,12 @@ class SingleController extends Controller
     public function scripts()
     {
         $cdn = take('enable_cdn');
-        
+        $cdn_url = take('cdn_url');
         if(take('enable_highlight')){
             if($cdn){
-                wp_enqueue_style('highlight-css', 'https://cdn.staticfile.org/highlight.js/10.1.2/styles/vs.min.css', [], '10.1.2');
-                wp_enqueue_script('highlight-js', 'https://cdn.staticfile.org/highlight.js/10.1.2/highlight.min.js', [], '10.1.2', true);
-                wp_enqueue_script('line-numbers', 'https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js', [], '2.8.0', true);
+                wp_enqueue_style('highlight-css', $cdn_url . '/highlight.js/10.1.2/styles/vs.min.css', [], '10.1.2');
+                wp_enqueue_script('highlight-js', $cdn_url . '/highlight.js/10.1.2/highlight.min.js', [], '10.1.2', true);
+                wp_enqueue_script('line-numbers', $cdn_url . '/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js', [], '2.8.0', true);
             }
             else{
                 wp_enqueue_style('highlight-css', STATIC_URL . '/lib/highlight/styles/vs.css', [], '9.9.0');
@@ -45,8 +45,8 @@ class SingleController extends Controller
         }
         
         if($cdn){
-            wp_enqueue_style('share-css', 'https://cdn.staticfile.org/social-share.js/1.0.16/css/share.min.css', [], '1.0.16');
-            wp_enqueue_script('share-js', 'https://cdn.staticfile.org/social-share.js/1.0.16/js/social-share.min.js', [], '1.0.16', true);
+            wp_enqueue_style('share-css', $cdn_url . '/social-share.js/1.0.16/css/share.min.css', [], '1.0.16');
+            wp_enqueue_script('share-js', $cdn_url . '/social-share.js/1.0.16/js/social-share.min.js', [], '1.0.16', true);
         }
         else{
             wp_enqueue_style('share-css', STATIC_URL . '/lib/share/css/share.min.css', [], '1.0.16');

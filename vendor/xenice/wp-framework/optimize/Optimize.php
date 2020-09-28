@@ -156,6 +156,12 @@ class Optimize extends Base
                             'value' => false,
                             'label'  => _t('Convert the html within the code tag to entity before saving article')
                         ],
+                        [
+                            'id'   => 'remove_image_attribute',
+                            'type'  => 'checkbox',
+                            'value' => true,
+                            'label'  => _t('Remove image attributes while editing articles')
+                        ],
                     ]
                 ],
                 [

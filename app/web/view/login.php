@@ -61,7 +61,7 @@
                       <span class="nav-link active" ><?=_t('Register')?></span>
                   </li>
                 </ul>
-                <div class="sign-tips alert alert-danger"></div>
+                <div class="sign-tips alert"></div>
                 <form >
                     <div class="form-group">
                         <input id="r_username" type="text" class="form-control" name="username" placeholder="<?=_t('Username')?>">

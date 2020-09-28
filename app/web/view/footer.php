@@ -7,10 +7,12 @@
 		        echo $p->title();
 		    }
 		?>
-		<p>&copy; 2020 
-            <a href="<?=$option->info['url']?>"><?=$option->info['name']?></a>&nbsp;&nbsp;
-            <a href="https://www.xenice.com/project/onenice" target="_blank">theme by onenice</a> 
-        </p>
+		<div class="d-flex justify-content-center">
+		    <?php if(take('site_footer')){echo take('site_footer');} else{?>
+    		    <span>&copy; 2020 <a href="<?=$option->info['url']?>"><?=$option->info['name']?></a></span>
+                <a href="https://www.xenice.com/project/onenice" target="_blank">theme by onenice</a>
+            <?};?>
+        </div>
 	</div>
 </footer>
 <?=$template->footer()?>

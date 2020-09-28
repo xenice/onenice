@@ -7,13 +7,22 @@ jQuery(function($){
 	};
 
 	var _loginTipstimer;
-	function logtips(str){
+	function logtips(str, success){
 		if( !str ) return false;
+		success = arguments[1] ? arguments[1] : false;
+		if(success){
+		    $('.sign-tips').removeClass('alert-danger');
+            $('.sign-tips').addClass('alert-success');
+		}
+		else{
+		    $('.sign-tips').removeClass('alert-success');
+            $('.sign-tips').addClass('alert-danger');
+		}
 		_loginTipstimer && clearTimeout(_loginTipstimer);
 		$('.sign-tips').html(str).slideDown();
 		_loginTipstimer = setTimeout(function(){
 			$('.sign-tips').slideUp();
-		}, 5000);
+		}, 10000);
 	}
 
 	$('#login').on('click', function(){
@@ -261,14 +270,13 @@ jQuery(function($){
 
 				xenice.action+'captcha&rand='+Math.random(),
 				{
-				    email_nonce: xenice.nonce['send_email'],
+				    email_nonce: xenice.nonce['send_captcha'],
 					email:$("#r_email").val()
 				},
 
 				function (data) {
 					if($.trim(data) == "1"){
-
-						logtips(_t('Captcha has been sent to the email, may appear in the dustbin oh ~'));
+						logtips(_t('Captcha has been sent to the email, may appear in the dustbin oh ~'), true);
 						var countdown=60; 
 						settime(captcha);
 						function settime() { 

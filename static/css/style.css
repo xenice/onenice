@@ -545,6 +545,10 @@ footer{
 	font-size:13px;
 }
 
+footer .d-flex span,footer .d-flex>a{
+    margin:5px;
+}
+
 /* Bottom right button */
 
 .rollbar{
@@ -590,7 +594,7 @@ footer{
         min-width:120px;
         margin:0;
         border-radius: 4px;
-        z-index:2;
+        z-index:20;
     }
 
     .navbar .sub-menu li{

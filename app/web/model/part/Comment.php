@@ -20,7 +20,7 @@ trait Comment
     
     	$defaults = array(
     		'walker'            => null,
-    		'max_depth'         => '',
+    		'max_depth'         => '2',
     		'style'             => 'div',
     		'callback'          => [$this,'callback'],
     		'end-callback'      => [$this,'endCallback'],
@@ -107,10 +107,14 @@ trait Comment
      */
     public function callback( $comment, $args, $depth )
     {
-        $page         = ( ! empty( $in_comment_loop ) ) ? get_query_var( 'cpage' ) - 1 : get_page_of_comment( $comment->comment_ID, $args ) - 1;
-        $cpp          = get_option( 'comments_per_page' );
-        //$this->commentcount = $this->commentcount??$cpp * $page;
-        $this->commentcount = $this->commentcount??$this->count(true)+1;
+        // floor number
+        if(!isset($this->commentcount)){
+            $paged = get_query_var('cpage')?:1;
+            $num = get_option('comments_per_page');
+            $count = $this->count(true)+1;
+            $this->commentcount = $count - ($paged -1 )*$num;
+        }
+        
         $p = Theme::new('comment_pointer', $comment);
         if (!$p->pid()) {
             ?>

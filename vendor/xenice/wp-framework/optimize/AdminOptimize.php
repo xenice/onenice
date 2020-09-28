@@ -24,7 +24,11 @@ class AdminOptimize
 		take('enable_empty_email_save') && add_action('user_profile_update_errors',[$this,'enableEmptyEmailSave'],10,3);
 		take('remove_w_icon') && add_action('wp_before_admin_bar_render',[$this,'removeWIcon']);
 		take('enable_link') && add_filter( 'pre_option_link_manager_enabled', '__return_true' );
-		take('enable_code_escape') && add_filter( 'content_save_pre', [$this, 'replaceCodeTags'], 9 ); 
+		take('enable_code_escape') && add_filter( 'content_save_pre', [$this, 'replaceCodeTags'], 9 );
+		if(take('remove_image_attribute')){
+    		add_filter( 'post_thumbnail_html', [$this, 'removeImageAttribute'], 10 );
+            add_filter( 'image_send_to_editor', [$this, 'removeImageAttribute'], 10 );
+		}
     }
     
     public function disableAutoSave()
@@ -64,6 +68,12 @@ class AdminOptimize
     {
     	$data = preg_replace_callback('@(<code.*>)(.*)(</code>)@isU', [$this,'escapeCode'], $data);
     	return $data;
+    }
+    
+    public function removeImageAttribute( $html ) {
+    	$html = preg_replace( '/width="(\d*)"\s+height="(\d*)"\s+class=\"[^\"]*\"/', "", $html );
+    	$html = preg_replace( '/  /', "", $html );
+    	return $html;
     }
     
 }

@@ -46,13 +46,13 @@ class Mail extends Base
                 ],
                 [
                     'id'   => 'mail_host',
-                    'name' => _t('STMP Host'),
+                    'name' => _t('SMTP Host'),
                     'type'  => 'text',
                     'value' => ''
                 ],
                 [
                     'id'   => 'mail_post',
-                    'name' => _t('STMP Post'),
+                    'name' => _t('SMTP Post'),
                     'type'  => 'number',
                     'value' => 465
                 ],

@@ -14,4 +14,4 @@ define('XENICE_URL', THEME_URL . '/vendor/xenice');
 // options
 define('OPTIONS_FILE', __dir__ . '/options.php');
 
-define('CACHE', false);
+define('CACHE', true);

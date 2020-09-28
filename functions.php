@@ -64,5 +64,4 @@ function ad($id, $class='', $style = ''){
     }
 }
 
-
 Loader::instance();

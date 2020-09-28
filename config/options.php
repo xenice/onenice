@@ -57,6 +57,16 @@ return [
                 
             ],
             [
+                'id'   => 'site_footer',
+                'name' => _t('Site Footer'),
+                'desc' => _t('Customize the site footer'),
+                'type'  => 'textarea',
+                'style' => 'regular',
+                'value' => '<span>&copy; 2020 <a href="https://www.xenice.com/">Xenice</a></span><a href="https://www.xenice.com/article/onenice" target="_blank">theme by onenice</a>',
+                'rows' => 6
+                
+            ],
+            [
                 'name' => _t('Bottom right button'),
                 'fields'=>[
                     [
@@ -74,7 +84,7 @@ return [
                 ]
             ],
             [
-                'name' => _t('Auxiliary'),
+                'name' => 'CDN',
                 'fields'=>[
                     [
                         'id'   => 'enable_cdn',
@@ -82,6 +92,22 @@ return [
                         'value' => true,
                         'label'  => _t('Enable static file CDN acceleration')
                     ],
+                    [
+                        'id'   => 'cdn_url',
+                        'type'  => 'select',
+                        'label' => _t('CDN Repository'),
+                        'value' => 'https://www.staticfile.org',
+                        'opts' => [
+                            'https://cdn.staticfile.org'=>'staticfile',
+                            'https://cdn.bootcdn.net/ajax/libs'=>'bootcdn',
+                            'https://libs.cdnjs.net'=>'cdnjs',
+                        ]
+                    ],
+                ]
+            ],
+            [
+                'name' => _t('Auxiliary'),
+                'fields'=>[
                     [
                         'id'   => 'enable_highlight',
                         'type'  => 'checkbox',

@@ -152,7 +152,7 @@ class LoginAjax extends Ajax
     
     public function captcha()
     {
-        if(!wp_verify_nonce($_POST['email_nonce'],'send_email')){
+        if(!wp_verify_nonce($_POST['email_nonce'],'send_captcha')){
             exit;
         }
         $email = $_POST['email'];

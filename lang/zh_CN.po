@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: onenice\n"
-"POT-Creation-Date: 2020-08-08 21:41+0800\n"
-"PO-Revision-Date: 2020-08-11 08:54+0800\n"
+"POT-Creation-Date: 2020-09-28 11:27+0800\n"
+"PO-Revision-Date: 2020-09-28 11:29+0800\n"
 "Last-Translator: \n"
 "Language-Team: xenice<xenice@qq.com>\n"
 "Language: zh_CN\n"
@@ -115,11 +115,11 @@ msgstr "搜索页"
 msgid "Single Page"
 msgstr "单篇页"
 
-#: app/web/action/GuestAction.php:120 config/options.php:72
+#: app/web/action/GuestAction.php:122 config/options.php:82
 msgid "Service QQ"
 msgstr "咨询QQ"
 
-#: app/web/action/GuestAction.php:123
+#: app/web/action/GuestAction.php:125
 msgid "Back to top"
 msgstr "返回顶部"
 
@@ -135,7 +135,7 @@ msgstr "标题"
 msgid "Describtion"
 msgstr "描述"
 
-#: app/web/action/SeoAction.php:34 config/options.php:129
+#: app/web/action/SeoAction.php:34 config/options.php:155
 msgid "Keywords"
 msgstr "关键字"
 
@@ -168,8 +168,8 @@ msgid "Please enter password"
 msgstr "请输入密码"
 
 #: app/web/ajax/LoginAjax.php:72 app/web/ajax/LoginAjax.php:277
-#: app/web/view/page/user.php:178 static/js/login.js:111 static/js/login.js:113
-#: static/js/login.js:217
+#: app/web/view/page/user.php:178 static/js/login.js:120 static/js/login.js:122
+#: static/js/login.js:226
 msgid "Entered passwords differ"
 msgstr "两次输入的密码不一致"
 
@@ -313,29 +313,29 @@ msgstr "阅读"
 
 #: app/web/model/Category.php:17 app/web/model/Tag.php:12
 #: app/web/model/part/Article.php:15 app/web/view/archive/index.php:4
-#: app/web/view/search/index.php:4 config/options.php:115
+#: app/web/view/search/index.php:4 config/options.php:141
 #: vendor/xenice/wp-profession/src/doc/view/index.php:12
 msgid "Home"
 msgstr "首页"
 
-#: app/web/model/part/Comment.php:125
+#: app/web/model/part/Comment.php:129
 msgid "Sofa"
 msgstr "沙发"
 
-#: app/web/model/part/Comment.php:128
+#: app/web/model/part/Comment.php:132
 msgid "Bench"
 msgstr "板凳"
 
-#: app/web/model/part/Comment.php:131
+#: app/web/model/part/Comment.php:135
 msgid "Floor"
 msgstr "地板"
 
-#: app/web/model/part/Comment.php:134
+#: app/web/model/part/Comment.php:138
 #, php-format
 msgid "#%s"
 msgstr "#%s"
 
-#: app/web/model/part/Comment.php:146 app/web/model/part/Comment.php:177
+#: app/web/model/part/Comment.php:150 app/web/model/part/Comment.php:181
 msgid "Reply"
 msgstr "回复"
 
@@ -433,14 +433,14 @@ msgstr "退出"
 #: app/web/view/login.php:37 app/web/view/login.php:58
 #: app/web/view/page/login.php:74 app/web/view/page/login.php:107
 #: app/web/view/page/login.php:131 app/web/view/page/login.php:166
-#: static/js/login.js:44 vendor/xenice/wp-login/src/Login.php:36
+#: static/js/login.js:53 vendor/xenice/wp-login/src/Login.php:36
 msgid "Login"
 msgstr "登录"
 
 #: app/web/view/login.php:25 app/web/view/login.php:61
 #: app/web/view/login.php:85 app/web/view/page/login.php:79
 #: app/web/view/page/login.php:103 app/web/view/page/login.php:132
-#: app/web/view/page/login.php:167 static/js/login.js:166
+#: app/web/view/page/login.php:167 static/js/login.js:175
 msgid "Register"
 msgstr "注册"
 
@@ -489,7 +489,7 @@ msgstr "对不起，您访问的页面已迁移或不存在"
 msgid "Forget password ?"
 msgstr "忘记密码?"
 
-#: app/web/view/page/login.php:99 static/js/login.js:291 static/js/login.js:297
+#: app/web/view/page/login.php:99 static/js/login.js:299 static/js/login.js:305
 msgid "Send captcha"
 msgstr "发送验证码"
 
@@ -499,7 +499,7 @@ msgid ""
 "create a new password via email."
 msgstr "请输入您的用户名或邮箱地址。您将通过邮箱收到创建新密码的链接。"
 
-#: app/web/view/page/login.php:127 static/js/login.js:199
+#: app/web/view/page/login.php:127 static/js/login.js:208
 msgid "Get New Password"
 msgstr "获取新密码"
 
@@ -508,7 +508,7 @@ msgid "New password"
 msgstr "新密码"
 
 #: app/web/view/page/login.php:162 app/web/view/page/user.php:187
-#: static/js/login.js:240
+#: static/js/login.js:249
 msgid "Change password"
 msgstr "修改密码"
 
@@ -553,7 +553,7 @@ msgstr "保存更改"
 msgid "Original password error"
 msgstr "原密码错误"
 
-#: app/web/view/page/user.php:174 static/js/login.js:27
+#: app/web/view/page/user.php:174 static/js/login.js:36
 msgid "Password cannot be empty"
 msgstr "密码不能为空"
 
@@ -589,7 +589,7 @@ msgstr "相关文章"
 msgid "Xenice Advertise"
 msgstr "Xenice 广告"
 
-#: app/web/widget/Advertise.php:11 config/options.php:191
+#: app/web/widget/Advertise.php:11 config/options.php:217
 msgid "Advertise"
 msgstr "广告"
 
@@ -743,185 +743,197 @@ msgstr "百度自动推送"
 msgid "Fill in baidu auto push script"
 msgstr "填写百度自动推送脚本"
 
-#: config/options.php:60
+#: config/options.php:61
+msgid "Site Footer"
+msgstr "网站页脚"
+
+#: config/options.php:62
+msgid "Customize the site footer"
+msgstr "自定义网站页脚"
+
+#: config/options.php:70
 msgid "Bottom right button"
 msgstr "右下角按钮"
 
-#: config/options.php:66
+#: config/options.php:76
 msgid "Enable back-to-top button"
 msgstr "开启回到顶部按钮"
 
-#: config/options.php:77
-msgid "Auxiliary"
-msgstr "辅助"
-
-#: config/options.php:83
+#: config/options.php:93
 msgid "Enable static file CDN acceleration"
 msgstr "开启静态文件CDN加速"
 
-#: config/options.php:89
+#: config/options.php:98
+msgid "CDN Repository"
+msgstr "CDN仓库"
+
+#: config/options.php:109
+msgid "Auxiliary"
+msgstr "辅助"
+
+#: config/options.php:115
 msgid "Enable code highlight"
 msgstr "开启代码高亮显示"
 
-#: config/options.php:95
+#: config/options.php:121
 msgid "Enbale category badge on the list page"
 msgstr "在列表页上启用类别标记"
 
-#: config/options.php:101
+#: config/options.php:127
 msgid "Enable article seo"
 msgstr "开启文章SEO"
 
-#: config/options.php:107
+#: config/options.php:133
 msgid "Enable the phrase"
 msgstr "开启说说"
 
-#: config/options.php:116
+#: config/options.php:142
 msgid "Home Settings"
 msgstr "首页设置"
 
-#: config/options.php:120
+#: config/options.php:146
 msgid "Description"
 msgstr "描述"
 
-#: config/options.php:136
+#: config/options.php:162
 msgid "Slide"
 msgstr "放灯片"
 
-#: config/options.php:137
+#: config/options.php:163
 msgid ""
 "Please set slide images below if Enable slide, Images recommended size is "
 "715px*350px."
 msgstr "如果开启幻灯片，请设置下面的幻灯片图片，图片推荐大小为715px*350px。"
 
-#: config/options.php:143
+#: config/options.php:169
 msgid "Enable Slide"
 msgstr "开启放灯片"
 
-#: config/options.php:149
+#: config/options.php:175
 msgid "Display the title and description of the slide"
 msgstr "显示放灯片图片标题和描述"
 
-#: config/options.php:156
+#: config/options.php:182
 msgid "Slide Image 1"
 msgstr "放灯片图片1"
 
-#: config/options.php:167
+#: config/options.php:193
 msgid "Slide Image 2"
 msgstr "放灯片图片2"
 
-#: config/options.php:178
+#: config/options.php:204
 msgid "Slide Image 3"
 msgstr "放灯片图片3"
 
-#: config/options.php:192
+#: config/options.php:218
 msgid "Advertise Settings"
 msgstr "广告设置"
 
-#: config/options.php:195
+#: config/options.php:221
 msgid "Single page top AD"
 msgstr "单篇页上部广告"
 
-#: config/options.php:200 config/options.php:228 config/options.php:256
-#: config/options.php:284 vendor/xenice/wp-login/src/Login.php:47
+#: config/options.php:226 config/options.php:254 config/options.php:282
+#: config/options.php:310 vendor/xenice/wp-login/src/Login.php:47
 #: vendor/xenice/wp-login/src/Login.php:71
 #: vendor/xenice/wp-login/src/Login.php:95
 msgid "Enable"
 msgstr "开启"
 
-#: config/options.php:206 config/options.php:234 config/options.php:262
-#: config/options.php:290
+#: config/options.php:232 config/options.php:260 config/options.php:288
+#: config/options.php:316
 msgid "PC AD code"
 msgstr "电脑端广告代码"
 
-#: config/options.php:214 config/options.php:242 config/options.php:270
-#: config/options.php:298
+#: config/options.php:240 config/options.php:268 config/options.php:296
+#: config/options.php:324
 msgid "Mobile AD code"
 msgstr "手机端广告代码"
 
-#: config/options.php:223
+#: config/options.php:249
 msgid "Single page bottom AD"
 msgstr "单篇页底部广告"
 
-#: config/options.php:251
+#: config/options.php:277
 msgid "List page top AD"
 msgstr "列表页上部广告"
 
-#: config/options.php:279
+#: config/options.php:305
 msgid "List page bottom AD"
 msgstr "列表页底部广告"
 
-#: static/js/login.js:22 static/js/login.js:174
+#: static/js/login.js:31 static/js/login.js:183
 msgid "Username or email cannot be empty"
 msgstr "用户名或邮箱不能为空"
 
-#: static/js/login.js:32
+#: static/js/login.js:41
 msgid "Login..."
 msgstr "登录中..."
 
-#: static/js/login.js:43
+#: static/js/login.js:52
 msgid "Username or password wrong"
 msgstr "用户名或密码错误"
 
-#: static/js/login.js:120
+#: static/js/login.js:129
 msgid ""
 "Username can only be 6-16 characters composed of alphanumeric or underlined "
 "characters"
 msgstr "用户名只能是6-16个字符，由字母、数字或下划线字符组成"
 
-#: static/js/login.js:125
+#: static/js/login.js:134
 msgid "Email format error"
 msgstr "邮箱格式错误"
 
-#: static/js/login.js:130 static/js/login.js:212
+#: static/js/login.js:139 static/js/login.js:221
 msgid "Password length at least 6"
 msgstr "密码长度至少6位"
 
-#: static/js/login.js:136 static/js/login.js:178 static/js/login.js:207
+#: static/js/login.js:145 static/js/login.js:187 static/js/login.js:216
 msgid "The captcha cannot be empty"
 msgstr "验证码不能为空"
 
-#: static/js/login.js:141
+#: static/js/login.js:150
 msgid "Register..."
 msgstr "注册中..."
 
-#: static/js/login.js:154
+#: static/js/login.js:163
 msgid "Registered successfully"
 msgstr "注册成功"
 
-#: static/js/login.js:182 static/js/login.js:221
+#: static/js/login.js:191 static/js/login.js:230
 msgid "execute..."
 msgstr "执行中..."
 
-#: static/js/login.js:194
+#: static/js/login.js:203
 msgid ""
 "The link has been successfully sent to your email, please check and confirm."
 msgstr "链接已经成功发送到您的邮箱，请查收并确认。"
 
-#: static/js/login.js:235
+#: static/js/login.js:244
 msgid "Password changed successfully, please remember the password."
 msgstr "密码更改成功，请记住密码。"
 
-#: static/js/login.js:252
+#: static/js/login.js:261
 msgid "Your operation too fast, please wait a moment."
 msgstr "您操作太快了，请稍等。"
 
-#: static/js/login.js:258
+#: static/js/login.js:267
 msgid "Send in..."
 msgstr "发送中..."
 
-#: static/js/login.js:271
+#: static/js/login.js:279
 msgid "Captcha has been sent to the email, may appear in the dustbin oh ~"
 msgstr "验证码已发送到邮箱，可能出现在垃圾箱哦~"
 
-#: static/js/login.js:277 static/js/login.js:282
+#: static/js/login.js:285 static/js/login.js:290
 msgid "Resend captcha"
 msgstr "重新发送验证码"
 
-#: static/js/login.js:290
+#: static/js/login.js:298
 msgid "Email already exists"
 msgstr "邮箱已存在"
 
-#: static/js/login.js:296
+#: static/js/login.js:304
 msgid "The captcha failed to send. Please try again later."
 msgstr "验证码发送失败，请稍后再试。"
 
@@ -946,12 +958,12 @@ msgid "From Name"
 msgstr "发件人名称"
 
 #: vendor/xenice/wp-framework/mail/Mail.php:49
-msgid "STMP Host"
-msgstr "STMP服务器"
+msgid "SMTP Host"
+msgstr "SMTP服务器"
 
 #: vendor/xenice/wp-framework/mail/Mail.php:55
-msgid "STMP Post"
-msgstr "STMP端口"
+msgid "SMTP Post"
+msgstr "SMTP端口"
 
 #: vendor/xenice/wp-framework/mail/Mail.php:61
 msgid "Mail Account"
@@ -1100,15 +1112,19 @@ msgstr "启用友情链接"
 msgid "Convert the html within the code tag to entity before saving article"
 msgstr "在保存文章之前，将代码标记中的html转换为实体"
 
-#: vendor/xenice/wp-framework/optimize/Optimize.php:162
+#: vendor/xenice/wp-framework/optimize/Optimize.php:163
+msgid "Remove image attributes while editing articles"
+msgstr "编辑文章时移除图片属性"
+
+#: vendor/xenice/wp-framework/optimize/Optimize.php:168
 msgid "Front-end optimization"
 msgstr "前端优化"
 
-#: vendor/xenice/wp-framework/optimize/Optimize.php:168
+#: vendor/xenice/wp-framework/optimize/Optimize.php:174
 msgid "Disable the front admin bar"
 msgstr "禁用前台管理栏"
 
-#: vendor/xenice/wp-framework/optimize/Optimize.php:174
+#: vendor/xenice/wp-framework/optimize/Optimize.php:180
 msgid "Disable useless links to the front wp_head"
 msgstr "禁用前端wp_head的无用链接"
 
@@ -1183,19 +1199,19 @@ msgstr "保存失败"
 msgid "Markdown"
 msgstr ""
 
-#: vendor/xenice/wp-framework/option/Elements.php:113
+#: vendor/xenice/wp-framework/option/Elements.php:117
 msgid "URL:"
 msgstr "链接："
 
-#: vendor/xenice/wp-framework/option/Elements.php:115
+#: vendor/xenice/wp-framework/option/Elements.php:119
 msgid "Title:"
 msgstr "标题："
 
-#: vendor/xenice/wp-framework/option/Elements.php:117
+#: vendor/xenice/wp-framework/option/Elements.php:121
 msgid "Description:"
 msgstr "描述："
 
-#: vendor/xenice/wp-framework/option/Elements.php:119
+#: vendor/xenice/wp-framework/option/Elements.php:123
 msgid "Image Path:"
 msgstr "图片路径："
 
@@ -1682,9 +1698,6 @@ msgstr "新增资源分类"
 
 #~ msgid "Green"
 #~ msgstr "绿色"
-
-#~ msgid "Site Logo"
-#~ msgstr "网站Logo"
 
 #~ msgid "Search Type"
 #~ msgstr "搜索类型"

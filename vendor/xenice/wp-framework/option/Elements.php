@@ -82,6 +82,10 @@ trait Elements
             }
         }
         $str .= '</select>';
+        
+        if(isset($field['label'])){
+            $str = sprintf( '<label>%s %s</label>', $str, $field['label']);
+        }
         return $str;
     }
     

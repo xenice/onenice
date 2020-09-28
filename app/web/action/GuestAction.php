@@ -33,13 +33,14 @@ class GuestAction extends GlobalAction
         wp_dequeue_style( 'wp-block-library' );
         wp_deregister_script( 'jquery' );
         if(take('enable_cdn')){
-            wp_enqueue_style( 'font-awesome', 'https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css', [], '4.7.0');
-            wp_enqueue_style( 'bootstrap-css', 'https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css', [], '4.4.1');
+            $cdn_url = take('cdn_url');
+            wp_enqueue_style( 'font-awesome', $cdn_url . '/font-awesome/4.7.0/css/font-awesome.min.css', [], '4.7.0');
+            wp_enqueue_style( 'bootstrap-css', $cdn_url . '/twitter-bootstrap/4.4.1/css/bootstrap.min.css', [], '4.4.1');
             
-            wp_enqueue_script( 'jquery', 'https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js', [], '3.2.1',true);
-            wp_enqueue_script( 'popper', 'https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js', [], '1.15.0',true);
-            wp_enqueue_script( 'bootstrap-js', 'https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js', [], '4.4.1',true);
-            wp_enqueue_script( 'gifffer', 'https://cdn.staticfile.org/gifffer/1.5.0/gifffer.min.js', [], '1.5.0',true);
+            wp_enqueue_script( 'jquery', $cdn_url . '/jquery/3.2.1/jquery.min.js', [], '3.2.1',true);
+            wp_enqueue_script( 'popper', $cdn_url . '/popper.js/1.15.0/umd/popper.min.js', [], '1.15.0',true);
+            wp_enqueue_script( 'bootstrap-js', $cdn_url . '/twitter-bootstrap/4.4.1/js/bootstrap.min.js', [], '4.4.1',true);
+            wp_enqueue_script( 'gifffer', $cdn_url . '/gifffer/1.5.0/gifffer.min.js', [], '1.5.0',true);
             
         }
         else{
@@ -98,6 +99,7 @@ class GuestAction extends GlobalAction
             'Email already exists',
             'Send captcha',
             'The captcha failed to send. Please try again later.',
+            'Captcha has been sent to the email, may appear in the dustbin oh ~',
         ];
         
         $lang = [];

@@ -17,9 +17,6 @@ class Loader extends Base
 	        error_reporting(-1);
             ini_set('display_errors', 1);
 	    }
-	    else{
-	        Fault::instance();
-	    }
 	    isset($_SESSION) || session_start();
 	    load_theme_textdomain(THEME_NAME, THEME_DIR . '/lang');
 	    date_default_timezone_set(get_option('timezone_string'));
