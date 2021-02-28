@@ -15,7 +15,7 @@
     <header class="navbar navbar-expand-md">
     	<div class="container">
     		<!-- Brand -->
-    		<a class="navbar-brand" href="<?=$option->info['url']?>"><?=$option->info['name']?></a>
+    		<a class="navbar-brand" href="<?=$option->info['url']?>"><?=$template->logo()?></a>
     
     		<!-- Toggler/collapsibe Button -->
     		<div class="menu-toggle d-md-none" data-toggle="collapse" data-target="#collapsibleNavbar">

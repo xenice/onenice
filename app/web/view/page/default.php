@@ -1,4 +1,9 @@
 <?php import('header'); ?>
+<div class="breadcrumb">
+	<div class="container">
+	    <?=$page->breadcrumb()?>
+	</div>
+</div>
 <div class="main container">
 	<div class="row">
 	  <div class="col-md-8">

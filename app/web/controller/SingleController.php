@@ -4,18 +4,15 @@ namespace app\web\controller;
 
 use xenice\theme\Theme;
 use xenice\theme\Controller;
-use app\web\model\Category;
-use app\web\model\Article;
-use app\web\model\User;
 
 class SingleController extends Controller
 {
-    public function index()
+    public function index($view = 'index')
     {
         Theme::bind('footer', [$this, 'footer']);
         add_action( 'wp_enqueue_scripts', [$this, 'scripts']);
         //add_action( 'wp_print_scripts', [$this, 'footer']);
-        $article = Article::instance();
+        $article = Theme::use('article');
         $article->setViews();
         if(take('enable_article_seo') && $title = $article->get('title'))
 	       $this->title = $title;
@@ -23,7 +20,7 @@ class SingleController extends Controller
             $this->title = $article->title() . ' - ' . $this->option->info['name'];
         $this->description = $article->description();
         $this->keywords = $article->keywords();
-	    $this->render();
+	    $this->render($view);
     }
     
     public function scripts()
@@ -46,17 +43,19 @@ class SingleController extends Controller
         
         if($cdn){
             wp_enqueue_style('share-css', $cdn_url . '/social-share.js/1.0.16/css/share.min.css', [], '1.0.16');
-            wp_enqueue_script('share-js', $cdn_url . '/social-share.js/1.0.16/js/social-share.min.js', [], '1.0.16', true);
+            wp_enqueue_script('share-js', $cdn_url . '/social-share.js/1.0.16/js/jquery.share.min.js', [], '1.0.16', true);
         }
         else{
             wp_enqueue_style('share-css', STATIC_URL . '/lib/share/css/share.min.css', [], '1.0.16');
-            wp_enqueue_script('share-js', STATIC_URL . '/lib/share/js/social-share.min.js', [], '1.0.16', true);
+            wp_enqueue_script('share-js', STATIC_URL . '/lib/share/js/jquery.share.min.js', [], '1.0.16', true);
         }
     }
     
     public function footer($footer)
     {
-        $footer .= '<script>hljs.initHighlightingOnLoad();hljs.initLineNumbersOnLoad();</script>';
+        if(take('enable_highlight')){
+            $footer .= '<script>hljs.initHighlightingOnLoad();hljs.initLineNumbersOnLoad();</script>';
+        }
         return $footer;
     }
 }

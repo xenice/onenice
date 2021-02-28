@@ -52,7 +52,7 @@ class UniversalArticles extends \WP_Widget
                     <?php else: ?>
                         <li class="d-flex thumbnail">
                             <a href="<?=$p->url()?>" title="<?=$p->title()?>">
-                                <img class="lazyload" src="<?=STATIC_URL?>/images/thumbnail.png" data-src="<?=$p->thumbnail()?>" alt="<?=$p->title()?>"/>
+                                <img class="lazyload" src="<?=take('default_loading_image')?>" data-src="<?=$p->thumbnail()?>" alt="<?=$p->title()?>"/>
                             </a>
                             <div class="data">
                                 <a href="<?=$p->url()?>" rel="bookmark" title="<?=$p->title()?>"><?=$p->title()?></a>

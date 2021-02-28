@@ -6,14 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'xenice\\view\\' => array($vendorDir . '/xenice/wp-framework/view'),
-    'xenice\\theme\\' => array($vendorDir . '/xenice/wp-framework/theme'),
-    'xenice\\option\\' => array($vendorDir . '/xenice/wp-framework/option'),
-    'xenice\\optimize\\' => array($vendorDir . '/xenice/wp-framework/optimize'),
-    'xenice\\model\\' => array($vendorDir . '/xenice/wp-framework/model'),
-    'xenice\\mail\\' => array($vendorDir . '/xenice/wp-framework/mail'),
-    'xenice\\cache\\' => array($vendorDir . '/xenice/wp-framework/cache'),
-    'xenice\\login\\' => array($vendorDir . '/xenice/wp-login/src'),
-    'xenice\\profession\\' => array($vendorDir . '/xenice/wp-profession/src'),
+    'xenice\\' => array($vendorDir . '/xenice/src'),
     'app\\' => array($baseDir . '/app'),
 );

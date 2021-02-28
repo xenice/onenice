@@ -7,15 +7,14 @@
             "email": "xenice@qq.com"
         }
     ],
-	"minimum-stability": "dev",
     "require": {
-		"php": ">=7.0",
-		"xenice/wp-framework":"@dev",
-		"xenice/wp-login":"@dev"
+		"php": ">=7.0"
 	},
     "autoload": {
 		"psr-4": {
+			"xenice\\" : "vendor/xenice/src",
 			"app\\":"app/"
-		}
+		},
+		"files": ["vendor/xenice/src/functions.php"]
 	}
 }

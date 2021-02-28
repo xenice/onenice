@@ -12,8 +12,10 @@ return [
                 'value'=>'#0099FF #0099FF #0099FF #007bff #fff #99CCFF',
                 'opts' =>[
                     '#0099FF #0099FF #0099FF #007bff #fff #99CCFF'  => _t('Blue'),
-                    '#000 #666 #f9f9f9 #eee #666 #aaa' => _t('Grey'),
                     '#FF5E52 #FF5E52 #FF5E52 #f13c2f #fff #fc938b'  => _t('Red'),
+                    '#1fae67 #1fae67 #1fae67 #229e60 #fff #35dc89'  => _t('Green'),
+                    '#ff4979 #ff4979 #ff4979 #f2295e #fff #fb94af'  => _t('Pink'),
+                    '#000 #666 #f9f9f9 #eee #666 #aaa' => _t('Grey'),
                 ]
                 
             ],
@@ -23,6 +25,27 @@ return [
                 'type'  => 'img',
                 'style' => 'regular',
                 'value' => STATIC_URL . '/images/icon.ico',
+            ],
+            [
+                'id'   => 'site_logo',
+                'name' => _t('Site Logo'),
+                'type'  => 'img',
+                'style' => 'regular',
+                'value' => STATIC_URL . '/images/logo.png',
+            ],
+            [
+                'id'   => 'default_thumbnail',
+                'name' => _t('Default Thumbnail'),
+                'type'  => 'img',
+                'style' => 'regular',
+                'value' => STATIC_URL . '/images/thumbnail.png',
+            ],
+            [
+                'id'   => 'default_loading_image',
+                'name' => _t('Default Loading Image'),
+                'type'  => 'img',
+                'style' => 'regular',
+                'value' => STATIC_URL . '/images/loading.png',
             ],
             [
                 'id'   => 'display_style',
@@ -62,7 +85,7 @@ return [
                 'desc' => _t('Customize the site footer'),
                 'type'  => 'textarea',
                 'style' => 'regular',
-                'value' => '<span>&copy; 2020 <a href="https://www.xenice.com/">Xenice</a></span><a href="https://www.xenice.com/article/onenice" target="_blank">theme by onenice</a>',
+                'value' => '',
                 'rows' => 6
                 
             ],
@@ -84,6 +107,13 @@ return [
                 ]
             ],
             [
+                'id'   => 'site_icp',
+                'name' => _t('Site ICP'),
+                'type'  => 'text',
+                'style' => 'regular',
+                'value' => '',
+            ],
+            [
                 'name' => 'CDN',
                 'fields'=>[
                     [
@@ -96,7 +126,7 @@ return [
                         'id'   => 'cdn_url',
                         'type'  => 'select',
                         'label' => _t('CDN Repository'),
-                        'value' => 'https://www.staticfile.org',
+                        'value' => 'https://cdn.staticfile.org',
                         'opts' => [
                             'https://cdn.staticfile.org'=>'staticfile',
                             'https://cdn.bootcdn.net/ajax/libs'=>'bootcdn',
@@ -109,10 +139,10 @@ return [
                 'name' => _t('Auxiliary'),
                 'fields'=>[
                     [
-                        'id'   => 'enable_highlight',
+                        'id'   => 'first_image_thumbnail',
                         'type'  => 'checkbox',
                         'value' => true,
-                        'label'  => _t('Enable code highlight')
+                        'label'  => _t('The first picture of the article is used as a thumbnail when no thumbnail is set')
                     ],
                     [
                         'id'   => 'enable_category_badge',
@@ -127,11 +157,11 @@ return [
                         'label'  => _t('Enable article seo')
                     ],
                     [
-                        'id'   => 'enable_phrase',
+                        'id'   => 'enable_highlight',
                         'type'  => 'checkbox',
-                        'value' => false,
-                        'label'  => _t('Enable the phrase')
-                    ]
+                        'value' => true,
+                        'label'  => _t('Enable code highlight')
+                    ],
                 ]
             ],
         ]
@@ -169,7 +199,7 @@ return [
                         'label'  => _t('Enable Slide')
                     ],
                     [
-                        'id'   => 'display_slide_title',
+                        'id'   => 'display_slide_info',
                         'type'  => 'checkbox',
                         'value' => true,
                         'label'  => _t('Display the title and description of the slide')
@@ -178,38 +208,30 @@ return [
                 
             ],
             [
-                'id'   => 'slide_image_1',
-                'name' => _t('Slide Image 1'),
-                'type'  => 'image',
+                'id'   => 'slide_images',
+                'name' => _t('Slide Images'),
+                'type'  => 'slide',
                 'value' => [
-                    'url'  =>'http://www.xenice.com/',
-                    'title'=>'xenice',
-                    'desc' => '',
-                    'path' =>STATIC_URL . '/images/onenice_slide_1.jpg'
-                ]
+                    [
+                        'url'=>'https://www.xenice.com/',
+                        'src'=>STATIC_URL . '/images/onenice_slide_1.jpg',
+                        'title'=>'xenice',
+                        'desc'=>''
+                    ],
+                    [
+                        'url'=>'https://www.xenice.com/',
+                        'src'=>STATIC_URL . '/images/onenice_slide_2.jpg',
+                        'title'=>'xenice',
+                        'desc'=>''
+                    ],
+                    [
+                        'url'=>'https://www.xenice.com/',
+                        'src'=>STATIC_URL . '/images/onenice_slide_3.jpg',
+                        'title'=>'xenice',
+                        'desc'=>''
+                    ],
+                ],
             ],
-            [
-                'id'   => 'slide_image_2',
-                'name' => _t('Slide Image 2'),
-                'type'  => 'image',
-                'value' => [
-                    'url'  =>'http://www.xenice.com/',
-                    'title'=>'xenice',
-                    'desc' => '',
-                    'path' =>STATIC_URL . '/images/onenice_slide_2.jpg'
-                ]
-            ],
-            [
-                'id'   => 'slide_image_3',
-                'name' => _t('Slide Image 3'),
-                'type'  => 'image',
-                'value' => [
-                    'url'  =>'http://www.xenice.com/',
-                    'title'=>'xenice',
-                    'desc' => '',
-                    'path' =>STATIC_URL . '/images/onenice_slide_3.jpg'
-                ]
-            ]
         ]
     ],
     [

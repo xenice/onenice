@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    '4fb921a42d925f1af95487ee0c721d1c' => $vendorDir . '/xenice/wp-framework/option/functions.php',
+    '5e48a5f37ef5c3bdce10af665cfc20b0' => $vendorDir . '/xenice/src/functions.php',
 );

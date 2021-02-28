@@ -52,6 +52,10 @@ input[type="text"],input[type="password"],textarea,select{
 
 /* header */
 
+header .container .logo{
+    max-height:28px;
+}
+
 .navbar{
 	border-bottom: 1px solid #eeeeee;
 	padding: 0.8rem 1rem;
@@ -545,6 +549,10 @@ footer{
 	font-size:13px;
 }
 
+footer .d-flex{
+    flex-wrap: wrap;
+}
+    
 footer .d-flex span,footer .d-flex>a{
     margin:5px;
 }
@@ -582,6 +590,10 @@ footer .d-flex span,footer .d-flex>a{
 @media screen and (min-width:768px){
     body{
         font-size:14px;
+    }
+    
+    header .container .logo{
+        max-height:26px;
     }
     
     .navbar .sub-menu {

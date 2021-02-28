@@ -3,8 +3,6 @@
 namespace app\web\controller;
 
 use xenice\theme\Controller;
-use app\web\model\Article;
-//use app\web\model\Tag;
 
 class HomeController extends Controller
 {

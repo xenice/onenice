@@ -24,12 +24,20 @@ class Article extends ArticlePointer
 	
     public function category($field = 'name')
 	{
-	    return get_term($this->cid(), $this->taxonomy())->$field;
+	    $obj = get_term($this->cid(), $this->taxonomy());
+	    if(!is_wp_error($obj)){
+	        return $obj->$field;
+	    }
 	}
 	
 	public function user($field = 'display_name')
 	{
 	    return get_the_author_meta( $field, $this->uid());
+	}
+	
+	public function avatar($size = 32)
+	{
+	    return get_avatar( $this->user('user_email'), $size, '', '', ['class'=>'rounded-circle']);
 	}
 	
     public function views()
@@ -48,7 +56,9 @@ class Article extends ArticlePointer
 	    if(!$excerpt){
 	       $excerpt = $this->row('post_content');
 	    }
-	    $excerpt = preg_replace( "/\[.*?\].*?\[\/.*?\]/is", "", $excerpt);
+	    $pattern = '\[(\[?)([^\]\/]*(?:\/(?!\])[^\]\/]*)*?)(?:(\/)\]|\](?:([^\[]*+(?:\[(?!\/\2\])[^\[]*+)*+)\[\/\2\])?)(\]?)';
+        $excerpt = preg_replace("/$pattern/", '', $excerpt);
+	    //$excerpt = preg_replace( "/\[.*?\].*?\[\/.*?\]/is", "", $excerpt);
         $excerpt = mb_strimwidth( strip_tags( $excerpt), 0, $limit, "..." );
 	    return $excerpt;
 	}
@@ -85,7 +95,7 @@ class Article extends ArticlePointer
         if (has_post_thumbnail()){
             $attachment = wp_get_attachment_image_src(get_post_thumbnail_id($this->id()), $type);
             $src = $attachment[0];
-        } 
+        }
         return Theme::call('article_thumbnail', $src, $this);
     }
     

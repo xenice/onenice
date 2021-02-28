@@ -3,8 +3,6 @@
 namespace app\web\controller;
 
 use xenice\theme\Controller;
-use app\web\model\Category;
-use app\web\model\Tag;
 
 class ArchiveController extends Controller
 {

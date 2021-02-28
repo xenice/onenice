@@ -13,31 +13,14 @@ class Article extends ArticleModel
     {
         parent::__construct();
         Theme::bind('article_date',[$this, 'alterDate']);
-        Theme::bind('article_thumbnail',[$this, 'alterThumbnail']);
         Theme::bind('article_comments',[$this, 'alterComments']);
         Theme::bind('article_views',[$this, 'alterViews']);
-        
+        take('first_image_thumbnail') && Theme::bind('article_thumbnail',[$this, 'alterThumbnail']);
     }
     
     public function alterDate($date)
     {
         return $this->since($date);
-    }
-    
-    public function alterThumbnail($src, $p)
-    {
-        if(!$src){
-            preg_match_all( '/\<img.+?src="(.+?)".*?\/>/is', $p->row('post_content'), $matches, PREG_SET_ORDER );
-            if(isset($matches[0][1])){
-                return $matches[0][1];
-            }
-            else{
-                return STATIC_URL . '/images/thumbnail.png';
-            }
-        }
-        else{
-            return $src;
-        }
     }
     
     public function alterComments($count, $p)
@@ -59,6 +42,22 @@ class Article extends ArticleModel
         }
         else{
             return $count . ' ' . _t('view');
+        }
+    }
+    
+    public function alterThumbnail($src, $p)
+    {
+        if(!$src){
+            preg_match_all( '/\<img.+?src="(.+?)".*?\/>/is', $p->row('post_content'), $matches, PREG_SET_ORDER );
+            if(isset($matches[0][1])){
+                return $matches[0][1];
+            }
+            else{
+                return take('default_thumbnail');
+            }
+        }
+        else{
+            return $src;
         }
     }
 }

@@ -3,7 +3,7 @@
 <div class="card">
   <div class="card-body d-flex">
     <a href="<?=$p->url()?>" title="<?=$p->title()?>">
-        <img class="lazyload" src="<?=STATIC_URL?>/images/thumbnail.png" data-src="<?=$p->thumbnail()?>" alt="<?=$p->title()?>" />
+        <img class="lazyload" src="<?=take('default_loading_image')?>" data-src="<?=$p->thumbnail()?>" alt="<?=$p->title()?>" />
     </a>
     <div class="data">
     	<h4 class="card-title">
