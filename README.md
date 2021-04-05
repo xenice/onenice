@@ -1,9 +1,9 @@
 # onenice
-> OneNice是一款超级简洁的WordPress主题，支持中英文，免费开源，无任何加密，无任何冗余代码，无任何授权限制，可随便使用。  
+> OneNice是一款超级简洁的WordPress主题，支持中英文，免费开源，无任何加密，无任何冗余代码，无任何授权限制，可随便使用。下载最新版本请进技术交流QQ群707252643，作者QQ942835420。  
 
 ### 主题演示
 
-[http://www.xenice.com/](http://www.xenice.com/)
+[https://www.xenice.com/](https://www.xenice.com/)
 
 ![onenice](https://raw.githubusercontent.com/xenice/onenice/master/screenshot.png)
 
