@@ -15,6 +15,7 @@ class Article extends ArticleModel
         Theme::bind('article_date',[$this, 'alterDate']);
         Theme::bind('article_comments',[$this, 'alterComments']);
         Theme::bind('article_views',[$this, 'alterViews']);
+        Theme::bind('article_likes',[$this, 'alterLikes']);
         take('first_image_thumbnail') && Theme::bind('article_thumbnail',[$this, 'alterThumbnail']);
     }
     
@@ -42,6 +43,18 @@ class Article extends ArticleModel
         }
         else{
             return $count . ' ' . _t('view');
+        }
+    }
+    
+    public function alterLikes($count)
+    {
+        $icon = '<i class="fa fa-thumbs-o-up"></i>&nbsp;';
+        
+        if(isset($_COOKIE['xenice_like_'.$this->id()])){
+            return $icon . _t('Liked') . '(<span>' .$count . '</span>)';
+        }
+        else{
+            return $icon . _t('Like') . '(<span>' .$count . '</span>)';;
         }
     }
     

@@ -17,7 +17,7 @@ class Links extends \WP_Widget
         <div class="right-group">
             <h3><?=_t('Links'); ?></h3>
             <ul class="list links">
-                <?php $bookmarks = get_bookmarks( ['limit'=>$limit,'category_name'=>'友情链接'] );
+                <?php $bookmarks = get_bookmarks( ['limit'=>$limit] );
                 if ( ! empty( $bookmarks ) ) {
                     foreach ( $bookmarks as $bookmark ) {
                     ?>

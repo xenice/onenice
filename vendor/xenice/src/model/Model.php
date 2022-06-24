@@ -18,15 +18,25 @@ class Model extends Base
 
     public function __call($method, $args)
     {
+        // Call pointer methods
         if(method_exists($this->pointer, $method)){
             return call_user_func_array([$this->pointer, $method], $args);
         }
-        elseif (isset($this->$method)){ // Call dynamic methods
+        // Call pointer extends methods
+        foreach($this->pointer->extras as $ext){
+            if(method_exists($ext, $method)){
+                array_unshift($args, $this->pointer);
+                
+                return call_user_func_array([$ext, $method], $args);
+            }
+        }
+        
+        // Call dynamic methods
+        if (isset($this->$method)){ 
             return call_user_func_array($this->$method, $args);
         }
-        else{
-            throw new \Exception('Call to undefined method ' . get_called_class() . '::' . $method);
-        }
+        
+        return parent::__call($method, $args);
 
     }
 }

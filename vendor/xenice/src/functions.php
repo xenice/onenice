@@ -10,41 +10,84 @@
 use xenice\theme\Theme;
 use xenice\view\View;
  
+ 
+  /**
+ * get current user meta
+ */
+if(!function_exists("cur_take")){
+    
+    function cur_take($name)
+    {
+        $user_id = Theme::get('current_user_id');
+        
+        if($user_id){
+            return multi_take($user_id, $name);
+        }
+    }
+}
+
+
+ /**
+ * get user meta
+ */
+if(!function_exists("multi_take")){
+    function multi_take($user_id, $name)
+    {
+        static $option = [];
+        if(!$option){
+            
+            $options = Theme::use('app')->getOptions($user_id)?:[];
+            foreach($options as $o){
+                $option = array_merge($option, $o);
+            }
+            
+        }
+        return $option[$name]??'';
+    }
+}
+
  /**
  * get option
  */
-function take($name)
-{
-    static $option = [];
-    if(!$option){
-        $options = get_option('xenice_options')?:[];
-        foreach($options as $o){
-            $option = array_merge($option, $o);
+if(!function_exists("take")){
+    function take($name, $key='xenice_options')
+    {
+        static $option = [];
+        if(!$option){
+            $options = get_option($key)?:[];
+            //var_dump($options);
+            foreach($options as $o){
+                $option = array_merge($option, $o);
+            }
+            
         }
+        return $option[$name]??'';
     }
-    return $option[$name]??'';
 }
 
  /**
  * set option
  */
-function put($name, $value)
-{
-    $options = get_option('xenice_options')?:[];
-    foreach($options as $id=>&$o){
-        if(isset($o[$name])){
-            $o[$name] = $value;
-            update_option('xenice_options', $options);
-            return;
+if(!function_exists("put")){
+    function put($name, $value, $key='xenice_options')
+    {
+        $options = get_option($key)?:[];
+        foreach($options as $id=>&$o){
+            if(isset($o[$name])){
+                $o[$name] = $value;
+                update_option($key, $options);
+                return;
+            }
         }
     }
 }
 
-
-function _t($str, $domain = THEME_NAME)
-{
-    $translations = get_translations_for_domain($domain);
-    return $translations->translate($str);
+if(!function_exists("_t")){
+    function _t($str, $domain = THEME_NAME)
+    {
+        $translations = get_translations_for_domain($domain);
+        return $translations->translate($str);
+    }
 }
 
 function is_url($v){
@@ -53,7 +96,7 @@ function is_url($v){
 }
 
 
-function import($slug, $dir = '')
+function import($slug, $dir = '', $vars =[])
 {
     if($dir == ''){
         $file = '/' . $slug . '.php';
@@ -63,8 +106,26 @@ function import($slug, $dir = '')
         $file = $dir . '/' . $slug . '.php';
     }
 	extract(View::getVars());
+	if($vars){
+	   extract($vars);
+	}
 	include($file);
 }
+
+function get_ajax_url($action, $args_str = '')
+{
+    $url = admin_url('admin-ajax.php').'?action='.$action;
+    if($args_str){
+        $url .= '&' . $args_str;
+    }
+    return $url;
+}
+
+function get_ext_static_url($ext_name, $slug)
+{
+    return THEME_URL . '/ext/'.$ext_name.'/static/' . $slug;
+}
+
 
 /*
 function import_relate()

@@ -44,6 +44,12 @@ class Optimize extends Base
                             'label'  => _t('Enable classic editor')
                         ],
                         [
+                            'id'   => 'enable_classic_widget',
+                            'type'  => 'checkbox',
+                            'value' => true,
+                            'label'  => _t('Enable classic widget')
+                        ],
+                        [
                             'id'   => 'disable_widgets',
                             'type'  => 'checkbox',
                             'value' => true,
@@ -66,6 +72,12 @@ class Optimize extends Base
                             'type'  => 'checkbox',
                             'value' => false,
                             'label'  => _t('Disable the restapi')
+                        ],
+                        [
+                            'id'   => 'disable_default_rest_api',
+                            'type'  => 'checkbox',
+                            'value' => true,
+                            'label'  => _t('Disable the default restapi')
                         ],
                         [
                             'id'   => 'disable_embeds',
@@ -92,10 +104,10 @@ class Optimize extends Base
                             'label'  => _t('Remove the article link subcategory, leaving only the parent category')
                         ],
                         [
-                            'id'   => 'enable_ssl_avatar',
+                            'id'   => 'enable_avatar_acc',
                             'type'  => 'checkbox',
-                            'value' => false,
-                            'label'  => _t('Enable official Gravatar SSL avatar links')
+                            'value' => true,
+                            'label'  => _t('Enable Gravatar Acceleration')
                         ],
                         [
                             'id'   => 'enable_user_register_login_info',
@@ -131,12 +143,6 @@ class Optimize extends Base
                             'type'  => 'checkbox',
                             'value' => true,
                             'label'  => _t('Profile can also be saved when user email is empty')
-                        ],
-                        [
-                            'id'   => 'only_display_current_user',
-                            'type'  => 'checkbox',
-                            'value' => true,
-                            'label'  => _t('Only current user articles and comments are displayed, except for administrators')
                         ],
                         [
                             'id'   => 'remove_w_icon',
@@ -190,6 +196,17 @@ class Optimize extends Base
                             'type'  => 'checkbox',
                             'value' => true,
                             'label'  => _t('Disable useless links to the front wp_head')
+                        ],
+                    ]
+                ],
+                [
+                    'name' => _t('插件优化'),
+                    'fields'=>[
+                        [
+                            'id'   => 'fit_elementor',
+                            'type'  => 'checkbox',
+                            'value' => true,
+                            'label'  => _t('兼容elementor可视化编辑插件')
                         ],
                     ]
                 ]

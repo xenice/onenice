@@ -27,18 +27,21 @@ class Loader extends \xenice\theme\Loader
         
         isset($args['aliases']) && Theme::alias($args['aliases']);
         
+        
         parent::__construct();
         
         $prepares = [
            10 => 'app\web\widget\Widget',
            20 => 'xenice\optimize\Optimize',
            30 => 'xenice\mail\Mail',
-           //40 => 'xenice\profession\Profession',
+           //39 => 'xenice\profession\Profession',
+           //40 => 'ext\Ext',
            50 => 'app\web\module\About',
            60 => 'app\web\ajax\Ajax',
         ];
         
         if(is_admin()){
+            Theme::bind('xenice_options_init', [$this,'set']);
             $prepares[70] = 'xenice\option\Option';
             take('enable_article_seo') && $prepares[80] = 'app\web\module\Seo';
             $prepares[90] = 'app\web\module\inner\Admin';
@@ -46,6 +49,7 @@ class Loader extends \xenice\theme\Loader
         else{
             $prepares[100] = 'app\web\module\inner\Guest';
             $prepares[110] = 'xenice\theme\Route';
+            //add_filter('pre_get_posts',[$this,'queryArgs']);
         }
         
         Theme::prepare($prepares);
@@ -55,5 +59,18 @@ class Loader extends \xenice\theme\Loader
         Theme::execute();
 		
 	}
-
+	
+	public function set($options)
+    {
+        return array_merge($options, require(__DIR__ . '/options.php'));
+    }
+    
+    /*
+    public function queryArgs($query)
+    {
+        if (  $query->is_main_query()){
+            $query->set('post_type', ['post', 'page', 'qr','elementor_library']);
+        }
+        return $query;
+    }*/
 }

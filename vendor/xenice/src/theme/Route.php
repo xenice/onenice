@@ -12,13 +12,12 @@ namespace xenice\theme;
 class Route extends Base
 {
     public $rules = [];
-    public $namespace = 'app\web\controller\\';
     
 	public function __construct()
 	{
         add_action( 'init', [$this,'addRules']);
 	    add_filter('query_vars', [$this, 'addQuery'], 1);
-		add_action("template_include", [$this,'run']);
+		add_action("template_include", [$this,'run'],999);
 		add_filter('template_redirect', [$this,'generate'],1);
 		
 	}
@@ -43,10 +42,16 @@ class Route extends Base
 			$type = 'home';
 		}
 		elseif(is_single()){
+		    global $post;
+		    Theme::set('post_type', $post->post_type);
+		    Theme::set('id', $post->ID);
 			$type = 'single';
 		}
 		elseif(is_page()){
 			$type = 'page';
+			if(!strpos($template,'themes/'.THEME_NAME.'/')){
+			    return $template;
+			}
 		}
 		elseif(is_category()){
 		    global $cat;
@@ -85,16 +90,21 @@ class Route extends Base
 		$args = [];
 		Theme::set('type', $type);
 		
+		//var_dump(Theme::get('post_type'));
+		//exit;
+		
 		if(Theme::call('xenice_route_run', $type, $method, $args)){
 		    $class = ucfirst($type) . 'Controller';
-		    
-		    $controllers = Theme::get('controllers');
-		    if(isset($controllers[$class])){ // custom controllers
-		        $controller = Theme::instance($controllers[$class]);
+
+		    $fullClass = 'app\\'.THEME_KEY.'\controller\\' . $class;
+		    if(class_exists('\\'.$fullClass)){
+		        $controller = Theme::instance($fullClass);
 		    }
 		    else{
-                $controller = Theme::instance('app\web\controller\\' . $class);
+		        $themeKey = Theme::get('default_theme');
+		        $controller = Theme::instance('app\\'.$themeKey.'\controller\\' . $class);
 		    }
+		    
             $controller->extends = Theme::use('view');
             return call_user_func_array([$controller, $method], $args);
 		}

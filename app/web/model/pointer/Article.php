@@ -69,9 +69,10 @@ class Article extends ArticlePointer
 	}
     
     
-    public function tags($before = '', $sep = '', $after = '')
+    public function tags($taxis = '', $before = '', $sep = '', $after = '')
     {
-        return get_the_term_list( $this->id(), 'post_tag', $before, $sep, $after ); 
+        $taxis || $taxis = $this->taxis();
+        return get_the_term_list( $this->id(), $taxis, $before, $sep, $after ); 
     }
     
     public function keywords()
@@ -92,7 +93,7 @@ class Article extends ArticlePointer
     public function thumbnail($type = 'full')
     {
         $src = null;
-        if (has_post_thumbnail()){
+        if (get_post_meta( $this->id(), '_thumbnail_id', true )){
             $attachment = wp_get_attachment_image_src(get_post_thumbnail_id($this->id()), $type);
             $src = $attachment[0];
         }
@@ -102,5 +103,18 @@ class Article extends ArticlePointer
     public function stick()
     {
         return is_sticky($this->id()); 
+    }
+    
+    public function likes()
+    {
+        return Theme::call('article_likes', $this->get('likes')?:0);
+    }
+    
+    public function tag()
+    {
+        $arr = get_the_tags($this->id());
+        if(isset($arr[0])){
+            return $arr[0];
+        }
     }
 }

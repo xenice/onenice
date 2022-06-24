@@ -15,6 +15,7 @@ class Widget extends Base
 	{
 	    register_widget( __namespace__ . '\UniversalArticles');
 		register_widget( __namespace__ . '\HotArticles');
+		register_widget( __namespace__ . '\RelatedArticles');
 		register_widget( __namespace__ . '\RecentArticles');
 		register_widget( __namespace__ . '\StickyArticles');
 		register_widget( __namespace__ . '\RecentComments');

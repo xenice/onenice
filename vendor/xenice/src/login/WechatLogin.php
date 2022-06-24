@@ -9,6 +9,7 @@
  
 namespace xenice\login;
 
+use xenice\theme\Theme;
 use xenice\theme\Ajax;
 
 class WechatLogin extends Ajax
@@ -47,7 +48,7 @@ class WechatLogin extends Ajax
     
 	private function login($appid,$appkey,$code)
 	{
-		if($_REQUEST ['state'] == 'MBT_weixin_login'){
+		if($_REQUEST ['state'] == 'xenice_weixin_login'){
 		
 			$token_url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=".$appid."&secret=".$appkey."&code=".$code."&grant_type=authorization_code";
 			$response = $this->get( $token_url );
@@ -76,7 +77,7 @@ class WechatLogin extends Ajax
 			global $wpdb;
 			if(isset($_SESSION ['weixin_open_id'])){
 				
-				$user_ID = $wpdb->get_var("SELECT ID FROM $wpdb->users WHERE wechat='".$wpdb->escape($_SESSION['weixin_open_id'])."'");
+				$user_ID = $wpdb->get_var("SELECT ID FROM $wpdb->users WHERE user_wechat='".$wpdb->escape($_SESSION['weixin_open_id'])."'");
 				if($user_ID){
 				    Theme::call('social_login', $user_ID);
 				    Theme::new('user_pointer', $user_ID)->setValue('last_login_way', 'wechat');
@@ -102,7 +103,7 @@ class WechatLogin extends Ajax
 						echo $user_id->get_error_message();
 					}else{
 		
-						$ff = $wpdb->query("UPDATE $wpdb->users SET wechat = '".$wpdb->escape($_SESSION['weixin_open_id'])."' WHERE ID = '$user_id'");
+						$ff = $wpdb->query("UPDATE $wpdb->users SET user_wechat = '".$wpdb->escape($_SESSION['weixin_open_id'])."' WHERE ID = '$user_id'");
 						if($ff){
 						    Theme::call('social_register', $user_id);
 						    $data = [
@@ -130,7 +131,7 @@ class WechatLogin extends Ajax
 			global $wpdb;
 			if(isset($_SESSION ['weixin_open_id'])){
 				
-				$hsauser_ID = $wpdb->get_var("SELECT ID FROM $wpdb->users WHERE wechat='".$wpdb->escape($_SESSION['weixin_open_id'])."'");
+				$hsauser_ID = $wpdb->get_var("SELECT ID FROM $wpdb->users WHERE user_wechat='".$wpdb->escape($_SESSION['weixin_open_id'])."'");
 				if($hsauser_ID){
 				    echo _t('The binding failed. It may have been bound to other accounts. Please log in to other accounts to unbind.');
 				    exit;
@@ -139,7 +140,7 @@ class WechatLogin extends Ajax
 					$userid = $current_user->ID;
 					$uinfo = $this->wx_oauth2_get_user_info($_SESSION ['weixin_access_token'],$_SESSION ['weixin_open_id']);
 					
-					$wpdb->query("UPDATE $wpdb->users SET wechat = '".$wpdb->escape($_SESSION['weixin_open_id'])."' WHERE ID = $userid");
+					$wpdb->query("UPDATE $wpdb->users SET user_wechat = '".$wpdb->escape($_SESSION['weixin_open_id'])."' WHERE ID = $userid");
 					Theme::new('user_pointer', $user_ID)->setValue('wechat_name', $uinfo->nickname);
 					wp_redirect(get_bloginfo('url'));
 				}

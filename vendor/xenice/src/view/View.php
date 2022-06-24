@@ -19,6 +19,7 @@ class View extends Base
     public function __construct()
     {
         $type = Theme::get('type');
+        $this->theme = Theme::$instance;
         $this->type = $type;
 		$this->user = Theme::use('user');
 		$this->option = Theme::use('option');

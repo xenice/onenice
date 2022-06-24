@@ -1,4 +1,5 @@
 <?php import('header'); ?>
+<?php if ( !take('fit_elementor') || ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'archive' ) ) {?>
 <style>
 .main .author{
     background-color: #fafafa;
@@ -21,4 +22,5 @@
     <?php import('sidebar'); ?>
 	</div><!-- row -->
 </div>
+<?php }?> 
 <?php import('footer'); ?>

@@ -1,5 +1,5 @@
 <?php
-namespace xenice\optimize\lib;
+namespace xenice\util;
 
 class Client
 {

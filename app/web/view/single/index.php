@@ -1,4 +1,7 @@
 <?php import('header'); ?>
+<?php 
+if ( !take('fit_elementor') || ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'single' ) ) {
+?>
 <style>
     /* for block of numbers */
 .hljs-ln-numbers {
@@ -63,5 +66,5 @@
     <?php import('sidebar'); ?>
 	</div><!-- row -->
 </div>
-
+<?php }?>
 <?php import('footer'); ?>

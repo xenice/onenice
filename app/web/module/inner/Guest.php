@@ -152,12 +152,7 @@ class Guest extends Base
     {
         // rollbar
         $str = '';
-        if($qq = take('service_qq')){
-            $str .= '<div class="rollbar-item" ><a target="_blank" title="'._t('Service QQ').'" href="http://wpa.qq.com/msgrd?v=3&uin='.$qq.'&site=qq&menu=yes"><i class="fa fa-qq"></i></a></div>';
-        }
-        if(take('enable_scroll_top')){
-            $str .= '<div class="rollbar-item scroll-top" title="'._t('Back to top').'"><i class="fa fa-angle-up"></i></div>';
-        }
+        
         $str && $footer .= '<div class="rollbar md-down-none">' . $str . '</div>';
         
         take('Baidu_statistics') && $footer .= take('Baidu_statistics');

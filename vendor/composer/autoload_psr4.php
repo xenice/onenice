@@ -7,5 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'xenice\\' => array($vendorDir . '/xenice/src'),
+    'ext\\' => array($baseDir . '/ext'),
     'app\\' => array($baseDir . '/app'),
 );

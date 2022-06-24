@@ -13,7 +13,8 @@
     "autoload": {
 		"psr-4": {
 			"xenice\\" : "vendor/xenice/src",
-			"app\\":"app/"
+			"app\\":"app/",
+			"ext\\":"ext/"
 		},
 		"files": ["vendor/xenice/src/functions.php"]
 	}

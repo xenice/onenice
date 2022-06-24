@@ -1,7 +1,7 @@
 <?php 
 /**
  * template name: Login Page
- * description: template for xenice.com pure theme 
+ * description: template for onenice theme 
  */
  
 if($user->login()){

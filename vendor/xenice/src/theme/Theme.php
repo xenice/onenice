@@ -15,6 +15,7 @@ class Theme extends Base
     private $defines = [];
     private $aliases = [];
     private $instances = [];
+    private $extensions = [];
 	private $actions = [];
 	private $prepares = [];
 	public  $vars = [];
@@ -29,7 +30,7 @@ class Theme extends Base
 		$args = func_get_args();
 		$class = array_shift($args);
 		if($args && !isset($this->defines[$class])){
-			$this->defines[$class] = function(){
+			$this->defines[$class] = function()use($class, $args){
 				$reflector = new \ReflectionClass($class);
 				if (!$reflector->isInstantiable()) {
                     throw new \Exception('class ['.$class.'] cannot be instantiated');
@@ -56,6 +57,9 @@ class Theme extends Base
 			$object = $closure();
         } else {
             $object =  $this->create($class);
+        }
+        if(isset($this->extensions[$class])){
+            $object->extras = $this->extInstances($class, $object);
         }
         $this->instances[$class] = $object;
         return $object;
@@ -103,15 +107,31 @@ class Theme extends Base
 	}
 	
 	/**
-	 * create an instance through an alias
+	 * create an new instance
+     */
+    protected function newInstance()
+	{
+	    $args = func_get_args();
+		$name = array_shift($args);
+        $class = new \ReflectionClass($name);
+		return $class->newInstanceArgs($args);
+	}
+	
+	/**
+	 * create an new instance through an alias
      */
     protected function new()
 	{
 	    $args = func_get_args();
 		$alias = array_shift($args);
 	    if(isset($this->aliases[$alias])){
-	        $class = new \ReflectionClass($this->aliases[$alias]);
-			return $class->newInstanceArgs($args);
+	        $class = $this->aliases[$alias];
+	        $ref = new \ReflectionClass($class);
+			$object = $ref->newInstanceArgs($args);
+			if(isset($this->extensions[$class])){
+                $object->extras = $this->extInstances($class, $object);
+            }
+            return $object;
 	    }
 	}
 	
@@ -139,6 +159,32 @@ class Theme extends Base
         return call_user_func_array([$instance, $method], $args);
     }
     
+    protected function extend($alias, $extClass)
+    {
+        if(!isset($this->aliases[$alias])) return;
+        
+        $class = $this->aliases[$alias];
+        if(!isset($this->extensions[$class])) {
+            $this->extensions[$class] = [];
+        }
+        
+        if(!in_array($extClass,$this->extensions[$class])){
+            $this->extensions[$class][] = $extClass;
+        }
+    }
+    
+    /**
+	 * create ext instances
+     */
+    protected function extInstances($class, $that)
+	{
+	    $extInstances = [];
+	    foreach($this->extensions[$class] as $extClass){
+	        $extInstances[] = $this->newInstance($extClass, $that);
+	    }
+	    return $extInstances;
+	}
+	
 	protected function bind($name, $closure, $priority = null)
     {
         $action = ['closure'=>$closure];

@@ -7,8 +7,10 @@ class ValidationAjax extends Ajax
 {
 	public function __construct()
 	{
-		$this->action('validation');
-		add_filter('preprocess_comment',[$this,'validationProcess']);
+	    //if(is_front_page()){
+    		$this->action('validation');
+    		add_filter('preprocess_comment',[$this,'validationProcess']);
+	    //}
 	}
     
     public function validation()

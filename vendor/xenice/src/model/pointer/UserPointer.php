@@ -73,4 +73,18 @@ class UserPointer extends Pointer
     {
         return update_user_meta($this->id(), $key, $value);
     }
+    
+    public function setRole($role)
+    {
+        $u = new \WP_User($this->row->ID);
+        return $u->set_role($role);
+    }
+    
+    public function getRole($role)
+    {
+        $u = new \WP_User($this->row->ID);
+        return $u->roles[0];
+    }
+    
+    
 }

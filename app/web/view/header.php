@@ -12,6 +12,9 @@
     <?=$template->head()?>
 </head>
 <body>
+<?php 
+if ( !take('fit_elementor') || ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'header' ) ) {
+?>
     <header class="navbar navbar-expand-md">
     	<div class="container">
     		<!-- Brand -->
@@ -52,4 +55,5 @@ function check(){
     return true;
 }
 js;
+}
 ?>

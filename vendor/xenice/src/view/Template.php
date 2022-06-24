@@ -79,6 +79,9 @@ class Template extends Base
         if($src = take('site_logo')){
 	        return '<img class="logo" src="' . $src . '" />';
 	    }
+	    elseif($title = take('site_title')){
+	        return $title;
+	    }
 	    else{
 	        return Theme::use('option')->info['name'];
 	    }

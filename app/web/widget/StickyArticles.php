@@ -22,7 +22,7 @@ class StickyArticles extends \WP_Widget
                 $args  = array(
                     'orderby'             => 'modified',
                     'post__in' => get_option('sticky_posts'),
-                    'post_type'           => 'post',
+                    'post_type'           => Theme::get('post_type')??'post',
                     'post_status'         => 'publish',
                     'showposts'           => $instance['limit']
                 );

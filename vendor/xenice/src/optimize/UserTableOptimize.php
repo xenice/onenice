@@ -11,7 +11,6 @@ namespace xenice\optimize;
 
 use xenice\theme\Base;
 use xenice\theme\Theme;
-use xenice\optimize\lib\Client;
 
 class UserTableOptimize
 {
@@ -31,7 +30,7 @@ class UserTableOptimize
     
     function register($user_id)
     {
-        $client =  new Client;
+        $client = Theme::use('client');
         $data = [
 	        'registered_os'=>$client->os(),
 	        'registered_ip'=>$client->ip(),
@@ -42,7 +41,7 @@ class UserTableOptimize
     
     function login($user_id)
     {
-        $client =  new Client;
+        $client = Theme::use('client');
         $data = [
 	        'last_login_time'=>date('Y-m-d H:i:s',time()),
 	        'last_login_os'=>$client->os(),

@@ -184,7 +184,6 @@ EOT;
     
     public function avatar($url, $id_or_email)
     {
-        // param is id
         if(is_numeric($id_or_email)){
             $user_id = $id_or_email;
             if(!empty($user_id)){
@@ -194,7 +193,8 @@ EOT;
                     $way = $data['last_login_way'];
                     $avatar = $data[$way . '_avatar'];
                     if(!empty($avatar)){
-                        $_SERVER['HTTPS'] && $avatar = str_replace('http://','https://',$avatar);
+                        !empty($_SERVER['HTTPS']) && $avatar = str_replace('http://','https://',$avatar);
+                        //var_dump($avatar);
                         return $avatar;
                     }
                 }

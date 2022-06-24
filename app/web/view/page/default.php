@@ -1,4 +1,5 @@
 <?php import('header'); ?>
+<?php if ( !take('fit_elementor') || ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'single' ) ) {?>
 <div class="breadcrumb">
 	<div class="container">
 	    <?=$page->breadcrumb()?>
@@ -16,4 +17,5 @@
     <?php import('sidebar'); ?>
 	</div><!-- row -->
 </div>
+<?php }?> 
 <?php import('footer'); ?>

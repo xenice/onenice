@@ -31,6 +31,7 @@ class ArticlePointer extends PostPointer
 	    return $this->row->cid;
 	}
 	
+	// category type
 	public function taxonomy()
 	{
 	    if(property_exists($this->row, 'taxonomy')){
@@ -40,6 +41,18 @@ class ArticlePointer extends PostPointer
 	    $type = $this->type();
 	    $this->row->taxonomy = ($type == 'post')?'category':$type . "_category";
 	    return $this->row->taxonomy;
+	}
+	
+	// tag type
+	public function taxis()
+	{
+	    if(property_exists($this->row, 'taxis')){
+	        return $this->row->taxis;
+	    }
+	    
+	    $type = $this->type();
+	    $this->row->taxis = ($type == 'post')?'post_tag':$type . "_tag";
+	    return $this->row->taxis;
 	}
 	
 	public function content()

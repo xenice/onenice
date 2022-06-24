@@ -16,7 +16,6 @@ class AdminOptimize
 {
     public function __construct()
     {
-        take('only_display_current_user') && new UserOptimize;
         //Hide the Upgrade Notice to Recent Versions
         take('disable_update_remind') && add_filter( 'pre_site_transient_update_core', create_function( '$a', "return null;" ) );
 		take('disable_auto_save') && add_action('wp_print_scripts', [$this, 'disableAutoSave']);
@@ -29,6 +28,7 @@ class AdminOptimize
 		if(take('remove_image_attribute')){
     		add_filter( 'post_thumbnail_html', [$this, 'removeImageAttribute'], 10 );
             add_filter( 'image_send_to_editor', [$this, 'removeImageAttribute'], 10 );
+            //add_filter( 'content_save_pre', [$this, 'removeImageAttribute'], 10 );
 		}
     }
     
@@ -72,8 +72,9 @@ class AdminOptimize
     }
     
     public function removeImageAttribute( $html ) {
-    	$html = preg_replace( '/width="(\d*)"\s+height="(\d*)"\s+class=\"[^\"]*\"/', "", $html );
-    	$html = preg_replace( '/  /', "", $html );
+    	//$html = preg_replace( '/width="(\d*)"\s+height="(\d*)"\s+class=\"[^\"]*\"/', "", $html );
+    	//$html = preg_replace( '/  /', "", $html );
+    	$html = preg_replace('/<img.+(src="?[^"]+"?)[^\/]+\/>/i',"<img \${1} />",$html);
     	return $html;
     }
     

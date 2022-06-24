@@ -11,6 +11,7 @@ namespace xenice\theme;
 
 class Base
 {	
+	public $extras = []; // Extended objects
 	
 	public static function __callstatic($method, $args)
 	{
@@ -40,4 +41,16 @@ class Base
 		}
 		
 	}
+	
+	public function __call($method, $args)
+    {
+        
+        foreach($this->extras as $ext){
+            if(method_exists($ext, $method)){
+                array_unshift($args, $this);
+                return call_user_func_array([$ext, $method], $args);
+            }
+        }
+        throw new \Exception('Call to undefined method ' . get_called_class() . '::' . $method);
+    }
 }

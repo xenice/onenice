@@ -32,4 +32,11 @@ class Controller extends Base
 	{
 	    $this->extends->global($name);
 	}
+	
+	public function notFound()
+	{
+		Theme::set('type','notFound');
+        $this->render('index');
+        exit;
+	}
 }

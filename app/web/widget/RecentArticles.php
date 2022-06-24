@@ -22,7 +22,7 @@ class RecentArticles extends \WP_Widget
                 $args  = array(
                     'orderby'             => 'modified',
                     'ignore_sticky_posts' => 1,
-                    'post_type'           => 'post',
+                    'post_type'           => Theme::get('post_type')??'post',
                     'post_status'         => 'publish',
                     'showposts'           => $instance['limit']
                 );

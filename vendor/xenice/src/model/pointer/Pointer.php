@@ -9,7 +9,9 @@
  
 namespace xenice\model\pointer;
 
-class Pointer
+use xenice\theme\Base;
+
+class Pointer extends Base
 {
     protected $row;
     

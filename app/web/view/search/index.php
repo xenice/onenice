@@ -1,4 +1,5 @@
 <?php import('header'); ?>
+<?php if ( !take('fit_elementor') || ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'archive' ) ) {?>
 <div class="breadcrumb">
 	<div class="container">
 	    <a class="breadcrumb-item" href="<?=$option->info['url']?>"><?=_t('Home')?></a>
@@ -17,4 +18,5 @@
     <?php import('sidebar'); ?>
 	</div><!-- row -->
 </div>
+<?php }?> 
 <?php import('footer'); ?>

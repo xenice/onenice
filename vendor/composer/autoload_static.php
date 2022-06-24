@@ -15,6 +15,10 @@ class ComposerStaticInitbf4323f6f7f4e9a01ac7aba46eb8531a
         array (
             'xenice\\' => 7,
         ),
+        'e' => 
+        array (
+            'ext\\' => 4,
+        ),
         'a' => 
         array (
             'app\\' => 4,
@@ -25,6 +29,10 @@ class ComposerStaticInitbf4323f6f7f4e9a01ac7aba46eb8531a
         'xenice\\' => 
         array (
             0 => __DIR__ . '/..' . '/xenice/src',
+        ),
+        'ext\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/ext',
         ),
         'app\\' => 
         array (

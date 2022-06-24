@@ -47,7 +47,7 @@ class ArticleModel extends Model
                 global $s;
                 $this->s = $s;
                 $this->defaults['s'] = $s;
-                $this->defaults['post_type'] = ['post'];
+                $this->defaults['post_type'] = Theme::get('post_type')??['post'];
                 break;
             case 'author':
             case 'archive':
@@ -65,6 +65,10 @@ class ArticleModel extends Model
             'ignore_sticky_posts' => 1,
         ];
         $args = wp_parse_args($args, $defaults);
+        if(empty($args['post_type']) && Theme::get('post_type')){
+            $args['post_type'] = Theme::get('post_type');
+        }
+
         $this->query = new \WP_Query( $args );
         $this->hasPosts = $this->query->have_posts();
     }

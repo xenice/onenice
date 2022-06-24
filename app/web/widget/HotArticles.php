@@ -23,7 +23,7 @@ class HotArticles extends \WP_Widget
                     'meta_key'            => 'views',
                     'orderby'             => 'meta_value_num',
                     'ignore_sticky_posts' => 1,
-                    'post_type'           => 'post',
+                    'post_type'           => Theme::get('post_type')??'post',
                     'post_status'         => 'publish',
                     'showposts'           => $instance['limit']
                 );

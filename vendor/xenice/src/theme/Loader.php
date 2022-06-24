@@ -17,11 +17,19 @@ class Loader extends Base
 	        error_reporting(-1);
             ini_set('display_errors', 1);
 	    }
-	    isset($_SESSION) || session_start();
+	    isset($_SESSION) || @session_start();
 	    load_theme_textdomain(THEME_NAME, THEME_DIR . '/lang');
 	    date_default_timezone_set(get_option('timezone_string'));
-	    add_action('after_switch_theme',[$this, 'themeCheck']);
+	    add_action('after_switch_theme',[$this, 'switchTheme']);
 	    Theme::alias([
+	        // util
+	        'str' => 'xenice\util\Str',
+	        'http' => 'xenice\util\Http',
+	        'cookie' => 'xenice\util\Cookie',
+	        'client' => 'xenice\util\Client',
+	        'buffer' => 'xenice\util\Buffer',
+	        'aes' => 'xenice\util\Aes',
+	        'rsa' => 'xenice\util\Rsa',
 	        
 	        // model
 	        'article' => 'xenice\model\ArticleModel',
@@ -34,6 +42,7 @@ class Loader extends Base
             
             // pointer
             'article_pointer' => 'xenice\model\pointer\ArticlePointer',
+            'page_pointer' => 'xenice\model\pointer\PagePointer',
             'category_pointer' => 'xenice\model\pointer\CategoryPointer',
             'tag_pointer' => 'xenice\model\pointer\TagPointer',
 	        'comment_pointer' => 'xenice\model\pointer\CommentPointer',
@@ -50,7 +59,7 @@ class Loader extends Base
             'cache' => 'xenice\cache\Cache',
 
         ], true);
-        
+
 	    if(is_admin()){
 	        add_filter( 'theme_templates', [$this, 'addTemplates']);
 		}
@@ -59,41 +68,29 @@ class Loader extends Base
 	public function addTemplates($templates)
 	{
 		$dir = VIEW_DIR_EX . '/page';
-		$arr = scandir($dir);
-		foreach($arr as $name){
-			$file = $dir . '/' . $name;
-			if(is_dir($dir . '/' . $file)){
-				continue;
-			}
-			if (!preg_match( '|Template Name:(.*)$|mi', @file_get_contents( $file ), $header ) ) {
-				continue;
-			}
-			$templates[substr($name,0,-4)] = $header[1];
-			
+		if(is_dir($dir)){
+    		$arr = scandir($dir);
+    		foreach($arr as $name){
+    			$file = $dir . '/' . $name;
+    			if(is_dir($dir . '/' . $file)){
+    				continue;
+    			}
+    			if (!preg_match( '|Template Name:(.*)$|mi', @file_get_contents( $file ), $header ) ) {
+    				continue;
+    			}
+    			$templates[substr($name,0,-4)] = $header[1];
+    			
+    		}
 		}
 		return $templates;
 	}
 	
-	function themeCheck()
+	function switchTheme()
 	{
-        $body = [
-            'key'=>'iunice',
-            'seceret'=>'f47a40c92ef0605f0bfdb03b7b02bfbd',
-            'data'=>[
-                'type'=>'user',
-                'name' => get_bloginfo('name'), 
-                'theme' => wp_get_theme()->get('Name'),
-                'version' => wp_get_theme()->get('Version'), 
-                'domain' => get_bloginfo('url'), 
-                'email' => get_bloginfo('admin_email')
-            ]
-        ];
-        
-        $key = md5(json_encode($body['data']) . date("Y-m-d"));
-        $m = Theme::use('option');
-        $url='https://api.xenice.com/guest';
-        $request = new \WP_Http;
-        $result = $request->request( $url, ['method' => 'POST', 'body' => $body]);
-        $m->setMeta('xenice_guest', $key, $body['data']['type']);
+	    // 设置随机KEY以备后用
+	    $m = Theme::use('option');
+	    if(!$m->getValue('key32')){
+	        $m->setValue("key32", md5(uniqid (mt_rand(), true)));
+	    }
     }
 }

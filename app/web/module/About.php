@@ -22,7 +22,7 @@ class About
             'pos'=>1000,
             'name'=> _t('About'),
             'title'=> _t('About the theme'),
-            'desc'=> sprintf(_t('Thank you for using <a href="https://www.xenice.com/" target="_blank">%s</a> theme.'),THEME_NAME),
+            'desc'=> sprintf(_t('感谢使用 <a href="%s" target="_blank">%s</a> 主题。'), THEME_URI, THEME_NAME),
             'fields'=>[
                 [
                     'id' => 'about_version',
@@ -34,7 +34,7 @@ class About
                     'id' => 'about_official_website',
                     'type'  => 'label',
                     'name'  => _t('Official website'),
-                    'value' => '<a href="https://www.xenice.com/" target="_blank">https://www.xenice.com/</a>',
+                    'value' => sprintf('<a href="%s" target="_blank">%s</a>', THEME_URI, THEME_URI),
                 ],
             ]
         ];

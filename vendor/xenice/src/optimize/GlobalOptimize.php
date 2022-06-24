@@ -16,16 +16,22 @@ class GlobalOptimize
     public function __construct()
     {
         // wordpress
+        
         take('enable_classic_editor') && add_filter('use_block_editor_for_post', '__return_false');
+        if(take('enable_classic_widget')){
+            add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
+            add_filter( 'use_widgets_block_editor', '__return_false' );
+        }
         take('disable_pingback') && $this->disablePingback();
         take('disable_emoji') && $this->disableEmoji();
         take('disable_rest_api') && $this->disableRestApi();
+        take('disable_default_rest_api') && remove_action( 'rest_api_init', 'create_initial_rest_routes', 99 );
         take('disable_embeds') && $this->disableEmbeds();
         take('disable_open_sans') && add_action( 'init', [$this, 'disableOpenSans']);
         take('disable_widgets') && add_action('widgets_init', [$this, 'disableWidgets']);
         
         // xenice
-        take('enable_ssl_avatar') && add_filter('get_avatar', [$this,'getAvatar']);
+        take('enable_avatar_acc') && add_filter('get_avatar', [$this,'getAvatar']);
         take('remove_category_pre') && new NoCategory;
         take('remove_child_categories') && add_filter( 'post_link_category', [$this,'removeChildCategories']);
         take('enable_user_register_login_info') && new UserTableOptimize;
@@ -145,7 +151,7 @@ class GlobalOptimize
             $avatar,
             $matches
         ) > 0) {
-            $url = 'https://secure.gravatar.com';
+            $url = 'https://gravatar.wp-china-yes.net';
             $size = $matches[3][0];
             $vargs = array_pad(array(), count($matches[0]), array());
             for ($i = 1; $i < count($matches); $i++) {
@@ -165,7 +171,7 @@ class GlobalOptimize
                );
             }
             return sprintf(
-                    '<img alt="avatar" %s class="avatar avatar-%s" height="%s" width="%s" />',
+                    '<img alt="avatar" %s class="avatar avatar-%s photo rounded-circle" height="%s" width="%s" />',
                     implode(' ', $buffers), $size, $size, $size
                 );
         } else {

@@ -17,7 +17,7 @@ class Avatar
 
 	}
  
-	public function get( $avatar = '', $id_or_email, $size = 96, $default = '', $alt = false )
+	public function get( $avatar = '', $id_or_email = null, $size = 96, $default = '', $alt = false )
 	{
 		if ( is_numeric($id_or_email) )
 			$user_id = (int) $id_or_email;

@@ -14,7 +14,7 @@ class User extends UserPointer
     
 	public function avatar($size = 32)
 	{
-	    return get_avatar( $this->email(), $size, '', '', ['class'=>'rounded-circle']);
+	    return get_avatar($this->id(), $size, '', '', ['class'=>'rounded-circle']);
 	}
 
 }

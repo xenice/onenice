@@ -20,15 +20,16 @@ class Admin extends Base
     protected $options  = [];
     protected $defaults = [];
     
+    protected $cur_key;
     use Elements;
     
     public function __construct($args = [])
     {
+        add_action('admin_enqueue_scripts', function(){wp_enqueue_media();});
         isset($args['defaults']) && $this->defaults = $args['defaults'];
         isset($args['show_menu']) && $this->show_menu = $args['show_menu'];
         isset($args['main_menu']) && $this->main_menu = $args['main_menu'];
         $this->get();
-        
         if($this->show_menu){
             add_action( 'admin_menu', [$this, 'menu']);
         }
@@ -42,16 +43,17 @@ class Admin extends Base
             }
             $main = $this->main_menu;
             // main menu id
-            $id = $main['prefix'] . $this->options[0]['id'];
-            
-            add_menu_page($main['name'], $main['name'], $main['auth'], $id, [$this, $this->options[0]['id']], $main['icon'],$main['pos']);
+            $sub = $this->options[0]['id'];
+            $id = $main['prefix'] . $sub;
+            $auth = $main['auth']??'manage_options';
+            add_menu_page($main['name'], $main['name'], $auth, $id, [$this, $sub], $main['icon'],$main['pos']);
             foreach($this->options as $option){
-                add_submenu_page( $id, $option['name'], $option['name'], $main['auth'], $main['prefix'] . $option['id'], [$this,$option['id']]);
+                add_submenu_page( $id, $option['name'], $option['name'], $auth, $main['prefix'] . $option['id'], [$this,$option['id']]);
             }
         }
         else{
             $main = $this->options[0];
-            add_menu_page($main['name'], $main['name'], $main['auth'], $id, [$this, $main['id']], $main['icon'], $main['pos']);
+            add_menu_page($main['name'], $main['name'], $main['auth']??'manage_options', $id, [$this, $main['id']], $main['icon'], $main['pos']);
         }
     }
 
@@ -82,6 +84,7 @@ class Admin extends Base
                 $tab = -1;
             }
             Theme::bind('xenice_options_result',[$this,'post']);
+            
             if(Theme::call('xenice_options_save', $_POST['xenice_option_key'], $tab, $data)){
                 $result = [];
                 if($this->set($_POST['xenice_option_key'], $tab,$data)){
@@ -173,7 +176,12 @@ class Admin extends Base
                 foreach($option['tabs'] as $key => $tab){
                     if($current_tab == $tab['id']){
                         $str .= '<a href="'.$page_url.'&tab='.$tab['id'].'" class="nav-tab nav-tab-active" >'.$tab['title'].'</a>';
-                        $option['fields'] = $tab['fields'];
+                        if(isset($tab['fields'])){
+                            $option['fields'] = $tab['fields'];
+                        }
+                        elseif(isset($tab['func'])){ // custom page
+                            $option['func'] = $tab['func'];
+                        }
                         $option['tab_key'] = $key;
                         if(isset($tab['submit'])){
                             $option['submit'] = $tab['submit'];
@@ -186,6 +194,11 @@ class Admin extends Base
                 }
                 $str .= '</nav>';
                 echo $str;
+            }
+            
+            if(isset($option['func'])){ // show custom page
+                call_user_func_array($option['func'],[]);
+                return;
             }
             
             if(!isset($option['submit'])){
@@ -207,28 +220,33 @@ class Admin extends Base
                     <?php
                     // show fields
                     $str = '';
-                    foreach ( $option['fields'] as $field ) {
-                        if(isset($field['type']) && $field['type'] == 'data')
-                            continue;
-                        $top = '<tr valign="top"><th scope="row"><label>'.$field['name'].'</label></th><td><p>';
-                        if(isset($field['fields'])){
-                            $main = '';
-                            foreach($field['fields'] as $f){
-                                $main .= '<p>' . call_user_func_array([$this,$f['type']],[$f]) . '</p>';
+                    if(isset($option['fields'])){
+                        foreach ( $option['fields'] as $field ) {
+                            if(isset($field['type']) && $field['type'] == 'data')
+                                continue;
+                            $style = (isset($field['hide'])&&$field['hide'])?'display:none':'';
+                            $top = '<tr style="'.$style.'" class="'.($field['id']??'').'" valign="top"><th scope="row"><label>'.$field['name'].'</label></th><td><p>';
+                            if(isset($field['fields'])){
+                                $main = '';
+                                foreach($field['fields'] as $f){
+                                    $main .= '<p style="margin-bottom:10px">' . call_user_func_array([$this,$f['type']],[$f]) . '</p>';
+                                    
+                                }
                             }
+                            else{
+                                $main = call_user_func_array([$this,$field['type']],[$field]);
+                                
+                            }
+                            
+                            $bottom = '</p>';
+                            if ( isset($field['desc']) && $field['desc']) {
+                                $bottom .= '<p class="description">'.$field['desc'] . '</p>';
+                            }
+                            $bottom .= '</td></tr>';
+                            
+                            
+                            $str .= $top . $main . $bottom;
                         }
-                        else{
-                            $main = call_user_func_array([$this,$field['type']],[$field]);
-                        }
-                        
-                        $bottom = '</p>';
-                        if ( isset($field['desc']) && $field['desc']) {
-                            $bottom .= '<p class="description">'.$field['desc'] . '</p>';
-                        }
-                        $bottom .= '</td></tr>';
-                        
-                        
-                        $str .= $top . $main . $bottom;
                     }
                     echo $str;
                     ?>
@@ -237,7 +255,7 @@ class Admin extends Base
                 <p class="submit">
                     <?php 
                         $buttons = '<input type="submit" class="button-primary" value="'.$option['submit'].'"/>';
-                        echo Theme::call('xenice_options_button',$buttons, $option['id']);
+                        echo Theme::call('xenice_options_button',$buttons, $option['id'],$option['tab_key']??null);
                     ?>
                 </p>
             </form>
@@ -255,6 +273,18 @@ class Admin extends Base
                     value += '"src":' + '"' + $('#' + id + '_src').val() + '"';
                     value  = '{' + value + '}';
                     this.value = value;
+                });
+                
+                // imgs
+                $('.xenice-imgs').each(function(){
+                    var value = '';
+                    var id = this.name;
+                    $('.xenice-imgs-' + id + ' img').each(function(i, e){
+                        value  += '"' + $(this).attr("src") + '",';
+                    });
+                    value = value.substring(0, value.lastIndexOf(','));
+                    this.value = '[' + value + ']';
+                    
                 });
                 
                 // slide
@@ -282,6 +312,7 @@ class Admin extends Base
             })
             
         </script>
+        
     <?php
     }
     
@@ -386,7 +417,7 @@ class Admin extends Base
     /**
      * Get names of the specified type
      */
-    private function names($id, $tab, $type)
+    public function names($id, $tab, $type)
     {
         $arr = [];
         $key = array_search($id, array_column($this->defaults, 'id'));
@@ -434,4 +465,5 @@ class Admin extends Base
         }
         return $arr;
     }
+    
 }
