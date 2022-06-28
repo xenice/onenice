@@ -1,5 +1,5 @@
 <?php 
-if ( !take('fit_elementor') || function_exists( 'elementor_theme_do_location' ) || elementor_theme_do_location( 'footer' ) ) {
+if ( !take('fit_elementor') || !function_exists( 'elementor_theme_do_location' ) || !elementor_theme_do_location( 'footer' ) ) {
 ?>
 <footer>
 	<div class="container text-center">
