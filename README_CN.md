@@ -7,7 +7,7 @@
 
 [https://cn.xenice.com/](https://cn.xenice.com/)
 
-![onenice](https://raw.githubusercontent.com/xenice/onenice/master/screenshot_cn.png)
+![onenice](https://raw.githubusercontent.com/xenice/onenice/master/screenshot.png)
 
 ### 主题特色
 
@@ -40,9 +40,9 @@
 
 ### 更新说明
 
-**最后更新：2022.11.05**
+**最后更新：2022.12.11**
 
-v3.3.0
+v3.5.0
 
 - 改用新版主题设置页面
 - 大幅度精简主题代码
