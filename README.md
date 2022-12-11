@@ -39,9 +39,9 @@ Show date, show author, Show tags, show previous/next article, show related arti
 
 ### Update Description
 
-**Last updated：2022.11.05**
+**Last updated：2022.12.11**
 
-v3.3.0
+v3.5.0
 - Switch to the new theme Settings page
 - Greatly simplify the theme code
 - Plug-in compatibility processing
