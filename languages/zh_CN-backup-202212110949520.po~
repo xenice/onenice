@@ -1,0 +1,255 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: onenice\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-01 02:28+0000\n"
+"PO-Revision-Date: 2022-11-01 02:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: 简体中文\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.2; wp-6.0.3\n"
+"X-Domain: onenice"
+
+#. Description of the theme
+msgid "A simple wordpress theme"
+msgstr "一个简单的WordPress主题"
+
+#: functions.php:139
+msgid "Admin"
+msgstr "管理"
+
+#: includes/Onenice_Options.php:476
+msgid "Archive"
+msgstr "归档"
+
+#: functions.php:154
+msgid "archive"
+msgstr "归档"
+
+#: includes/Onenice_Options.php:60
+msgid "Blue"
+msgstr "蓝色"
+
+#: includes/Onenice_Options.php:84
+msgid "Defalut"
+msgstr "默认"
+
+#: includes/Onenice_Options.php:211
+msgid "Delete Theme Copyright"
+msgstr "删除主题版权"
+
+#: includes/Onenice_Options.php:712
+msgid "Disable Share Buttons"
+msgstr "禁用分享按钮"
+
+#: includes/Onenice_Options.php:732
+msgid "Enable Code Highlight"
+msgstr "开启代码高亮显示"
+
+#: includes/Onenice_Options.php:264
+msgid "Enable Slides"
+msgstr "开启幻灯片"
+
+#: includes/Onenice_Options.php:195
+msgid "Footer"
+msgstr "页脚"
+
+#: includes/Onenice_Options.php:23
+msgid "Global"
+msgstr "全局"
+
+#: includes/Onenice_Options.php:62
+msgid "Green"
+msgstr "绿色"
+
+#: includes/Onenice_Options.php:129
+msgid "Header"
+msgstr "页头"
+
+#: search.php:8 functions.php:112 functions.php:124 functions.php:152
+msgid "Home"
+msgstr "首页"
+
+#. URI of the theme
+#. Author URI of the theme
+msgid "https://www.xenice.com"
+msgstr ""
+
+#: includes/Onenice_Options.php:231
+msgid "ICP Number"
+msgstr "ICP备案号"
+
+#: includes/Onenice_Options.php:492
+msgid "List Style"
+msgstr "列表风格"
+
+#: functions.php:145
+msgid "Login"
+msgstr "登录"
+
+#: functions.php:142
+msgid "Logout"
+msgstr "退出"
+
+#: functions.php:151
+msgid "Main Menu"
+msgstr "主菜单"
+
+#: template-parts/cards-thumbnail.php:26 template-parts/cards-text.php:21
+msgid "No articles."
+msgstr "没有文章"
+
+#: template-parts/related-posts.php:21
+msgid "None .."
+msgstr "暂无 。。"
+
+#: 404.php:17
+msgid "Not Found"
+msgstr "没有找不到"
+
+#. Name of the theme
+msgid "onenice"
+msgstr ""
+
+#: functions.php:38 functions.php:43 functions.php:48
+msgid ""
+"OneNice is a super concise WordPress theme, supporting both Chinese and "
+"English, free open source, no encryption, no redundant code, no "
+"authorization restrictions, can be used freely."
+msgstr "OneNice是一个超级简洁的WordPress主题，支持中英文两种语言，免费开源，无加密，无冗余代码，无授权限制，可以自由使用。"
+
+#: functions.php:37 functions.php:42 functions.php:47
+msgid "OneNice Theme"
+msgstr "OneNice主题"
+
+#: includes/Onenice_Options.php:107
+msgid "Page Width"
+msgstr "页面宽度"
+
+#: includes/Onenice_Options.php:63
+msgid "Pink"
+msgstr "粉红色"
+
+#: functions.php:153 includes/Onenice_Options.php:550
+msgid "Posts"
+msgstr "文章"
+
+#: index.php:10
+msgid "Recent Posts"
+msgstr "最近文章"
+
+#: includes/Onenice_Options.php:61
+msgid "Red"
+msgstr "红色"
+
+#: template-parts/related-posts.php:2
+msgid "Related Posts"
+msgstr "相关文章"
+
+#: search.php:9 header.php:48
+msgid "Search"
+msgstr "搜索"
+
+#: includes/Onenice_Options.php:584 includes/Onenice_Options.php:620
+msgid "Show Author"
+msgstr "显示作者"
+
+#: includes/Onenice_Options.php:566 includes/Onenice_Options.php:602
+msgid "Show Date"
+msgstr "显示日期"
+
+#: includes/Onenice_Options.php:180
+msgid "Show Login Button"
+msgstr "显示登录按钮"
+
+#: includes/Onenice_Options.php:656
+msgid "Show Previous/Next Posts"
+msgstr "显示上一篇/下一篇 文章"
+
+#: includes/Onenice_Options.php:675
+msgid "Show Related Posts"
+msgstr "显示相关文章"
+
+#: includes/Onenice_Options.php:162
+msgid "Show Search"
+msgstr "显示搜索"
+
+#: includes/Onenice_Options.php:694
+msgid "Show Share"
+msgstr "显示分享"
+
+#: includes/Onenice_Options.php:638
+msgid "Show Tags"
+msgstr "显示标签"
+
+#: includes/Onenice_Options.php:38
+msgid "Site Icon"
+msgstr "网站图标"
+
+#: includes/Onenice_Options.php:530
+msgid "Site Loading Image"
+msgstr "网站加载时图片"
+
+#: includes/Onenice_Options.php:144
+msgid "Site Logo"
+msgstr "网站LOGO"
+
+#: includes/Onenice_Options.php:513
+msgid "Site Thumbnail"
+msgstr "网站缩略图"
+
+#: includes/Onenice_Options.php:248
+msgid "Slides"
+msgstr "幻灯片"
+
+#: includes/Onenice_Options.php:330 includes/Onenice_Options.php:395
+#: includes/Onenice_Options.php:460
+msgid "Slides Description"
+msgstr "幻灯片描述"
+
+#: includes/Onenice_Options.php:282
+msgid "Slides Image 1"
+msgstr "幻灯片图片1"
+
+#: includes/Onenice_Options.php:347
+msgid "Slides Image 2"
+msgstr "幻灯片图片2"
+
+#: includes/Onenice_Options.php:412
+msgid "Slides Image 3"
+msgstr "幻灯片图片3"
+
+#: includes/Onenice_Options.php:314 includes/Onenice_Options.php:379
+#: includes/Onenice_Options.php:444
+msgid "Slides Title"
+msgstr "幻灯片标题"
+
+#: includes/Onenice_Options.php:298 includes/Onenice_Options.php:363
+#: includes/Onenice_Options.php:428
+msgid "Slides URL"
+msgstr "幻灯片链接"
+
+#: 404.php:18
+msgid "Sorry, the page you visited has migrated or does not exist"
+msgstr "对不起，您访问的页面已迁移或不存在"
+
+#: includes/Onenice_Options.php:80
+msgid "Static library CDN"
+msgstr "静态库CDN"
+
+#: includes/Onenice_Options.php:496
+msgid "Text"
+msgstr "文本"
+
+#: includes/Onenice_Options.php:56
+msgid "Theme Color"
+msgstr "主题颜色"
+
+#: includes/Onenice_Options.php:497
+msgid "Thumbnail"
+msgstr "缩略图"

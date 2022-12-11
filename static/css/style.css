@@ -27,7 +27,7 @@ video{
 }
 
 
-input[type="text"],input[type="password"],textarea,select{
+input[type="text"],input[type="email"],input[type="tel"],input[type="password"],textarea,select{
     box-shadow: inset 0 0 0 0 #fff!important;
     height:unset;
 }
@@ -125,69 +125,7 @@ header .container .logo{
 	color:#999;
 }
 
-/* login */
 
-.user-login{
-    margin-left: 20px;
-}
-
-.user-login .nav-item 
-{
-    margin-bottom:20px;
-}
-
-.sign-tips,.success-tips{
-    text-align:center;
-    display: none;
-    
-}
-
-.sign-tip{
-    color:#dc3545;
-    font-size:13px;
-}
-
-
-.user-login .nav-item .nav-link{
-    padding: 10px;
-    font-size:16px;
-    font-weight:500;
-    color:#999;
-    
-}
-.user-login .nav-item .active{
-    color:#666;
-    cursor:default;
-}
-
-.user-login .modal{
-    padding-right:0!important;
-    padding-left:0!important;
-}
-.user-login .modal-body{
-    padding:30px;
-}
-
-.user-login button[type="button"]{
-    width:100%;
-}
-
-.user-login .disabled{
-    pointer-events: none;
-    color:#999;
-}
-
-.login-ways{
-    font-size:13px;
-}
-
-.login-ways .btn{
-    padding:5px;
-}
-
-#r_captcha_clk{
-    cursor: pointer;
-}
 
 /* breadcrumb */
 
@@ -217,6 +155,7 @@ header .container .logo{
 /* main */
 .main{
     margin-top:30px;
+    min-height: calc(100vh - 249.09px);
 }
 
 .main .col-md-8>h3{
@@ -285,16 +224,18 @@ header .container .logo{
 .pagination{
     margin-top:40px;
 }
-.page-link{
+.pagination .page-numbers{
     margin:0 5px;
     padding:0.4rem 0.6rem;
     color:#666;
 }
-.pagination .active .page-link{
+.pagination .current{
     border-color:#dee2e6;
     background-color: #dee2e6;
     color: #666;
 }
+
+/* #pagination */
 
 /* post */
 .post-title{
@@ -356,6 +297,7 @@ header .container .logo{
 
 .related{
     margin-top:30px;
+    margin-bottom:30px;
 }
 
 .related ul{
@@ -380,73 +322,114 @@ header .container .logo{
 }
                 
 /* comment */
-.comments{
-    margin: 50px 0 30px 0;
+#comments{
+    margin-top:50px;
+    margin-bottom:15px;
 }
-.comments-count{
-    margin-bottom: 30px;
+.commentlist{
+    padding:0 0 0 20px;
+    margin:0;
 }
-.media{
-    margin-bottom: 30px;
+
+.commentlist li{
+    margin-bottom:30px;
 }
-.media-body{
-    margin-left:5px;
+
+.comment-body {
+    margin-bottom: 20px;
+}
+.comment-body .says{
+    display: none;
+}
+.comment-body p{
+    margin-top: 10px;
+}
+.comment-meta {
+    overflow: auto;
+}
+.comment-meta img {
+    float: left;
+    margin-right: 10px;
+}
+.comment-meta time {
+    margin-left: 12px;
+}
+
+.comment-respond{
+    margin-top:50px;
+}
+
+.comment-reply-link {
+}
+.comment-reply-title{
+    font-size:16px;
 }
 
 
-.comment-floor{
-    color:#999;
-    margin-left:20px;
+.commentlist .children>li{
+    list-style: none;
+    
 }
-.comments-meta{
-    font-size:13px;
-    color:#999;
+.comment-form textarea,.comment-form input[type="text"]{
+    padding: .375rem .75rem;
+    box-shadow: inset 0 0 0 0 #fff!important;
+    border: 1px solid #ced4da;
+    border-top-color: rgb(206, 212, 218);
+    border-right-color: rgb(206, 212, 218);
+    border-bottom-color: rgb(206, 212, 218);
+    border-left-color: rgb(206, 212, 218);
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    
 }
-
-.comments-meta span{
-    margin-right: 20px;
+.comment-form textarea {
+    width: 100%;
+    padding: .375rem .75rem;
+    height:140px;
 }
-
-
-/* comment-sub */
-
-.comments-sub {
-    margin-top:20px;
-}
-
-.comments-sub span{
-    font-size:13px;
-}
-
-.comments-sub .comments-meta span{
-    font-size:12px;
-}
-
-.comments-meta span.comments-admin{
-    color:#eea236;
+.comment-form textarea:focus,.comment-form input[type="text"]:focus{
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
 }
 
-.comments .comments-close{
-    font-size:18px;
+
+.comment-form input[type="text"]{
+    display: inline-block;
+    width:300px;
+}
+
+.comment-form .comment-form-author label,.comment-form .comment-form-email label,.comment-form .comment-form-url label{
+    width:130px;
+}
+
+.comment-form .comment-form-cookies-consent label{
+    
+}
+.comment-form .submit{
+    display: inline-block;
     font-weight: 400;
-    margin: 20px 0 20px 0;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color .15s
 }
+#wp-comment-cookies-consent{
+    height:unset;
+}
+/* #comment */
 
-.comments .d-md-flex input:nth-child(2){
-    margin:10px;
-}
-.comments label{
-    color:#999;
-}
-
-.comments input.validation
-{
-    width:100px;
-}
-
-.comments .btn{
-    margin-left:10px;
-}
 
 /* right */
 
@@ -463,9 +446,12 @@ header .container .logo{
 	list-style:none;
 }
 
+.right h3{
+	margin-bottom:20px;
+}
 
 .right a{
-	font-size:13px;
+	font-size:14px;
 }
 
 .right span{
@@ -473,11 +459,12 @@ header .container .logo{
 	color:#999;
 }
 
-.right .text a{
-    overflow: hidden; 
-    white-space: nowrap; 
-    text-overflow: ellipsis;
-    width:240px;
+.widget_recent_entries li a{
+
+}
+
+.widget_recent_entries .post-date{
+    display: block;
 }
 
 .right .thumbnail .data{
@@ -489,32 +476,36 @@ header .container .logo{
     display: block;
 }
 
-.right .right-group{
+.right .widget{
 	margin-bottom:50px;
 }
 
-.right-group .lazyload{
+.right .widget .lazyload{
     width:122px;
     height:86px;
     border-radius:5px;
 }
 
-.right-group .links{
+.right .widget .links{
     display: flex;
     flex-wrap: wrap;
 }
 
-.right-group .links li{
+.right .widget .links li{
     margin:5px;
     padding:5px;
 }
 
-/* tags cloud */
+/* widget_tag_cloud */
+    
+.widget_tag_cloud .tagcloud {
+    display: flex;
+    flex-wrap: wrap;
+}
 
-.tags-cloud .items a {
+.widget_tag_cloud .tagcloud a {
     color: #FFF;
     background-color: #f6f6f6;
-    float: left;
     width: 30%;
     margin: 1%;
     padding: 3px;
@@ -525,11 +516,16 @@ header .container .logo{
     text-align: center;
     border-radius: 3px;
 }
-.tags-cloud .items a:hover {
+.widget_tag_cloud .tagcloud a:hover {
     color: #fff;
     border: 1px solid #FFF;
     opacity: 1 !important;
 }
+
+.widget_tag_cloud .tagcloud .tag-link-count{
+    color: #FFF;
+}
+/* #widget_tag_cloud */
 
 .right-comments li{
     margin-bottom: 0;

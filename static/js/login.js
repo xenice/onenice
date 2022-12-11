@@ -42,7 +42,7 @@ jQuery(function($){
 		$.post(
 			xenice.action + 'login',
 			{
-			    login_nonce: xenice.nonce["login"],
+			    login_nonce: xenice.nonce.login,
 				username: $("#username").val(),
 				password: $("#password").val(),
 			},
@@ -69,7 +69,7 @@ jQuery(function($){
 		$.post(
 			xenice.action + 'check',
 			{
-			    username_nonce: xenice.nonce["check_username"],
+			    username_nonce: xenice.nonce.check_username,
 				username: $("#r_username").val(),
 			},
 			function (data) {
@@ -92,7 +92,7 @@ jQuery(function($){
 		$.post(
 			xenice.action + 'check',
 			{
-			    email_nonce: xenice.nonce["check_email"],
+			    email_nonce: xenice.nonce.check_email,
 				email: $("#r_email").val()
 			},
 			function (data) {
@@ -151,7 +151,7 @@ jQuery(function($){
 		$.post(
 			xenice.action+'register',
 			{
-			    register_nonce: xenice.nonce["register"],
+			    register_nonce: xenice.nonce.register,
 				username: $("#r_username").val(),
 				email: $("#r_email").val(),
 				password: $("#r_password").val(),
@@ -192,7 +192,7 @@ jQuery(function($){
 		$.post(
 			xenice.action+'forgetPassword',
 			{
-			    forget_password_nonce: xenice.nonce["forget_password"],
+			    forget_password_nonce: xenice.nonce.forget_password,
 				username: $("#fp_username").val(),
 				captcha: $("#fp_captcha").val(),
 				
@@ -231,7 +231,7 @@ jQuery(function($){
 		$.post(
 			xenice.action+'resetPassword',
 			{
-			    reset_password_nonce: xenice.nonce["reset_password"],
+			    reset_password_nonce: xenice.nonce.reset_password,
 			    captcha: $("#rp_captcha").val(),
 				password: $("#rp_password").val(),
 				repassword: $("#rp_repassword").val(),
@@ -270,7 +270,7 @@ jQuery(function($){
 
 				xenice.action+'captcha&rand='+Math.random(),
 				{
-				    email_nonce: xenice.nonce['send_captcha'],
+				    email_nonce: xenice.nonce.send_captcha,
 					email:$("#r_email").val()
 				},
 
@@ -280,7 +280,7 @@ jQuery(function($){
 						var countdown=60; 
 						settime(captcha);
 						function settime() { 
-                        	if (countdown === 0) { 
+                        	if (countdown === 0) {
                         		captcha.removeClass("disabled");   
                         		captcha.html(_t("Resend captcha"));
                         		countdown = 60; 
