@@ -39,9 +39,9 @@ xenice posts widgets is an extension of the recent posts classic widget that inc
 - [xenice-login](https://www.xenice.com/article/xenice-login)
 Customize WordPress login page, registration page, password retrieval page, support pop-up display.
 - [xenice-mail](https://www.xenice.com/article/xenice-mail)
-Simple WordPress email sending plugin.
+WordPress email sending plugin.
 - [xenice-seo](https://www.xenice.com/article/xenice-seo)
-Simple WordPress SEO plug-in, add SEO title, SEO keywords, SEO meta description, sitemap for the website. 
+WordPress SEO plug-in, add SEO title, SEO keywords, SEO meta description, sitemap for the website. 
 
 
 ### System Requirements
