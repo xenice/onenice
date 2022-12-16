@@ -33,6 +33,17 @@ Posts list style (text, thumbnail optional), excerpt length, website thumbnail, 
 Show date, show author, Show tags, show previous/next article, show related article, show Share button, code highlighting.
 
 
+### Optional Plugins
+- [xenice-posts-widgets](https://www.xenice.com/article/xenice-posts-widgets)
+xenice posts widgets is an extension of the recent posts classic widget that includes the latest Post widget, the most popular Post widget, and the top Post widget that can be displayed by category, with the option to display thumbnails.  
+- [xenice-login](https://www.xenice.com/article/xenice-login)
+Customize WordPress login page, registration page, password retrieval page, support pop-up display.
+- [xenice-mail](https://www.xenice.com/article/xenice-mail)
+Simple WordPress email sending plugin.
+- [xenice-seo](https://www.xenice.com/article/xenice-seo)
+Simple WordPress SEO plug-in, add SEO title, SEO keywords, SEO meta description, sitemap for the website. 
+
+
 ### System Requirements
 - php version 7.0 or later
 
