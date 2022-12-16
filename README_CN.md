@@ -40,9 +40,9 @@ WordPress经典小工具近期文章的扩展，可以按分类显示近期文�
 - [xenice-login](https://cn.xenice.com/article/xenice-login)
 自定义WordPress登录页面、注册页面、密码找回页面，支持弹窗显示。
 - [xenice-mail](https://cn.xenice.com/article/xenice-mail)
-简单的WordPress邮件发送插件。
+WordPress邮件发送插件。
 - [xenice-seo](https://cn.xenice.com/article/xenice-seo)
-简单的WordPress SEO插件，为网站添加SEO标题、SEO关键词、SEO元描述、网站地图。
+WordPress SEO插件，为网站添加SEO标题、SEO关键词、SEO元描述、网站地图。
 
 
 ### 系统要求
