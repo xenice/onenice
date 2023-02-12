@@ -1,11 +1,9 @@
-中文|[English](README.md)
-
 # onenice
 > OneNice是一款超级简洁的WordPress主题，支持中英文，免费开源，无任何加密，无任何冗余代码，无任何授权限制，可随便使用。技术交流QQ群707252643，作者QQ942835420。。  
 
 ### 主题演示
 
-[https://cn.xenice.com/](https://cn.xenice.com/)
+[https://www.xenice.com/](https://www.xenice.com/)
 
 ![onenice](https://raw.githubusercontent.com/xenice/onenice/master/screenshot.png)
 
@@ -35,13 +33,13 @@
 
 
 ### 可选插件
-- [xenice-posts-widgets](https://cn.xenice.com/article/xenice-posts-widgets)
+- [xenice-posts-widgets](https://www.xenice.com/article/xenice-posts-widgets)
 WordPress经典小工具近期文章的扩展，可以按分类显示近期文章、最热文章、置顶文章，可以选择显示缩略图。
-- [xenice-login](https://cn.xenice.com/article/xenice-login)
+- [xenice-login](https://www.xenice.com/article/xenice-login)
 自定义WordPress登录页面、注册页面、密码找回页面，支持弹窗显示。
-- [xenice-mail](https://cn.xenice.com/article/xenice-mail)
+- [xenice-mail](https://www.xenice.com/article/xenice-mail)
 WordPress邮件发送插件。
-- [xenice-seo](https://cn.xenice.com/article/xenice-seo)
+- [xenice-seo](https://www.xenice.com/article/xenice-seo)
 WordPress SEO插件，为网站添加SEO标题、SEO关键词、SEO元描述、网站地图。
 
 
