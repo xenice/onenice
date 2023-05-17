@@ -33,13 +33,13 @@
 
 
 ### 可选插件
-- [xenice-posts-widgets](https://www.xenice.com/article/xenice-posts-widgets)
+- [xenice-posts-widgets](https://www.xenice.com/plugins/xenice-posts-widgets)
 WordPress经典小工具近期文章的扩展，可以按分类显示近期文章、最热文章、置顶文章，可以选择显示缩略图。
-- [xenice-login](https://www.xenice.com/article/xenice-login)
+- [xenice-login](https://www.xenice.com/plugins/xenice-login)
 自定义WordPress登录页面、注册页面、密码找回页面，支持弹窗显示。
-- [xenice-mail](https://www.xenice.com/article/xenice-mail)
+- [xenice-mail](https://www.xenice.com/plugins/xenice-mail)
 WordPress邮件发送插件。
-- [xenice-seo](https://www.xenice.com/article/xenice-seo)
+- [xenice-seo](https://www.xenice.com/plugins/xenice-seo)
 WordPress SEO插件，为网站添加SEO标题、SEO关键词、SEO元描述、网站地图。
 
 
