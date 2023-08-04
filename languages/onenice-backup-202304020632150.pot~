@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: onenice\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-02 06:32+0000\n"
+"POT-Creation-Date: 2022-12-11 09:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -28,55 +28,47 @@ msgstr ""
 msgid "A simple wordpress theme"
 msgstr ""
 
-#: includes/Onenice_Options.php:511
+#: functions.php:138
+msgid "Admin"
+msgstr ""
+
+#: includes/Onenice_Options.php:474
 msgid "Archive"
 msgstr ""
 
-#: functions.php:197
+#: functions.php:156
 msgid "archive"
-msgstr ""
-
-#: functions.php:419 includes/Onenice_Options.php:127
-msgid "Back to top"
 msgstr ""
 
 #: includes/Onenice_Options.php:60
 msgid "Blue"
 msgstr ""
 
-#: functions.php:152
-msgid "Buy VIP "
-msgstr ""
-
 #: includes/Onenice_Options.php:84
 msgid "Defalut"
 msgstr ""
 
-#: includes/Onenice_Options.php:226
+#: includes/Onenice_Options.php:209
 msgid "Delete Theme Copyright"
 msgstr ""
 
-#: includes/Onenice_Options.php:769
+#: includes/Onenice_Options.php:732
 msgid "Disable Share Buttons"
 msgstr ""
 
-#: includes/Onenice_Options.php:789
+#: includes/Onenice_Options.php:752
 msgid "Enable Code Highlight"
 msgstr ""
 
-#: includes/Onenice_Options.php:299
+#: includes/Onenice_Options.php:262
 msgid "Enable Slides"
 msgstr ""
 
-#: includes/Onenice_Options.php:549
+#: includes/Onenice_Options.php:512
 msgid "Excerpt Length"
 msgstr ""
 
-#: functions.php:145
-msgid "Expire time: "
-msgstr ""
-
-#: includes/Onenice_Options.php:210
+#: includes/Onenice_Options.php:193
 msgid "Footer"
 msgstr ""
 
@@ -88,11 +80,11 @@ msgstr ""
 msgid "Green"
 msgstr ""
 
-#: includes/Onenice_Options.php:144
+#: includes/Onenice_Options.php:127
 msgid "Header"
 msgstr ""
 
-#: search.php:8 functions.php:113 functions.php:125 functions.php:195
+#: search.php:8 functions.php:111 functions.php:123 functions.php:154
 msgid "Home"
 msgstr ""
 
@@ -101,23 +93,23 @@ msgstr ""
 msgid "https://www.xenice.com"
 msgstr ""
 
-#: includes/Onenice_Options.php:265
+#: includes/Onenice_Options.php:229
 msgid "ICP Number"
 msgstr ""
 
-#: includes/Onenice_Options.php:527
+#: includes/Onenice_Options.php:490
 msgid "List Style"
 msgstr ""
 
-#: functions.php:185
+#: functions.php:144
 msgid "Login"
 msgstr ""
 
-#: functions.php:179
+#: functions.php:141
 msgid "Logout"
 msgstr ""
 
-#: functions.php:194
+#: functions.php:153
 msgid "Main Menu"
 msgstr ""
 
@@ -137,14 +129,14 @@ msgstr ""
 msgid "onenice"
 msgstr ""
 
-#: functions.php:40 functions.php:45 functions.php:50
+#: functions.php:38 functions.php:43 functions.php:48
 msgid ""
 "OneNice is a super concise WordPress theme, supporting both Chinese and "
 "English, free open source, no encryption, no redundant code, no "
 "authorization restrictions, can be used freely."
 msgstr ""
 
-#: functions.php:39 functions.php:44 functions.php:49
+#: functions.php:37 functions.php:42 functions.php:47
 msgid "OneNice Theme"
 msgstr ""
 
@@ -156,7 +148,7 @@ msgstr ""
 msgid "Pink"
 msgstr ""
 
-#: functions.php:196 includes/Onenice_Options.php:607
+#: functions.php:155 includes/Onenice_Options.php:570
 msgid "Posts"
 msgstr ""
 
@@ -176,39 +168,35 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: includes/Onenice_Options.php:247
-msgid "Service QQ"
-msgstr ""
-
-#: includes/Onenice_Options.php:641 includes/Onenice_Options.php:677
+#: includes/Onenice_Options.php:604 includes/Onenice_Options.php:640
 msgid "Show Author"
 msgstr ""
 
-#: includes/Onenice_Options.php:623 includes/Onenice_Options.php:659
+#: includes/Onenice_Options.php:586 includes/Onenice_Options.php:622
 msgid "Show Date"
 msgstr ""
 
-#: includes/Onenice_Options.php:195
+#: includes/Onenice_Options.php:178
 msgid "Show Login Button"
 msgstr ""
 
-#: includes/Onenice_Options.php:713
+#: includes/Onenice_Options.php:676
 msgid "Show Previous/Next Posts"
 msgstr ""
 
-#: includes/Onenice_Options.php:732
+#: includes/Onenice_Options.php:695
 msgid "Show Related Posts"
 msgstr ""
 
-#: includes/Onenice_Options.php:177
+#: includes/Onenice_Options.php:160
 msgid "Show Search"
 msgstr ""
 
-#: includes/Onenice_Options.php:751
+#: includes/Onenice_Options.php:714
 msgid "Show Share"
 msgstr ""
 
-#: includes/Onenice_Options.php:695
+#: includes/Onenice_Options.php:658
 msgid "Show Tags"
 msgstr ""
 
@@ -216,46 +204,46 @@ msgstr ""
 msgid "Site Icon"
 msgstr ""
 
-#: includes/Onenice_Options.php:587
+#: includes/Onenice_Options.php:550
 msgid "Site Loading Image"
 msgstr ""
 
-#: includes/Onenice_Options.php:159
+#: includes/Onenice_Options.php:142
 msgid "Site Logo"
 msgstr ""
 
-#: includes/Onenice_Options.php:570
+#: includes/Onenice_Options.php:533
 msgid "Site Thumbnail"
 msgstr ""
 
-#: includes/Onenice_Options.php:283
+#: includes/Onenice_Options.php:246
 msgid "Slides"
 msgstr ""
 
-#: includes/Onenice_Options.php:365 includes/Onenice_Options.php:430
-#: includes/Onenice_Options.php:495
+#: includes/Onenice_Options.php:328 includes/Onenice_Options.php:393
+#: includes/Onenice_Options.php:458
 msgid "Slides Description"
 msgstr ""
 
-#: includes/Onenice_Options.php:317
+#: includes/Onenice_Options.php:280
 msgid "Slides Image 1"
 msgstr ""
 
-#: includes/Onenice_Options.php:382
+#: includes/Onenice_Options.php:345
 msgid "Slides Image 2"
 msgstr ""
 
-#: includes/Onenice_Options.php:447
+#: includes/Onenice_Options.php:410
 msgid "Slides Image 3"
 msgstr ""
 
-#: includes/Onenice_Options.php:349 includes/Onenice_Options.php:414
-#: includes/Onenice_Options.php:479
+#: includes/Onenice_Options.php:312 includes/Onenice_Options.php:377
+#: includes/Onenice_Options.php:442
 msgid "Slides Title"
 msgstr ""
 
-#: includes/Onenice_Options.php:333 includes/Onenice_Options.php:398
-#: includes/Onenice_Options.php:463
+#: includes/Onenice_Options.php:296 includes/Onenice_Options.php:361
+#: includes/Onenice_Options.php:426
 msgid "Slides URL"
 msgstr ""
 
@@ -267,7 +255,7 @@ msgstr ""
 msgid "Static library CDN"
 msgstr ""
 
-#: includes/Onenice_Options.php:531 includes/Onenice_Options.php:553
+#: includes/Onenice_Options.php:494 includes/Onenice_Options.php:516
 msgid "Text"
 msgstr ""
 
@@ -275,12 +263,8 @@ msgstr ""
 msgid "Theme Color"
 msgstr ""
 
-#: includes/Onenice_Options.php:532 includes/Onenice_Options.php:554
+#: includes/Onenice_Options.php:495 includes/Onenice_Options.php:517
 msgid "Thumbnail"
-msgstr ""
-
-#: functions.php:143
-msgid "Upgrade VIP "
 msgstr ""
 
 #. Author of the theme
