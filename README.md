@@ -1,3 +1,5 @@
+# 本仓库已不再更新，下载最新版请前往[https://github.com/yythemes/onenice](https://github.com/yythemes/onenice]
+
 # onenice
 > OneNice是一款超级简洁的WordPress主题，支持中英文，免费开源，无任何加密，无任何冗余代码，无任何授权限制，可随便使用。技术交流QQ群707252643，作者QQ942835420。。  
 
