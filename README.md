@@ -36,7 +36,7 @@
 
 
 ### 推荐插件
-- [xenice-seo](https://www.xenice.com/xenice-seo)
+- [xenice-seo](https://www.xenice.com/zh/xenice-seo)
 xenice-seo是一款简单的SEO插件，可为网站添加SEO关键词、SEO元描述。。
 
 ### 系统要求
