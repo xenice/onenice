@@ -1,0 +1,29 @@
+/* breadcrumb */
+.yy-main{
+    .breadcrumb{
+    	background-color:#fff;
+    	padding:10px 0;
+    	font-size:12px;
+    	animation: fade-in;
+        animation-duration: .5s;
+    }
+    
+    .breadcrumb a:hover{
+        color:var(--yy-main-color);
+    }
+    
+    .breadcrumb-item + .breadcrumb-item{
+    	padding-left: 0.3rem;
+    }
+    
+    .breadcrumb-item + .breadcrumb-item::before {
+    	display: inline-block;
+    	padding-right: 0.3rem;
+    	color: #999;
+    	content: ">";
+    }
+    
+    .breadcrumb .breadcrumb-item{
+    	color:#999;
+    }
+}

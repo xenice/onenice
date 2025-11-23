@@ -1,0 +1,104 @@
+/* login */
+
+.user-login{
+    margin-left: 20px;
+}
+
+.user-login a:hover{
+    color:var(--yy-main-color);
+}
+
+.user-login .form-control:focus{
+    border-color: var(--yy-light-color)!important;
+}
+    
+.user-login .nav-item 
+{
+    margin-bottom:20px;
+}
+
+.sign-tips,.success-tips{
+    text-align:center;
+    display: none;
+    
+}
+
+.sign-tip{
+    color:#dc3545;
+    font-size:13px;
+}
+
+
+.user-login .nav-item .nav-link{
+    padding: 10px;
+    font-size:16px;
+    font-weight:500;
+    color:#999;
+    color:var(--yy-light-color);
+    
+}
+.user-login .nav-item .active{
+    color:#666;
+    cursor:default;
+    color:var(--yy-main-color);
+}
+
+.user-login .modal{
+    padding-right:0!important;
+    padding-left:0!important;
+}
+.user-login .modal-body{
+    padding:30px;
+}
+
+.user-login button[type="button"]{
+    width:100%;
+}
+
+.user-login .btn-custom{
+    color:#fff!important;
+    background-color:var(--yy-main-color);
+    border-color:var(--yy-main-color);
+}
+
+.user-login .btn-custom:hover{
+    color:#fff;
+    background-color:var(--yy-dark-color);
+    border-color:var(--yy-dark-color)
+}
+            
+.user-login .disabled{
+    pointer-events: none;
+    color:#999;
+}
+
+.login-ways{
+    font-size:13px;
+}
+
+.login-ways .btn{
+    padding:5px;
+}
+
+#r_captcha_clk{
+    cursor: pointer;
+}
+
+/* icon color */
+.user-login .fa-weixin{
+    color:#7BD172
+}
+
+.user-login .fa-qq{
+    color:#f67585
+}
+
+.user-login .fa-weibo{
+    color:#ff8d8d
+}
+
+@media screen and (min-width:768px){
+    .user-login .modal-dialog{
+        width: 400px;
+    }
+}

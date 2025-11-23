@@ -2,12 +2,14 @@
 /**
  * Not found
  *
- * @package Onenice
+ * @package YYThemes
  */
 
 get_header();
 
-if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'archive' ) ) {?>
+if (!yy_import( 'archive' ) ) {?>
+<div class="yy-main">
+    <div class="yy-group">
 	<style>
 	.errorDiv{
 		margin: 0 auto;
@@ -17,7 +19,7 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
 		padding-top:60px;
 	}
 	</style>
-	<div id="primary" class="main full-page">
+	<div id="primary" class="full-page">
 		<div class="errorDiv">
 			<p><h1><?php echo esc_html__( 'Not Found', 'onenice' ); ?></h1></p>
 			<p><?php echo esc_html__( 'Sorry, the page you visited has migrated or does not exist', 'onenice' ); ?></p>
@@ -37,7 +39,8 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
 
 	showTime();  
 	</script>  
-
+    </div><!-- yy-group -->
+</div><!-- yy-main -->
 	<?php
 }
 

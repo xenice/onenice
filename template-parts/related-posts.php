@@ -2,7 +2,7 @@
 /**
  * Related posts
  *
- * @package Onenice
+ * @package YYThemes
  */
 
 ?>
@@ -12,7 +12,7 @@
 		<?php
 			$r = new WP_Query(
 				apply_filters(
-					'onenice_related_posts_args',
+					'yy_related_posts_args',
 					array(
 						'tax_query'      => array(
 							array(

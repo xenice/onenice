@@ -1,57 +1,72 @@
-# 本仓库已不再更新，请前往 https://github.com/yythemes/onenice 下载最新版
-
 # onenice
 > OneNice是一款超级简洁的WordPress主题，支持中英文，免费开源，无任何加密，无任何冗余代码，无任何授权限制，可随便使用。技术交流QQ群707252643，作者QQ942835420。。  
 
-### 主题演示
+### 主题地址
+[https://www.xenice.com/zh/onenice/](https://www.xenice.com/zh/onenice/)
 
-[https://www.xenice.com/](https://www.xenice.com/)
+### 主题演示
+[https://onenice.xenice.com/](https://onenice.xenice.com/)
 
 ![onenice](https://raw.githubusercontent.com/xenice/onenice/master/screenshot.png)
 
 ### 主题特色
-
-- 响应式设计  
-完美支持PC端和移动端；
-- 多语言支持  
-内置中、英文语言包，需要其它语言可自己增加；
-- 原生主题设置页面  
-无缝嵌入WORDPRESS后台，页面更自然，速度更快；
-
+- 响应式设计，完美支持PC端和移动端；
+- 多语言支持，内置中、英文语言包，需要其它语言可自己增加；
+- 原生主题设置页面，无缝嵌入WORDPRESS后台，页面更自然，速度更快；
+- 内置主题小工具，可以按分类显示近期文章、最热文章、置顶文章，可以选择显示缩略图；
+- 登录和注册页面界面；
+- 代码高亮显示；
+- 当文章没有缩略图时，使用文章的第一张图片作为缩略图；
+- 网页载入时css动画效果；
+- 内置PhotoSwipe图片幻灯片效果；
+- 文章分享功能；
+- 文章点赞功能；
+- 首页置顶文章模块；
+- 回到顶部按钮；
+- 演示数据（专业版）；
 
 ### 主题选项
-- 全局选项  
-主题颜色（蓝、灰、红三种颜色可选）、静态库CDN选择、页面宽度。
-- 页头
-设置网站logo、显示搜索、显示登录按钮
-- 页脚
-删除主题版权信息、填写网站备案号。
-- 幻灯片  
-显示和设置幻灯片。
-- 归档  
-文章列表风格（文本、缩略图可选）、网站缩略图、网站加载时图片、显示日期、显示作者
-- 文章  
-显示日期、显示作者、显示标签、显示上一篇/下一篇 文章、显示相关文章、显示分享按钮、代码高亮显示
+- 全局选项 全局颜色、页头和页脚颜色、静态库CDN、页面宽度、网站图标。
+- 页头 设置网站logo、显示搜索、显示登录按钮
+- 页脚 删除主题版权信息、填写网站备案号。
+- 幻灯片 显示和设置幻灯片。
+- 归档 文章列表风格（文本、缩略图可选）、网站缩略图、网站加载时图片、显示日期、显示作者
+- 文章 显示日期、显示作者、显示标签、显示上一篇/下一篇 文章、显示相关文章、显示分享按钮、代码高亮显示
+- 其它功能 代码高亮显示、静态文件CDN加速、CSS动画。。。
 
 
-### 可选插件
-- [xenice-posts-widgets](https://www.xenice.com/plugins/xenice-posts-widgets)
-WordPress经典小工具近期文章的扩展，可以按分类显示近期文章、最热文章、置顶文章，可以选择显示缩略图。
-- [xenice-login](https://www.xenice.com/plugins/xenice-login)
-自定义WordPress登录页面、注册页面、密码找回页面，支持弹窗显示。
-- [xenice-mail](https://www.xenice.com/plugins/xenice-mail)
-WordPress邮件发送插件。
-- [xenice-seo](https://www.xenice.com/plugins/xenice-seo)
-WordPress SEO插件，为网站添加SEO标题、SEO关键词、SEO元描述、网站地图。
-
+### 推荐插件
+- [xenice-seo](https://www.xenice.com/xenice-seo)
+xenice-seo是一款简单的SEO插件，可为网站添加SEO关键词、SEO元描述。。
 
 ### 系统要求
-- php版本7.0或更高
+- php版本7.4或更高，推荐PHP8.0以上
 
 
 ### 更新说明
 
-**最后更新：2023.08.04**
+v3.8.6
+- 修改了不少，懒得列出来；
+
+v3.8.3
+- 修复若干bug; 
+- 调整程序文件结构；
+
+
+v3.7.2
+- core:修复二级分类显示bug；
+- core:修复摘要长度不能设置问题；
+
+v3.7.1
+- core:前端添加管理菜单项（当前用户有编辑权限时显示）；
+- core:修复时间问题；
+- core:修复头像加速不显示问题；
+
+v3.7.0
+- 重构主题设置页面
+- 添加置顶文章模块
+- 添加文章点赞功能
+- 修改若干BUG
 
 v3.6.0
 - 规范化代码

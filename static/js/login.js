@@ -1,7 +1,7 @@
 /**
  * Login
  *
- * @package Onenice
+ * @package YYThemes
  */
 
 jQuery(

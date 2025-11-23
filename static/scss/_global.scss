@@ -1,0 +1,91 @@
+
+/* global */
+
+body {
+	font-family: 'Poppins',sans-serif,'Microsoft Yahei';
+	color:var(--yy-fg-color);
+	background-color: var(--yy-bg-color);
+}
+
+a{
+	color: var(--yy-link-color);
+}
+
+a:hover{
+	text-decoration:none;
+	color:var(--yy-main-color);
+}
+
+
+h3{
+	font-size:18px;
+}
+
+video{
+	max-width: 100%;
+}
+
+@media screen and (min-width:768px){
+	.md-up-none{
+		display:none;
+	}
+}
+
+@media screen and (max-width:767px) {
+	.md-down-none{
+		display:none;
+	}
+}
+
+
+
+
+/* reset bootstrap */
+.container, .container-lg, .container-md, .container-sm, .container-xl{
+    max-width: var(--yy-page-width);
+}
+
+.form-group input,.form-group textarea{
+	padding: 6px 8px;
+}
+
+
+input[type="text"],input[type="email"],input[type="tel"],input[type="password"],textarea,select{
+	box-shadow: inset 0 0 0 0 #fff!important;
+	height:unset;
+}
+
+.form-group input[disabled]{
+	color:#999;
+}
+
+.form-group input[type="buttom"],.form-group input[type="submit"],.form-group button,.input-group-text{
+	padding: 6px 12px;
+}
+
+.input-group-text{
+	font-size:unset;
+	border-color:#eee;
+	background-color:#eee;
+}
+
+.form-control{
+	border-color: #eee;
+}
+
+.form-control:focus{
+    border-color: var(--yy-light-color)!important;
+}
+
+@media screen and (min-width:768px){
+
+	/* reset bootstrap */
+	.col-md-8{
+		padding-right:30px;
+	}
+
+	.form-group input, .form-group button, .btn{
+		font-size:14px;
+	}
+
+}

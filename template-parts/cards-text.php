@@ -2,7 +2,7 @@
 /**
  * Text cards
  *
- * @package Onenice
+ * @package YYThemes
  */
 
 ?>
@@ -16,10 +16,10 @@ if ( have_posts() ) :
 			<h4 class="card-title">
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 			</h4>
-					<?php if ( onenice_get( 'archive_show_date' ) ) : ?>
-				<span class="card-link"><?php echo esc_html( get_the_date() ); ?></span>
+					<?php if ( yy_get( 'archive_show_date' ) ) : ?>
+				<span class="card-link"><?php echo esc_html( get_the_date('Y-m-d') ); ?></span>
 			<?php endif; ?>
-					<?php if ( onenice_get( 'archive_show_author' ) ) : ?>
+					<?php if ( yy_get( 'archive_show_author' ) ) : ?>
 				<span class="card-link md-down-none"><?php the_author(); ?></span>
 			<?php endif; ?>
 			<p class="card-text"><?php the_excerpt(); ?></p>

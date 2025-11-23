@@ -2,27 +2,32 @@
 /**
  * Index
  *
- * @package Onenice
+ * @package YYThemes
  */
 
 get_header();
 
-if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'archive' ) ) {?>
+if ( !yy_import( 'index' ) ) {?>
+<div class="yy-main">
+    <div class="yy-group">
+        <div class="container">
+        	<div class="row">
+        		<div class="col-md-8">
+        			<?php yy_get( 'enable_slides' ) && get_template_part( 'template-parts/home', 'slides' ); ?>
+        			<?php do_action('yythemes_before_recent_posts'); ?>
+        			<h3><?php esc_html_e( 'Recent Posts', 'onenice' ); ?></h3>
+        			<?php get_template_part( 'template-parts/cards', yy_get( 'list_style' ) ); ?>
+        			<ul class="pagination">
+        				<?php echo paginate_links(); ?>
+        			</ul>
+        		</div>
+        	<?php get_sidebar(); ?>
+        	</div><!-- row -->
+        </div>
+    </div><!-- yy-group -->
+</div><!-- yy-main -->
 
-<div class="main container">
-	<div class="row">
-		<div class="col-md-8">
-			<?php onenice_get( 'enable_slides' ) && get_template_part( 'template-parts/home', 'slides' ); ?>
-			<h3><?php esc_html_e( 'Recent Posts', 'onenice' ); ?></h3>
-			<?php get_template_part( 'template-parts/cards', onenice_get( 'list_style' ) ); ?>
-			<ul class="pagination">
-				<?php echo paginate_links(); ?>
-			</ul>
-		</div>
-	<?php get_sidebar(); ?>
-	</div><!-- row -->
-</div>
-	<?php
+<?php
 }
 
 get_footer();

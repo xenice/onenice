@@ -2,7 +2,7 @@
 /**
  * Sidebar
  *
- * @package Onenice
+ * @package YYThemes
  */
 
 ?>
@@ -59,7 +59,7 @@
 							?>
 						<li>
 							<a href="<?php the_permalink( $recent_post->ID ); ?>"<?php echo esc_html( $aria_current ); ?>><?php echo esc_html( $titl ); ?></a>
-							<span class="post-date"><?php echo get_the_date( '', $recent_post->ID ); ?></span>
+							<span class="post-date"><?php echo get_the_date( 'Y-m-d', $recent_post->ID ); ?></span>
 						</li>
 							<?php
 					endforeach;

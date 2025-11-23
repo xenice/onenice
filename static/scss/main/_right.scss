@@ -1,0 +1,124 @@
+/* right */
+.yy-main{
+    .yy-group{
+        
+    }
+    .right{
+        padding-left: 20px;
+        animation: fade-in;
+        animation-duration: .5s;
+        ul{
+        	padding:0;
+        }
+        li{
+        	margin:10px 0;
+        	list-style:none;
+        }
+        h3{
+        	margin-bottom:20px;
+        }
+        a{
+        	font-size:14px;
+        }
+        span{
+        	font-size:13px;
+        	color:#999;
+        }
+        .thumbnail{
+            .data{
+            	margin-left:15px;
+            	flex:1;
+            	a{
+                	display: block;
+                }
+            }
+        }
+        .widget{
+        	margin-bottom:50px;
+        	.lazyload{
+            	width:122px;
+            	height:86px;
+            	border-radius:5px;
+            }
+            .links{
+            	display: flex;
+            	flex-wrap: wrap;
+            }
+            .links li{
+            	margin:5px;
+            	padding:5px;
+            }
+        }
+    }
+    .widget_recent_entries{
+        .post-date{
+        	display: block;
+        }
+        .thumbnail{
+            li{
+                display:flex;
+                margin: 20px 0;
+                line-height:1.8;
+                img {
+                    width: 122px;
+                    height: 96px;
+                    border-radius: 5px;
+                    object-fit: cover;
+                }
+                .data{
+                    line-height:1.8;
+                }
+            }
+        }
+    }
+    .widget_tag_cloud{
+        .tagcloud {
+        	display: flex;
+        	flex-wrap: wrap;
+        	a {
+            	color: #FFF;
+            	background-color: #f6f6f6;
+            	width: 30%;
+            	margin: 1%;
+            	padding: 3px;
+            	font-size: 12px;
+            	height: 28px;
+            	line-height: 22px;
+            	overflow: hidden;
+            	text-align: center;
+            	border-radius: 3px;
+            }
+            a:hover {
+            	color: #fff;
+            	border: 1px solid #FFF;
+            	opacity: 1 !important;
+            }
+            .tag-link-count{
+            	color: #FFF;
+            }
+        }
+        
+    }
+    .right-comments{
+        li{
+        	margin-bottom: 0;
+        }
+        li:nth-child(2n){
+        	margin-left: 35px;
+        	margin-top: 0;
+        
+        }
+    }
+}
+
+
+@media screen and (max-width:767px) {
+    .yy-main{
+    	.right{
+    		padding-left:15px;
+    	}
+    	.right a{
+    		font-size:15px;
+    	}
+    }
+}

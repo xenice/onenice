@@ -1,0 +1,84 @@
+/* main */
+.yy-main{
+    .yy-group{
+        >.container{
+            margin-top:15px;
+        }
+    }
+    .col-md-8{
+        >h3{
+            margin-bottom:10px;
+        }
+        a{
+        	font-size:14px;
+        }
+        animation: fade-in;
+        animation-duration: .5s;
+    }
+    .card{
+    	border:none;
+    	margin-bottom:10px;
+    	animation: fade-in;
+        animation-duration: .5s;
+        .card-title{
+        	font-size:16px;
+        	margin:0;
+        }
+        
+        .card-body{
+        	padding:10px 0;
+        	line-height: 2;
+        }
+        .card-link{
+        	font-size:12px;
+        	margin:0 10px 0 0;
+        
+        }
+        span.card-link{
+        	color:#999;
+        }
+        p{
+        	margin-top:10px;
+        }
+        .card-text{
+        	color:#777;
+        	font-size:14px;
+        }
+        .lazyload{
+        	width:220px;
+        	height:150px;
+        	border-radius:5px;
+        	object-fit: cover;
+        }
+        .data{
+        	flex:1;
+        	margin-left:15px;
+        }
+    }
+}
+
+
+/*
+.main{
+	margin-top:30px;
+	min-height: calc(100vh - 249.09px);
+}
+*/
+
+
+@media screen and (max-width:767px) {
+    .yy-main{
+        .card{
+            margin-bottom:0;
+            .lazyload{
+        		width:120px;
+        		height:96px;
+        		border-radius:5px;
+        	}
+        	.data .card-text{
+        		display:none;
+        	}
+            
+        }
+    }
+}

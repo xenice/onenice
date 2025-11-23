@@ -1,108 +1,84 @@
 <?php
+
+
 /**
  * Functions
  *
- * @package Onenice
  */
 
-define( 'HOME_URL', home_url( '', empty( $_SERVER['HTTPS'] ) ? 'http' : 'https' ) );
-define( 'THEME_NAME', 'onenice' );
-define( 'THEME_URI', wp_get_theme()->get( 'ThemeURI' ) );
-define( 'THEME_DIR', get_template_directory() );
-define( 'THEME_URL', get_template_directory_uri() );
-define( 'THEME_VER', wp_get_theme()->get( 'Version' ) );
-define( 'STATIC_DIR', THEME_DIR . '/static' );
-define( 'STATIC_URL', THEME_URL . '/static' );
-define( 'AJAX_URL', admin_url( 'admin-ajax.php' ) );
+require __DIR__ . '/vessel/vessel.php';
 
-load_theme_textdomain( THEME_NAME, __DIR__ . '/languages/' );
-
-/* customize */
-
-$onenice_defaults = array(
-	// global.
-	'site_icon'                    => STATIC_URL . '/images/icon.ico',
-	'theme_color'                  => '#0099FF #007bff #99CCFF',
-	'static_lib_cdn'               => '',
-	'page_width'                   => '1200px',
-	'enable_back_to_top'           => false,
-	'service_qq'                   => '',
-
-	// header.
-	'site_logo'                    => STATIC_URL . '/images/logo.png',
-	'show_search'                  => true,
-	'show_login_button'            => true,
-
-	// footer.
-	'delete_theme_copyright'       => false,
-	'icp_number'                   => '',
-
-	// slides.
-	'enable_slides'                => true,
-	'slides_image_1'               => STATIC_URL . '/images/onenice_slide_1.jpg',
-	'slides_url_1'                 => 'https://www.xenice.com',
-	'slides_title_1'               => __( 'OneNice Theme', 'onenice' ),
-	'slides_description_1'         => __( 'OneNice is a super concise WordPress theme, supporting both Chinese and English, free open source, no encryption, no redundant code, no authorization restrictions, can be used freely.', 'onenice' ),
-
-	'slides_image_2'               => STATIC_URL . '/images/onenice_slide_2.jpg',
-	'slides_url_2'                 => 'https://www.xenice.com',
-	'slides_title_2'               => __( 'OneNice Theme', 'onenice' ),
-	'slides_description_2'         => __( 'OneNice is a super concise WordPress theme, supporting both Chinese and English, free open source, no encryption, no redundant code, no authorization restrictions, can be used freely.', 'onenice' ),
-
-	'slides_image_3'               => STATIC_URL . '/images/onenice_slide_3.jpg',
-	'slides_url_3'                 => 'https://www.xenice.com',
-	'slides_title_3'               => __( 'OneNice Theme', 'onenice' ),
-	'slides_description_3'         => __( 'OneNice is a super concise WordPress theme, supporting both Chinese and English, free open source, no encryption, no redundant code, no authorization restrictions, can be used freely.', 'onenice' ),
-
-	// archive.
-	'list_style'                   => 'text',
-	'excerpt_length'               => 50,
-	'site_thumbnail'               => STATIC_URL . '/images/thumbnail.png',
-	'site_loading_image'           => STATIC_URL . '/images/loading.png',
-	'archive_show_date'            => true,
-	'archive_show_author'          => true,
-
-
-	// posts.
-	'single_show_date'             => true,
-	'single_show_author'           => true,
-	'single_show_tags'             => true,
-	'single_show_previous_next'    => true,
-	'show_related_posts'           => true,
-	'single_show_share'            => false,
-	'single_disable_share_buttons' => 'weibo,wechat,qq,douban,qzone,tencent,linkedin,diandian,google,twitter,facebook',
-	'single_enable_highlight'      => false,
-);
+require __DIR__ . '/ext/ext.php';
 
 /**
  * Get option
  *
- * @param string $name  option name.
+ * @param string $name option name.
  */
-function onenice_get( $name ) {
-	global $onenice_defaults;
-	return get_theme_mod( $name, $onenice_defaults[ $name ] );
+function yy_get( $name) {
+    
+    return vessel\get($name);
 }
 
 /**
- * Register customize options
+ * Get page
  *
- * @param object $wp_customize wp customize object.
+ * @param string $template tempalge name.
  */
-function onenice_customize( $wp_customize ) {
-	require __DIR__ . '/includes/class-onenice-options.php';
-	new Onenice_Options( $wp_customize );
-
+function yy_get_page($template)
+{
+    global $wpdb;
+    $page_id = $wpdb->get_var($wpdb->prepare("SELECT `post_id` 
+    FROM `$wpdb->postmeta`, `$wpdb->posts`
+    WHERE `post_id` = `ID`
+    AND `post_status` = 'publish'
+    AND `meta_key` = '_wp_page_template'
+    AND `meta_value` = %s
+    LIMIT 1;", $template));
+    if($page_id){
+        return get_post($page_id);
+    }
 }
 
-add_action( 'customize_register', 'onenice_customize' );
+/**
+ * Add page
+ *
+ * @param string $template tempalge name.
+ */
+function yy_add_page($template){
+    $post = [
+        'post_name' => 'login',
+        'post_title' => __('Login', 'onenice'),
+        'post_status'=> 'publish',
+        'post_type' => 'page'
+    ];
+    
+    $id = wp_insert_post($post);
+    
+    if($id){
+        update_post_meta($id, '_wp_page_template', $template);
+    }
+}
+
+/**
+ * Import tempalge page
+ *
+ * @param string $template tempalge name.
+ */
+function yy_import($name){
+    $file = apply_filters('yy_import_file', '', $name);
+    if(is_file($file)){
+        include($file);
+        return true;
+    }
+}
 
 /**
  * Breadcrumb
  *
  * @return string   Output breadcrumb html.
  */
-function onenice_breadcrumb() {
+function yy_breadcrumb() {
 	/**
 	 * Get breadcrumb
 	 *
@@ -110,56 +86,79 @@ function onenice_breadcrumb() {
 	 * @param string $taxonomy  Category taxonomy name.
 	 * @return string           Return the breadcrumb html.
 	 */
-	function onenice_get_greadcrumb( $cid, $taxonomy ) {
+	function yy_get_greadcrumb( $cid, $taxonomy ) {
 		if ( is_date() ) {
-			echo '<span class="breadcrumb-item active">' . esc_html( get_the_date() ) . '</span>';
+			echo '<span class="breadcrumb-item active">' . esc_html( get_the_date('Y-m-d') ) . '</span>';
 			return;
 		}
 		if ( is_author() ) {
 			echo '<span class="breadcrumb-item active">' . esc_html( get_the_author() ) . '</span>';
 			return;
 		}
+		if(is_post_type_archive()){
+		    echo '<span class="breadcrumb-item active">' . esc_html( post_type_archive_title('', false) ) . '</span>';
+		    return;
+		}
+
 		$row = get_term( $cid, $taxonomy );
 		$pid = $row->parent;
 		if ( $pid ) {
-			onenice_get_greadcrumb( $pid );
+			yy_get_greadcrumb( $pid, $taxonomy );
 		}
 		echo '<a class="breadcrumb-item" href="' . esc_attr( get_term_link( $row->term_id, $taxonomy ) ) . '">' . esc_html( $row->name ) . '</a>';
+		
 	}
-
-	if ( is_single() ) {
+    if ( is_page() ) {
 		global $post;
 		global $wpdb;
+		echo '<a class="breadcrumb-item" href="' . esc_attr( home_url() ) . '">' . esc_html__( 'Home', 'onenice' ) . '</a>';
+		echo '<span class="breadcrumb-item active">' . esc_html( $post->post_title ) . '</span>';
+		return;
+	}
+	elseif ( is_single() ) {
+	    global $post;
+		global $wpdb;
+	    if (get_post_type() != 'post') {
+            $post_type = get_post_type_object(get_post_type());
+            $post_type_archive_link = get_post_type_archive_link($post_type->name);
+            $post_type_archive_name = $post_type->labels->name;
+            echo '<a class="breadcrumb-item" href="' . esc_attr( home_url() ) . '">' . esc_html__( 'Home', 'onenice' ) . '</a>';
+            echo '<a class="breadcrumb-item" href="' . esc_attr( $post_type_archive_link ) . '">' . $post_type_archive_name . '</a>';
+            echo '<span class="breadcrumb-item active">' . esc_html( $post->post_title ) . '</span>';
+		    return;
+	    }
+		
 		$cats = wp_get_post_categories( $post->ID );
 		echo '<a class="breadcrumb-item" href="' . esc_attr( home_url() ) . '">' . esc_html__( 'Home', 'onenice' ) . '</a>';
-		$cid = $cats[0];
+		$cid = $cats[0]??0;
 		if ( $cid ) {
-			$taxonomy = wp_cache_get( 'taxonomy_' . $cid, 'onenice_cache_group' );
+			$taxonomy = wp_cache_get( 'taxonomy_' . $cid, 'yy_cache_group' );
 			if ( false === $taxonomy ) {
 				$taxonomy = $wpdb->get_var( $wpdb->prepare( "SELECT taxonomy FROM {$wpdb->term_taxonomy} WHERE term_id=%d", $cid ) );
-				wp_cache_set( 'taxonomy_' . $cid, $taxonomy, 'onenice_cache_group' );
+				wp_cache_set( 'taxonomy_' . $cid, $taxonomy, 'yy_cache_group' );
 			}
-			onenice_get_greadcrumb( $cid, $taxonomy );
+			yy_get_greadcrumb( $cid, $taxonomy );
 		}
 		echo '<span class="breadcrumb-item active">' . esc_html( $post->post_title ) . '</span>';
 		return;
-	} elseif ( is_archive() ) {
+	}
+	elseif ( is_archive() ) {
 		global $wpdb;
 		$cid      = get_queried_object_id();
-		$taxonomy = wp_cache_get( 'taxonomy_' . $cid, 'onenice_cache_group' );
+		$taxonomy = wp_cache_get( 'taxonomy_' . $cid, 'yy_cache_group' );
 		if ( false === $taxonomy ) {
 			$taxonomy = $wpdb->get_var( $wpdb->prepare( "SELECT taxonomy FROM {$wpdb->term_taxonomy} WHERE term_id=%d", $cid ) );
-			wp_cache_set( 'taxonomy_' . $cid, $taxonomy, 'onenice_cache_group' );
+			wp_cache_set( 'taxonomy_' . $cid, $taxonomy, 'yy_cache_group' );
 		}
 		echo '<a class="breadcrumb-item" href="' . esc_attr( home_url() ) . '">' . esc_html__( 'Home', 'onenice' ) . '</a>';
-		onenice_get_greadcrumb( $cid, $taxonomy );
+		yy_get_greadcrumb( $cid, $taxonomy );
 	}
 }
 
 /**
  * Login
  */
-function onenice_login() {
+function yy_login() {
 	global $current_user;
 	$user = $current_user->data;
 	echo '<div class="user-login">';
@@ -187,7 +186,6 @@ function onenice_login() {
 		</style>
 		<div class="dropdown">
 		<a class="" href="#" role="button" id="userMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			<span><?php echo esc_html( $user->display_name ); ?></span>
 			<?php echo get_avatar( $user->ID, 32 ); ?>
 		</a>
 
@@ -201,15 +199,23 @@ function onenice_login() {
 				echo '<span class="dropdown-item expire">' . esc_html__( 'Expire time: ', 'onenice' ) . esc_html( $vip_info['expire'] ) . '</span>';
 
 			}
-
+            
 			$page_id = xenice\member\get( 'vip_checkout' );
-
 			if ( $page_id ) {
 				echo '<a class="dropdown-item" href="' . esc_html( get_permalink( $page_id ) ) . '">' . esc_html__( 'Buy VIP ', 'onenice' ) . '</a>';
-
 			}
 		}
+		else{
+		    echo '<span class="dropdown-item role">' . esc_html( $user->display_name ) . '</span>';
+		}
+		
+		if(function_exists('xc_get_page_url')){
+            echo '<a class="dropdown-item" href="' . esc_html( xc_get_page_url('my_orders') ) . '">' . esc_html__('My orders', 'onenice' ) . '</a>';
+        }
 		?>
+		<?php if(current_user_can('edit_posts')):?>
+            <a class="dropdown-item" href="<?php echo esc_attr( get_admin_url()); ?>"><?php esc_html_e( 'Manage', 'onenice' ); ?></a>
+		<?php endif;?>
 			<a class="dropdown-item" href="<?php echo esc_attr( wp_logout_url() ); ?>"><?php esc_html_e( 'Logout', 'onenice' ); ?></a>
 			</div>
 		</div>
@@ -231,7 +237,7 @@ register_nav_menus( array( 'main-menu' => __( 'Main Menu', 'onenice' ) ) );
 /**
  * Register sidebars
  */
-function onenice_register_sidebars() {
+function yy_register_sidebars() {
 	register_sidebar(
 		array(
 			'id'           => 'home',
@@ -258,52 +264,38 @@ function onenice_register_sidebars() {
 	);
 }
 
-add_action( 'widgets_init', 'onenice_register_sidebars' );
+add_action( 'widgets_init', 'yy_register_sidebars' );
 
 /**
  * Ignore sticky posts
  *
  * @param object $query query object.
  */
-function onenice_exclude_sticky_posts( $query ) {
+function yy_exclude_sticky_posts( $query ) {
 	if ( $query->is_home() && $query->is_main_query() ) {
 		$query->set( 'ignore_sticky_posts', 1 );
 	}
 }
-add_action( 'pre_get_posts', 'onenice_exclude_sticky_posts' );
+add_action( 'pre_get_posts', 'yy_exclude_sticky_posts' );
 
 /**
  * Clean excerpt html
  *
- * @param string $str   query object.
+ * @param string $excerpt   query object.
  * @return string       Return to the overworry excerpt.
  */
-function onenice_excerpt( $str ) {
-	return wp_strip_all_tags( $str );
+function yy_excerpt( $excerpt ) {
+	$excerpt = wp_strip_all_tags( $excerpt );
+	$max_len = yy_get( 'excerpt_length' );
+	if(mb_strlen($excerpt)>$max_len){
+        return mb_substr($excerpt, 0, $max_len).'...';
+    }
+    else{
+        return $excerpt;
+    }
 }
-add_filter( 'the_excerpt', 'onenice_excerpt' );
+add_filter( 'the_excerpt', 'yy_excerpt' );
 
-/**
- * Change excerpt length
- *
- * @param int $length   Excerpt length.
- * @return string       Returns the modified excerpt length.
- */
-function onenice_excerpt_length( $length ) {
-	return onenice_get( 'excerpt_length' );
-}
-add_filter( 'excerpt_length', 'onenice_excerpt_length' );
-
-/**
- * Change the content at the end of the excerpt
- *
- * @param string $more   Later original content.
- * @return string       Returns the modified content at the end of the excerpt.
- */
-function onenice_excerpt_more( $more ) {
-	return ' ...';
-}
-add_filter( 'excerpt_more', 'onenice_excerpt_more' );
 
 /**
  * Set the default thumbnail url
@@ -311,13 +303,13 @@ add_filter( 'excerpt_more', 'onenice_excerpt_more' );
  * @param string $thumbnail_url   Original thumbnail url.
  * @return string       Returns the modified thumbnail url.
  */
-function onenice_post_thumbnail_url( $thumbnail_url ) {
+function yy_post_thumbnail_url( $thumbnail_url ) {
 	if ( ! $thumbnail_url ) {
-		return onenice_get( 'site_thumbnail' );
+		return yy_get( 'site_thumbnail' );
 	}
 	return $thumbnail_url;
 }
-add_filter( 'post_thumbnail_url', 'onenice_post_thumbnail_url', 99999999, 1 );
+add_filter( 'post_thumbnail_url', 'yy_post_thumbnail_url', 99999999, 1 );
 
 /**
  * Set the number of tag clouds and sort by count
@@ -325,7 +317,7 @@ add_filter( 'post_thumbnail_url', 'onenice_post_thumbnail_url', 99999999, 1 );
  * @param array $args   Tag cloud args.
  * @return string       Returns the modified tag cloud args.
  */
-function onenice_tag_cloud_args( $args ) {
+function yy_tag_cloud_args( $args ) {
 	$newargs = array(
 		'orderby' => 'count',
 		'order'   => 'DESC',
@@ -334,15 +326,37 @@ function onenice_tag_cloud_args( $args ) {
 
 	return array_merge( $args, $newargs );
 }
-add_filter( 'widget_tag_cloud_args', 'onenice_tag_cloud_args' );
+add_filter( 'widget_tag_cloud_args', 'yy_tag_cloud_args' );
+
+/**
+ * Get post first image
+ *
+ */
+function yy_get_post_first_image($post){
+    
+    $content = $post->post_content;
+
+    preg_match('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $content, $matches);
+
+    if (!empty($matches[1])) {
+        $image_url = $matches[1];
+        return $image_url;
+    }
+
+    return false;
+}
+
+
+
+
 
 
 if ( ! is_admin() ) {
 	/**
 	 * Load script and style
 	 */
-	function onenice_load_scripts() {
-		$cdn_url = onenice_get( 'static_lib_cdn' );
+	function yy_load_scripts() {
+		$cdn_url = yy_get( 'static_lib_cdn' );
 
 		if ( $cdn_url ) {
 			wp_enqueue_style( 'font-awesome', $cdn_url . '/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7.0' );
@@ -361,12 +375,13 @@ if ( ! is_admin() ) {
 
 		}
 
-		wp_enqueue_style( 'style', STATIC_URL . '/css/style6.css', array(), THEME_VER );
+		wp_enqueue_style( 'yythemes', STATIC_URL . '/css/style.css', array('bootstrap'), filemtime(STATIC_DIR . '/css/style.css'));
+		wp_enqueue_script( 'yythemes', STATIC_URL . '/js/script.js', array('bootstrap'), filemtime(STATIC_DIR . '/js/script.js'));
 		wp_enqueue_script( 'lazyload', STATIC_URL . '/libs/lazyload/lazyload.min.js', array(), '2.0.0', true );
 
 		if ( is_single() ) {
 
-			if ( onenice_get( 'single_enable_highlight' ) ) {
+			if ( yy_get( 'single_enable_highlight' ) ) {
 				if ( $cdn_url ) {
 					wp_enqueue_style( 'highlight', $cdn_url . '/highlight.js/10.1.2/styles/vs.min.css', array(), '10.1.2' );
 					wp_enqueue_script( 'highlight', $cdn_url . '/highlight.js/10.1.2/highlight.min.js', array(), '10.1.2', true );
@@ -378,54 +393,69 @@ if ( ! is_admin() ) {
 				}
 			}
 
-			if ( onenice_get( 'single_show_share', true ) ) {
+			if ( yy_get( 'single_show_share') ) {
 				if ( $cdn_url ) {
 					wp_enqueue_style( 'share', $cdn_url . '/social-share.js/1.0.16/css/share.min.css', array(), '1.0.16' );
-					wp_enqueue_script( 'share', $cdn_url . '/social-share.js/1.0.16/js/jquery.share.min.js', array(), '1.0.16', true );
+					wp_enqueue_script( 'share', $cdn_url . '/social-share.js/1.0.16/js/social-share.min.js', array(), '1.0.16', true );
 				} else {
 					wp_enqueue_style( 'share', STATIC_URL . '/libs/share/css/share.min.css', array(), '1.0.16' );
-					wp_enqueue_script( 'share', STATIC_URL . '/libs/share/js/jquery.share.min.js', array(), '1.0.16', true );
+					wp_enqueue_script( 'share', STATIC_URL . '/libs/share/js/social-share.min.js', array(), '1.0.16', true );
 				}
 			}
 		}
 
 	}
 
-	add_action( 'wp_enqueue_scripts', 'onenice_load_scripts' );
-
+	add_action( 'wp_enqueue_scripts', 'yy_load_scripts' );
+	
+    
 	/**
 	 * Add style
 	 */
-	function onenice_head() {
+	function yy_head(){
+
 		// set theme color.
-		$colors             = explode( ' ', onenice_get( 'theme_color' ) );
-		list($a1, $a2, $a3) = $colors;
-		$styles             = array(
-			'a:hover'                          => "{color:$a1;}",
-			'.breadcrumb a:hover'              => "{color:$a1;}",
-			'.comment-form .submit,.btn-custom,.badge-custom' => "{color:#fff!important;background-color:$a1;border-color:$a1;}",
-			'.comment-form .submit:hover,.btn-custom:hover,.badge-custom:hover' => "{color:#fff;background-color:$a2;border-color:$a2}",
-			'.form-control:focus'              => "{border-color: $a3!important;}",
-
-			'.navbar-nav .current-menu-item a' => "{color:$a1}",
-			'.fa-search:hover'                 => "{color:$a1;}",
-			'.post-content a'                  => "{color:$a1;}",
-			'.post-content a:hover'            => "{color:$a2;}",
-			'.rollbar .rollbar-item:hover'     => "{background-color: $a3;}",
-		);
-		// #set theme color.
-
-		// set page width.
-		$styles['.container, .container-lg, .container-md, .container-sm, .container-xl'] = '{max-width: ' . onenice_get( 'page_width' ) . ';}';
-		// #set page width.
-
-		echo '<style>';
-		foreach ( $styles as $key => $style ) {
-			echo esc_html( $key . $style );
+		$vars = [];
+	    $vars['--yy-main-color']  = yy_get( 'main_color' )?:'#0099FF';
+	    $vars['--yy-dark-color']  = yy_get( 'dark_color' )?:'#007bff';
+	    $vars['--yy-light-color'] = yy_get( 'light_color' )?:'#99CCFF';
+	    $vars['--yy-link-color']  = yy_get( 'link_color' )?:'#555555';
+	    $vars['--yy-bg-color']    = yy_get( 'bg_color' )?:'#ffffff';
+	    $vars['--yy-fg-color']    = yy_get( 'fg_color' )?:'#333333';
+		
+		$vars['--yy-hf-main-color']  = yy_get( 'hf_main_color' )?:'#0099FF';
+	    $vars['--yy-hf-dark-color']  = yy_get( 'hf_dark_color' )?:'#007bff';
+	    $vars['--yy-hf-light-color'] = yy_get( 'hf_light_color' )?:'#99CCFF';
+	    $vars['--yy-hf-link-color']  = yy_get( 'hf_link_color' )?:'#555555';
+	    $vars['--yy-hf-bg-color']    = yy_get( 'hf_bg_color' )?:'#ffffff';
+	    $vars['--yy-hf-fg-color']    = yy_get( 'hf_fg_color' )?:'#333333';
+	    
+		$page_width = yy_get( 'page_width' )?:1200;
+		$vars['--yy-page-width'] = $page_width . 'px';
+        
+        /**
+    	 * Filter css vars
+    	 */
+        $vars = apply_filters('yy_css_vars', $vars);
+        
+        echo '<style>';
+        echo ':root{';
+		foreach ( $vars as $key => $style ) {
+			echo esc_html( $key . ':' . $style . ';');
 		}
+		echo '}';
+		
+		if(yy_get('enable_css_animation')){
+            echo '@keyframes fade-in{ 0% { transform: translateY(20px); opacity: 0 } 100% { transform: translateY(0); opacity: 1 } } ';
+            echo '@-webkit-keyframes fade-in{ 0% { -webkit-transform: translateY(20px); opacity: 0 } 100% { -webkit-transform: translateY(0); opacity: 1 } } ';
+        }
+		
 		echo '</style>';
 
-		if ( onenice_get( 'single_enable_highlight' ) ) {
+        echo '<script>';
+        echo 'var admin_ajax = "'.admin_url( 'admin-ajax.php' ).'"';
+        echo '</script>';
+		if ( yy_get( 'single_enable_highlight' ) ) {
 			?>
 			<style>
 			/* for block of numbers */
@@ -459,12 +489,11 @@ if ( ! is_admin() ) {
 
 	}
 
-	add_action( 'wp_head', 'onenice_head' );
+	add_action( 'wp_head', 'yy_head' );
 
-	add_action(
-		'wp_footer',
-		function() {
-			?>
+    
+	add_action('wp_footer', function() {
+		?>
 		<script>
 		jQuery(function($){
 			len = jQuery(".widget_tag_cloud .tagcloud a").length - 1;
@@ -478,38 +507,43 @@ if ( ! is_admin() ) {
 				}
 			});
 
-			$(".scroll-top").on("click",function(){
-				$("body,html").animate({"scrollTop":0},500);
-			});
+		
 		});
-
-		function onenice_check_search(){
-
-			if(jQuery("#wd").val() == ""){
-				return false;
-			}
-			return true;
-		}
 		</script>
 			<?php
 
 			if ( is_single() ) {
-				if ( onenice_get( 'single_enable_highlight' ) ) {
+				if ( yy_get( 'single_enable_highlight' ) ) {
 					?>
 					<script>hljs.initHighlightingOnLoad();hljs.initLineNumbersOnLoad();</script>
 					<?php
 				}
 			}
-			echo '<div class="rollbar md-down-none">';
-			if ( onenice_get( 'enable_back_to_top' ) ) {
-				?>
-				<div class="rollbar-item scroll-top" title="<?php esc_attr_e( 'Back to top', 'onenice' ); ?>"><i class="fa fa-angle-up"></i></div>
-				<?php
+			
 
-			}
-			echo '</div>';
+	},99);
+	
+	function yy_rollbar(){
+        ?>
+        <script>
+            jQuery(function($){
+                $(".rollbar .scroll-top").on("click",function(){
+    				$("body,html").animate({"scrollTop":0},500);
+    			});
+            });
+        </script>
+        <?php
+        echo '<div class="rollbar md-down-none">';
+		if ( yy_get( 'enable_back_to_top' ) ) {
+			?>
+			<div class="rollbar-item scroll-top" title="<?php esc_attr_e( 'Back to top', 'onenice' ); ?>"><i class="fa fa-angle-up"></i></div>
+			<?php
 
-		},
-		99
-	);
+		}
+		echo '</div>';
+    }
+    add_action('wp_footer', 'yy_rollbar', 99);
+	
 }
+
+

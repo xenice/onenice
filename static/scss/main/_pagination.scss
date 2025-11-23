@@ -1,0 +1,16 @@
+/* pagination */
+.yy-main{
+    .pagination{
+    	margin-top:40px;
+    	.page-numbers{
+        	margin:0 5px;
+        	padding:0.4rem 0.6rem;
+        	color:#666;
+        }
+        .current{
+        	border-color:#dee2e6;
+        	background-color: #dee2e6;
+        	color: #666;
+        }
+    }
+}

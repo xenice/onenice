@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: onenice\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-02 06:32+0000\n"
+"POT-Creation-Date: 2025-04-16 04:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,273 +16,935 @@ msgstr ""
 "X-Loco-Version: 2.6.2; wp-6.0.3\n"
 "X-Domain: onenice"
 
-#: includes/Onenice_Options.php:109
-msgid "1140px"
+#: ext/class-relative-date.php:71
+msgid " days ago"
 msgstr ""
 
-#: includes/Onenice_Options.php:110
-msgid "1200px"
+#: ext/class-relative-date.php:72
+msgid " hours ago"
+msgstr ""
+
+#: ext/class-relative-date.php:73
+msgid " minutes ago"
+msgstr ""
+
+#: ext/class-relative-date.php:70
+msgid " months ago"
+msgstr ""
+
+#: ext/class-relative-date.php:74
+msgid " seconds ago"
+msgstr ""
+
+#: ext/class-relative-date.php:69
+msgid " years ago"
+msgstr ""
+
+#: sidebar.php:53 template-parts/related-posts.php:35
+#: vessel/widgets/PostsWidget.php:116 vessel/widgets/PostsWidget.php:136
+msgid "(no title)"
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:246 vessel/login/ajax/LoginAjax.php:296
+msgid ":"
 msgstr ""
 
 #. Description of the theme
 msgid "A simple wordpress theme"
 msgstr ""
 
-#: includes/Onenice_Options.php:511
+#: vessel/Elements.php:207 vessel/Elements.php:286
+msgid "Add"
+msgstr ""
+
+#: ext/class-more.php:25 ext/class-sticky-posts.php:17
+msgid "Add a sticky posts to the homepage"
+msgstr ""
+
+#: vessel/Config.php:306
 msgid "Archive"
 msgstr ""
 
-#: functions.php:197
+#: functions.php:260
 msgid "archive"
 msgstr ""
 
-#: functions.php:419 includes/Onenice_Options.php:127
+#: sidebar.php:72
+msgid "Archives"
+msgstr ""
+
+#: vessel/Config.php:171
+msgid "Auxiliary functions"
+msgstr ""
+
+#: vessel/login/templates/xenice-login.php:178
+msgid "Back to home"
+msgstr ""
+
+#: functions.php:539
 msgid "Back to top"
 msgstr ""
 
-#: includes/Onenice_Options.php:60
-msgid "Blue"
+#: vessel/Config.php:90 vessel/Config.php:132
+msgid "Background "
 msgstr ""
 
-#: functions.php:152
+#: functions.php:205
 msgid "Buy VIP "
 msgstr ""
 
-#: includes/Onenice_Options.php:84
+#: vessel/login/ajax/LoginAjax.php:186 vessel/login/ajax/LoginAjax.php:187
+#: vessel/login/templates/xenice-login.php:101
+#: vessel/login/templates/xenice-login.php:124
+#: vessel/login/templates/xenice-login.php:159
+#: vessel/login/templates/modal.php:67
+msgid "Captcha"
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:88
+msgid "Captcha and email do not correspond"
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:84
+msgid "Captcha error"
+msgstr ""
+
+#: vessel/login/Login.php:84
+msgid "Captcha has been sent to the email, may appear in the dustbin oh ~"
+msgstr ""
+
+#: sidebar.php:82
+msgid "Categories"
+msgstr ""
+
+#: vessel/widgets/PostsWidget.php:216
+msgid "Category:"
+msgstr ""
+
+#: vessel/login/Login.php:76 vessel/login/templates/xenice-login.php:166
+msgid "Change password"
+msgstr ""
+
+#. %s is the comments number.
+#: comments.php:28
+#, php-format
+msgid "Comments (%s)"
+msgstr ""
+
+#: vessel/login/templates/xenice-login.php:98
+#: vessel/login/templates/xenice-login.php:156
+#: vessel/login/templates/modal.php:64
+msgid "Confirm password"
+msgstr ""
+
+#: vessel/Config.php:72 vessel/Config.php:114
+msgid "Dark"
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:246 vessel/login/ajax/LoginAjax.php:296
+msgid "Dear "
+msgstr ""
+
+#: vessel/Config.php:163
 msgid "Defalut"
 msgstr ""
 
-#: includes/Onenice_Options.php:226
+#: vessel/widgets/PostsWidget.php:221 vessel/widgets/PostsWidget.php:223
+msgid "Default"
+msgstr ""
+
+#: vessel/Config.php:258
 msgid "Delete Theme Copyright"
 msgstr ""
 
-#: includes/Onenice_Options.php:769
+#: vessel/Elements.php:252 vessel/Elements.php:270
+msgid "Description:"
+msgstr ""
+
+#: ext/class-optimize.php:58
+msgid "Disable revision"
+msgstr ""
+
+#: vessel/Config.php:402
 msgid "Disable Share Buttons"
 msgstr ""
 
-#: includes/Onenice_Options.php:789
+#: ext/class-optimize.php:86
+msgid "Disable the front admin bar"
+msgstr ""
+
+#: ext/class-optimize.php:65
+msgid "Disable update reminders"
+msgstr ""
+
+#: vessel/widgets/PostsWidget.php:246
+msgid "Display post date?"
+msgstr ""
+
+#: vessel/widgets/PostsWidget.php:242
+msgid "Display post thumbnail?"
+msgstr ""
+
+#: page.php:27 single.php:33 page-templates/full-width-template.php:26
+msgid "Edit"
+msgstr ""
+
+#: vessel/login/templates/xenice-login.php:92
+#: vessel/login/templates/modal.php:58
+msgid "Email"
+msgstr ""
+
+#: vessel/login/Login.php:81
+msgid "Email already exists"
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:222
+msgid "Email does not exist"
+msgstr ""
+
+#: vessel/login/Login.php:68
+msgid "Email format error"
+msgstr ""
+
+#: vessel/Config.php:233 vessel/Config.php:240 vessel/Config.php:259
+#: vessel/Config.php:272 vessel/Config.php:340 vessel/Config.php:347
+#: vessel/Config.php:361 vessel/Config.php:368 vessel/Config.php:375
+#: vessel/Config.php:382 vessel/Config.php:389 vessel/Config.php:396
+#: ext/class-optimize.php:36 ext/class-optimize.php:43
+#: ext/class-optimize.php:50 ext/class-optimize.php:57
+#: ext/class-optimize.php:64 ext/class-optimize.php:71
+#: ext/class-optimize.php:78 ext/class-optimize.php:85 ext/class-more.php:18
+msgid "Enable"
+msgstr ""
+
+#: vessel/Config.php:211
+msgid "Enable back to top button"
+msgstr ""
+
+#: ext/class-optimize.php:37
+msgid "Enable classic editor"
+msgstr ""
+
+#: ext/class-optimize.php:44
+msgid "Enable classic widget"
+msgstr ""
+
+#: vessel/Config.php:187
 msgid "Enable Code Highlight"
 msgstr ""
 
-#: includes/Onenice_Options.php:299
-msgid "Enable Slides"
+#: vessel/Config.php:201
+msgid "Enable css animation"
 msgstr ""
 
-#: includes/Onenice_Options.php:549
+#: ext/class-optimize.php:51
+msgid "Enable gravatar acceleration"
+msgstr ""
+
+#: vessel/mail/Config.php:73
+msgid "Enable SMTP Auth service"
+msgstr ""
+
+#: vessel/mail/Config.php:36
+msgid "Enable SMTP email server"
+msgstr ""
+
+#: vessel/Config.php:181
+msgid "Enable theme login interface"
+msgstr ""
+
+#: vessel/Config.php:175
+msgid "Enable theme widgets"
+msgstr ""
+
+#: vessel/login/Login.php:66 vessel/login/ajax/LoginAjax.php:74
+#: vessel/login/ajax/LoginAjax.php:279
+msgid "Entered passwords differ"
+msgstr ""
+
+#: vessel/login/templates/xenice-login.php:175
+msgid "Error request, please check email for reset password link"
+msgstr ""
+
+#: vessel/Config.php:320
 msgid "Excerpt Length"
 msgstr ""
 
-#: functions.php:145
+#: vessel/login/Login.php:73
+msgid "execute..."
+msgstr ""
+
+#: functions.php:199
 msgid "Expire time: "
 msgstr ""
 
-#: includes/Onenice_Options.php:210
+#: ext/class-optimize.php:79
+msgid "Extend the classic editor buttons"
+msgstr ""
+
+#: ext/ext.php:43 ext/class-ext-config.php:15 ext/class-ext-config.php:17
+msgid "Extension"
+msgstr ""
+
+#: vessel/mail/Config.php:80
+msgid "Fill in ssl if SMTP Auth service is enabled, leave blank if not"
+msgstr ""
+
+#: vessel/Config.php:248
 msgid "Footer"
 msgstr ""
 
-#: includes/Onenice_Options.php:23
+#: vessel/Config.php:96 vessel/Config.php:138
+msgid "Foreground"
+msgstr ""
+
+#: vessel/login/templates/xenice-login.php:82
+msgid "Forget password ?"
+msgstr ""
+
+#: vessel/login/templates/modal.php:30
+msgid "Forget password?"
+msgstr ""
+
+#: vessel/mail/Config.php:42
+msgid "From Name"
+msgstr ""
+
+#. Name of the template
+#: page-templates/full-width-template.php:2
+msgid "Full width template"
+msgstr ""
+
+#: vessel/login/templates/modal.php:69
+msgid "Get captcha"
+msgstr ""
+
+#: vessel/login/Login.php:75 vessel/login/templates/xenice-login.php:131
+msgid "Get New Password"
+msgstr ""
+
+#: vessel/Config.php:207
+msgid "Give a like"
+msgstr ""
+
+#: vessel/Config.php:58
 msgid "Global"
 msgstr ""
 
-#: includes/Onenice_Options.php:62
-msgid "Green"
+#: vessel/Config.php:61
+msgid "Global Colors"
 msgstr ""
 
-#: includes/Onenice_Options.php:144
+#: vessel/Config.php:222
 msgid "Header"
 msgstr ""
 
-#: search.php:8 functions.php:113 functions.php:125 functions.php:195
+#: vessel/Config.php:103
+msgid "Header and footer colors"
+msgstr ""
+
+#: functions.php:114 functions.php:125 functions.php:132 functions.php:153
+#: functions.php:244 search.php:15
 msgid "Home"
 msgstr ""
 
-#. URI of the theme
+#: vessel/widgets/HotPostsWidget.php:29
+msgid "Hot Posts"
+msgstr ""
+
 #. Author URI of the theme
 msgid "https://www.xenice.com"
 msgstr ""
 
-#: includes/Onenice_Options.php:265
+#. URI of the theme
+msgid "https://www.yythemes.com/product/onenice"
+msgstr ""
+
+#: vessel/Config.php:252
 msgid "ICP Number"
 msgstr ""
 
-#: includes/Onenice_Options.php:527
+#: vessel/login/ajax/LoginAjax.php:246
+msgid "If not you, please ignore this mail."
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:301
+msgid "Illegal request"
+msgstr ""
+
+#: vessel/Elements.php:265
+msgid "Image"
+msgstr ""
+
+#: vessel/Elements.php:254 vessel/Elements.php:272
+msgid "Image Path:"
+msgstr ""
+
+#: vessel/Config.php:78 vessel/Config.php:120
+msgid "Light"
+msgstr ""
+
+#: single.php:46 vessel/ajax/LikeAjax.php:31
+msgid "Liked"
+msgstr ""
+
+#: vessel/Config.php:84 vessel/Config.php:126
+msgid "Link"
+msgstr ""
+
+#: vessel/Config.php:310
 msgid "List Style"
 msgstr ""
 
-#: functions.php:185
+#: functions.php:51 functions.php:225 vessel/login/Login.php:59
+#: vessel/login/templates/xenice-login.php:78
+#: vessel/login/templates/xenice-login.php:111
+#: vessel/login/templates/xenice-login.php:135
+#: vessel/login/templates/xenice-login.php:170
+#: vessel/login/templates/modal.php:12 vessel/login/templates/modal.php:27
+#: vessel/login/templates/modal.php:46
 msgid "Login"
 msgstr ""
 
-#: functions.php:179
+#: vessel/login/Login.php:63
+msgid "Login..."
+msgstr ""
+
+#: functions.php:219
 msgid "Logout"
 msgstr ""
 
-#: functions.php:194
+#: vessel/vessel.php:133
+msgid "Mail"
+msgstr ""
+
+#: vessel/mail/Config.php:60
+msgid "Mail Account"
+msgstr ""
+
+#: vessel/mail/Config.php:99
+msgid "Mail Content"
+msgstr ""
+
+#: vessel/mail/Config.php:66
+msgid "Mail Password"
+msgstr ""
+
+#: vessel/mail/Config.php:26 vessel/mail/Config.php:27
+#: vessel/mail/Config.php:31
+msgid "Mail Settings"
+msgstr ""
+
+#: vessel/mail/Config.php:93
+msgid "Mail Title"
+msgstr ""
+
+#: vessel/Config.php:66 vessel/Config.php:108
+msgid "Main"
+msgstr ""
+
+#: functions.php:235
 msgid "Main Menu"
 msgstr ""
 
-#: template-parts/cards-thumbnail.php:26 template-parts/cards-text.php:21
+#: functions.php:217
+msgid "Manage"
+msgstr ""
+
+#: ext/class-ext-config.php:26
+msgid "More"
+msgstr ""
+
+#: functions.php:213
+msgid "My orders"
+msgstr ""
+
+#: vessel/login/templates/xenice-login.php:153
+msgid "New password"
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:296
+msgid "New password: "
+msgstr ""
+
+#: single.php:57
+msgid "Next Post"
+msgstr ""
+
+#: template-parts/cards-thumbnail.php:45 template-parts/cards-text.php:33
 msgid "No articles."
 msgstr ""
 
-#: template-parts/related-posts.php:21
+#: template-parts/related-posts.php:31
 msgid "None .."
 msgstr ""
 
-#: 404.php:17
+#: 404.php:24
 msgid "Not Found"
+msgstr ""
+
+#: vessel/widgets/PostsWidget.php:237
+msgid "Number of posts to show:"
 msgstr ""
 
 #. Name of the theme
 msgid "onenice"
 msgstr ""
 
-#: functions.php:40 functions.php:45 functions.php:50
+#: vessel/Config.php:285 vessel/Config.php:291 vessel/Config.php:297
 msgid ""
 "OneNice is a super concise WordPress theme, supporting both Chinese and "
 "English, free open source, no encryption, no redundant code, no "
 "authorization restrictions, can be used freely."
 msgstr ""
 
-#: functions.php:39 functions.php:44 functions.php:49
+#: vessel/Config.php:284 vessel/Config.php:290 vessel/Config.php:296
 msgid "OneNice Theme"
 msgstr ""
 
-#: includes/Onenice_Options.php:105
+#: ext/class-ext-config.php:21
+msgid "Optimize"
+msgstr ""
+
+#: vessel/Config.php:146
 msgid "Page Width"
 msgstr ""
 
-#: includes/Onenice_Options.php:63
-msgid "Pink"
+#: vessel/login/templates/xenice-login.php:75
+#: vessel/login/templates/xenice-login.php:95
+#: vessel/login/templates/modal.php:24 vessel/login/templates/modal.php:61
+msgid "Password"
 msgstr ""
 
-#: functions.php:196 includes/Onenice_Options.php:607
+#: vessel/login/Login.php:62
+msgid "Password cannot be empty"
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:295
+msgid "Password changed successfully"
+msgstr ""
+
+#: vessel/login/Login.php:77
+msgid "Password changed successfully, please remember the password."
+msgstr ""
+
+#: vessel/login/Login.php:69
+msgid "Password length at least 6"
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:78
+msgid "Password length should not be less than 6"
+msgstr ""
+
+#: ext/class-more.php:15 ext/class-photoswipe.php:18
+msgid "PhotoSwipe"
+msgstr ""
+
+#: comments.php:10
+msgid "Please do not load this page directly. Thanks!"
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:70
+msgid "Please enter password"
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:50 vessel/login/ajax/LoginAjax.php:131
+msgid "Please enter username"
+msgstr ""
+
+#: vessel/login/templates/xenice-login.php:115
+msgid ""
+"Please enter your username or email address. You will receive a link to "
+"create a new password via email."
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:60 vessel/login/ajax/LoginAjax.php:144
+msgid "Please fill in your email address"
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:296
+msgid ""
+"Please remember the password, you can click the following link to log in: "
+msgstr ""
+
+#: functions.php:252 vessel/Config.php:356
 msgid "Posts"
 msgstr ""
 
-#: index.php:10
+#: single.php:56
+msgid "Previous Post"
+msgstr ""
+
+#: index.php:18 sidebar.php:37 vessel/widgets/RecentPostsWidget.php:27
 msgid "Recent Posts"
 msgstr ""
 
-#: includes/Onenice_Options.php:61
-msgid "Red"
+#: vessel/login/Login.php:60 vessel/login/templates/xenice-login.php:83
+#: vessel/login/templates/xenice-login.php:107
+#: vessel/login/templates/xenice-login.php:136
+#: vessel/login/templates/xenice-login.php:171
+#: vessel/login/templates/modal.php:15 vessel/login/templates/modal.php:49
+#: vessel/login/templates/modal.php:73
+msgid "Register"
 msgstr ""
 
-#: template-parts/related-posts.php:2
+#: vessel/login/Login.php:64
+msgid "Register..."
+msgstr ""
+
+#: vessel/login/Login.php:71
+msgid "Registered successfully"
+msgstr ""
+
+#: template-parts/related-posts.php:10
 msgid "Related Posts"
 msgstr ""
 
-#: search.php:9 header.php:48
+#: ext/class-relative-date.php:21
+msgid "Relative date"
+msgstr ""
+
+#: ext/class-optimize.php:72
+msgid "Remove image attributes while editing posts"
+msgstr ""
+
+#: vessel/login/Login.php:80
+msgid "Resend captcha"
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:245
+msgid "Reset password"
+msgstr ""
+
+#: vessel/Admin.php:181 vessel/Config.php:53
+msgid "Save Changes"
+msgstr ""
+
+#: ext/class-ext-config.php:16
+msgid "Save changes"
+msgstr ""
+
+#: vessel/Admin.php:97
+msgid "save failed"
+msgstr ""
+
+#: vessel/Admin.php:90
+msgid "save success"
+msgstr ""
+
+#: header.php:64 search.php:16
 msgid "Search"
 msgstr ""
 
-#: includes/Onenice_Options.php:247
-msgid "Service QQ"
+#: vessel/Elements.php:162
+msgid "Select"
 msgstr ""
 
-#: includes/Onenice_Options.php:641 includes/Onenice_Options.php:677
+#: vessel/mail/Config.php:89
+msgid "Send"
+msgstr ""
+
+#: vessel/login/Login.php:82 vessel/login/templates/xenice-login.php:103
+msgid "Send captcha"
+msgstr ""
+
+#: vessel/mail/Mail.php:58
+msgid "Send failure"
+msgstr ""
+
+#: vessel/login/Login.php:79
+msgid "Send in..."
+msgstr ""
+
+#: vessel/mail/Config.php:88
+msgid "Send Mail"
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:253
+msgid "Send mail failed, please try again later"
+msgstr ""
+
+#: vessel/mail/Mail.php:53
+msgid "Send successfully"
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:110
+msgid "Server timeout, please try again later"
+msgstr ""
+
+#: vessel/vessel.php:128
+msgid "Settings"
+msgstr ""
+
+#: vessel/Config.php:346 vessel/Config.php:367
 msgid "Show Author"
 msgstr ""
 
-#: includes/Onenice_Options.php:623 includes/Onenice_Options.php:659
+#: vessel/Config.php:339 vessel/Config.php:360
 msgid "Show Date"
 msgstr ""
 
-#: includes/Onenice_Options.php:195
+#: vessel/Config.php:239
 msgid "Show Login Button"
 msgstr ""
 
-#: includes/Onenice_Options.php:713
+#: vessel/Config.php:381
 msgid "Show Previous/Next Posts"
 msgstr ""
 
-#: includes/Onenice_Options.php:732
+#: vessel/Config.php:388
 msgid "Show Related Posts"
 msgstr ""
 
-#: includes/Onenice_Options.php:177
+#: vessel/Config.php:232
 msgid "Show Search"
 msgstr ""
 
-#: includes/Onenice_Options.php:751
+#: vessel/Config.php:395
 msgid "Show Share"
 msgstr ""
 
-#: includes/Onenice_Options.php:695
+#: vessel/Config.php:374
 msgid "Show Tags"
 msgstr ""
 
-#: includes/Onenice_Options.php:38
+#: vessel/Config.php:154
 msgid "Site Icon"
 msgstr ""
 
-#: includes/Onenice_Options.php:587
+#: vessel/Config.php:333
 msgid "Site Loading Image"
 msgstr ""
 
-#: includes/Onenice_Options.php:159
+#: vessel/Config.php:226
 msgid "Site Logo"
 msgstr ""
 
-#: includes/Onenice_Options.php:570
+#: vessel/Config.php:327
 msgid "Site Thumbnail"
 msgstr ""
 
-#: includes/Onenice_Options.php:283
+#: vessel/Config.php:267 vessel/Config.php:271
 msgid "Slides"
 msgstr ""
 
-#: includes/Onenice_Options.php:365 includes/Onenice_Options.php:430
-#: includes/Onenice_Options.php:495
-msgid "Slides Description"
+#: vessel/Config.php:278
+msgid "Slides Settings"
 msgstr ""
 
-#: includes/Onenice_Options.php:317
-msgid "Slides Image 1"
+#: vessel/mail/Config.php:72
+msgid "SMTP Auth"
 msgstr ""
 
-#: includes/Onenice_Options.php:382
-msgid "Slides Image 2"
+#: vessel/mail/Config.php:35
+msgid "SMTP email server"
 msgstr ""
 
-#: includes/Onenice_Options.php:447
-msgid "Slides Image 3"
+#: vessel/mail/Config.php:48
+msgid "SMTP Host"
 msgstr ""
 
-#: includes/Onenice_Options.php:349 includes/Onenice_Options.php:414
-#: includes/Onenice_Options.php:479
-msgid "Slides Title"
+#: vessel/mail/Config.php:54
+msgid "SMTP Port"
 msgstr ""
 
-#: includes/Onenice_Options.php:333 includes/Onenice_Options.php:398
-#: includes/Onenice_Options.php:463
-msgid "Slides URL"
+#: vessel/mail/Config.php:79
+msgid "SMTP Secure"
 msgstr ""
 
-#: 404.php:18
+#: 404.php:25
 msgid "Sorry, the page you visited has migrated or does not exist"
 msgstr ""
 
-#: includes/Onenice_Options.php:80
+#: vessel/Config.php:160
 msgid "Static library CDN"
 msgstr ""
 
-#: includes/Onenice_Options.php:531 includes/Onenice_Options.php:553
+#: vessel/widgets/StickyPostsWidget.php:29 ext/templates/sticky-posts.php:106
+msgid "Sticky Posts"
+msgstr ""
+
+#: ext/class-more.php:22 ext/class-sticky-posts.php:14
+msgid "Sticky posts"
+msgstr ""
+
+#: vessel/login/Login.php:183
+msgid "Successfully copied to clipboard"
+msgstr ""
+
+#: sidebar.php:21
+msgid "Tag Cloud"
+msgstr ""
+
+#: single.php:41
+msgid "Tags: "
+msgstr ""
+
+#: vessel/Config.php:313
 msgid "Text"
 msgstr ""
 
-#: includes/Onenice_Options.php:56
-msgid "Theme Color"
+#: vessel/login/Login.php:184
+msgid "The browser does not support link clicks to copy to the clipboard"
 msgstr ""
 
-#: includes/Onenice_Options.php:532 includes/Onenice_Options.php:554
+#: vessel/login/Login.php:70
+msgid "The captcha cannot be empty"
+msgstr ""
+
+#: vessel/login/Login.php:83
+msgid "The captcha failed to send. Please try again later."
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:200 vessel/login/ajax/LoginAjax.php:274
+msgid "The captcha is incorrect"
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:66
+msgid "The email address has been registered"
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:63
+msgid "The email address is incorrect"
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:147
+msgid "The email format is incorrect"
+msgstr ""
+
+#: vessel/login/Login.php:74
+msgid ""
+"The link has been successfully sent to your email, please check and confirm."
+msgstr ""
+
+#: ext/class-relative-date.php:24
+msgid "The posts show relative dates"
+msgstr ""
+
+#: ext/class-photoswipe.php:21
+msgid "The slideshow is displayed when you click on post images"
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:56 vessel/login/ajax/LoginAjax.php:135
+msgid "The username has been registered"
+msgstr ""
+
+#: vessel/Config.php:52 vessel/Config.php:54
+msgid "Theme settings"
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:150
+msgid "This email address has been registered, please change it"
+msgstr ""
+
+#: comments.php:15
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:53 vessel/login/ajax/LoginAjax.php:133
+msgid "This username contains an invalid character"
+msgstr ""
+
+#: vessel/Config.php:314
 msgid "Thumbnail"
 msgstr ""
 
-#: functions.php:143
-msgid "Upgrade VIP "
+#: vessel/Elements.php:250 vessel/Elements.php:268
+#: vessel/widgets/PostsWidget.php:211
+msgid "Title:"
+msgstr ""
+
+#: vessel/Elements.php:248 vessel/Elements.php:266
+msgid "URL:"
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:216
+msgid "User does not set email"
+msgstr ""
+
+#: vessel/login/templates/xenice-login.php:89
+#: vessel/login/templates/modal.php:55
+msgid "Username"
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:129
+msgid "Username at least 6 characters"
+msgstr ""
+
+#: vessel/login/Login.php:67
+msgid ""
+"Username can only be 6-16 characters composed of alphanumeric or underlined "
+"characters"
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:211
+msgid "Username does not exist"
+msgstr ""
+
+#: vessel/login/templates/xenice-login.php:72
+#: vessel/login/templates/xenice-login.php:121
+#: vessel/login/templates/modal.php:21
+msgid "Username or Email"
+msgstr ""
+
+#: vessel/login/Login.php:61 vessel/login/Login.php:72
+msgid "Username or email cannot be empty"
+msgstr ""
+
+#: vessel/login/Login.php:65
+msgid "Username or password wrong"
+msgstr ""
+
+#: vessel/Config.php:403
+msgid ""
+"weibo,wechat,qq,douban,qzone,tencent,linkedin,diandian,google,twitter,"
+"facebook"
+msgstr ""
+
+#: vessel/Config.php:193
+msgid ""
+"When the post does not have a thumbnail, use the first image of the post as "
+"a thumbnail"
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:246 vessel/login/ajax/LoginAjax.php:296
+msgid "With the best wishes"
 msgstr ""
 
 #. Author of the theme
-msgid "Xenice"
+msgid "xenice"
+msgstr ""
+
+#: vessel/widgets/HotPostsWidget.php:30
+msgid "Xenice Hot Posts"
+msgstr ""
+
+#: vessel/login/Login.php:29
+msgid "Xenice Login"
+msgstr ""
+
+#: vessel/widgets/RecentPostsWidget.php:28
+msgid "Xenice Recent Posts"
+msgstr ""
+
+#: vessel/widgets/StickyPostsWidget.php:31
+msgid "Xenice Sticky Posts"
+msgstr ""
+
+#: vessel/ajax/LikeAjax.php:17
+msgid "You already liked it"
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:246
+msgid ""
+"You have just initiated a password reset request, please click the following "
+"link to reset your password:"
+msgstr ""
+
+#: vessel/login/Login.php:78
+msgid "Your operation too fast, please wait a moment."
+msgstr ""
+
+#: vessel/login/ajax/LoginAjax.php:296
+msgid "Your password has been changed successfully, user name: "
 msgstr ""
